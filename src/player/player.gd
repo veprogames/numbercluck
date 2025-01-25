@@ -20,9 +20,3 @@ func _unhandled_input(event: InputEvent) -> void:
 			viewport_rect.position + padding / 2,
 			viewport_rect.end - padding / 2
 		)
-	
-	var click_event: InputEventMouseButton = event as InputEventMouseButton
-	if click_event and click_event.pressed:
-		var b: Bullet = IonBullet.instantiate() as Bullet
-		b.global_position = global_position + Vector2.UP * 16
-		owner.add_child(b)

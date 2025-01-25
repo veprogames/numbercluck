@@ -14,6 +14,8 @@ extends Area2D
 @export_category("Damage")
 @export var damage: float
 
+@onready var visible_rect: Rect2 = get_viewport_rect().grow(100)
+
 
 func _ready() -> void:
 	area_entered.connect(_on_area_entered)
@@ -27,6 +29,9 @@ func _physics_process(delta: float) -> void:
 	if not Engine.is_editor_hint():
 		speed += acceleration * delta
 		position += speed.rotated(angle - PI / 2) * delta
+		
+		if !visible_rect.has_point(global_position):
+			queue_free()
 
 
 func _draw() -> void:

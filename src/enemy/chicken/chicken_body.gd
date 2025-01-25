@@ -10,7 +10,7 @@ extends Node2D
 @export var leg: Texture2D = preload("res://assets/chicken/leg.png")
 @export var wing: Texture2D = preload("res://assets/chicken/wing.png")
 
-var t: float = 0.0
+var t: float = randf() * 10
 
 
 func _ready() -> void:
