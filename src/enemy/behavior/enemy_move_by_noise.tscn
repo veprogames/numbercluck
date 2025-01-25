@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://v6y7pt160a03"]
+
+[ext_resource type="Script" path="res://src/enemy/behavior/enemy_move_by_noise.gd" id="1_uunvf"]
+
+[node name="EnemyMoveByNoise" type="Node"]
+script = ExtResource("1_uunvf")
