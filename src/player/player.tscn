@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw6jtohhj1h22"]
+
+[ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="1_abc3k"]
+[ext_resource type="Script" path="res://src/player/player.gd" id="1_hvf25"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xbqmh"]
+radius = 76.26
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i0pew"]
+radius = 19.06
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_hvf25")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_abc3k")
+
+[node name="CollectionArea" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectionArea"]
+shape = SubResource("CircleShape2D_xbqmh")
+
+[node name="DamageArea" type="Area2D" parent="."]
+collision_mask = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+shape = SubResource("CircleShape2D_i0pew")

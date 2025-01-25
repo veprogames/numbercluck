@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsaqy3ab6pk0k"]
+
+[ext_resource type="Script" path="res://src/enemy/chicken/chicken.gd" id="1_65cjs"]
+[ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/chicken/chicken_body.tscn" id="2_mphgy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gbmmg"]
+radius = 45.26
+
+[node name="Chicken" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_65cjs")
+max_hp = 100.0
+
+[node name="ChickenBody" parent="." instance=ExtResource("2_mphgy")]
+scale = Vector2(0.25, 0.25)
+suit_modulate = Color(0.415446, 0.672857, 0.917026, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gbmmg")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
