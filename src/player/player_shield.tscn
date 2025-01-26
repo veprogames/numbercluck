@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu2ckb5hnpjnh"]
+
+[ext_resource type="Script" path="res://src/player/player_shield.gd" id="1_coi4o"]
+
+[node name="PlayerShield" type="Node2D"]
+script = ExtResource("1_coi4o")

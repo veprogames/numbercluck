@@ -14,7 +14,7 @@ script = ExtResource("1_c6y1l")
 texture = ExtResource("2_ixdqe")
 speed = Vector2(400, 0)
 acceleration = Vector2(800, 0)
-damage = 10.0
+damage = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708

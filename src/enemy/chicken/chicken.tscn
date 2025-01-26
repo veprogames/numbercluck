@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsaqy3ab6pk0k"]
+[gd_scene load_steps=7 format=3 uid="uid://dsaqy3ab6pk0k"]
 
 [ext_resource type="Script" path="res://src/enemy/chicken/chicken.gd" id="1_65cjs"]
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/chicken/chicken_body.tscn" id="2_mphgy"]
 [ext_resource type="PackedScene" uid="uid://bh41ogc1wjdj5" path="res://src/enemy/behavior/enemy_move_swivel.tscn" id="3_kak8n"]
+[ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="4_j7kvf"]
+[ext_resource type="PackedScene" uid="uid://4vcu6y6bedtt" path="res://src/bullet/egg_bullet.tscn" id="5_1da04"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gbmmg"]
 radius = 45.26
@@ -24,3 +26,9 @@ shape = SubResource("CircleShape2D_gbmmg")
 target = NodePath("..")
 amplitude = Vector2(0, 50)
 period = Vector2(0, 2)
+
+[node name="BulletPodEnemy" parent="." instance=ExtResource("4_j7kvf")]
+position = Vector2(0, 23)
+bullet = ExtResource("5_1da04")
+random_interval = 20.0
+angle = 1.571

@@ -7,8 +7,13 @@ extends Node2D
 
 @onready var position0: Vector2 = global_position
 
+@onready var damage_area: Area2D = $DamageArea
+
+var ShieldScene: PackedScene = preload("res://src/player/player_shield.tscn")
+
 var lives: int = 3
 
+var shield: PlayerShield
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
@@ -25,9 +30,30 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func _on_damage_area_area_entered(area: Area2D) -> void:
-	if area is Bullet or area is Enemy:
-		position = position0
-		lives -= 1
+	if is_instance_valid(shield):
+		return
 	
-		if lives <= 0:
-			queue_free()
+	if area is Bullet or area is Enemy:
+		damage()
+
+
+func _on_shield_exited_tree() -> void:
+	shield.tree_exited.disconnect(_on_shield_exited_tree)
+	if damage_area.get_overlapping_areas().size() > 0:
+		damage()
+
+
+func damage() -> void:
+	position = position0
+	lives -= 1
+	add_shield()
+
+	if lives <= 0:
+		queue_free()
+
+
+func add_shield() -> void:
+	var player_shield: PlayerShield = ShieldScene.instantiate() as PlayerShield
+	add_child(player_shield)
+	shield = player_shield
+	shield.tree_exited.connect(_on_shield_exited_tree)
