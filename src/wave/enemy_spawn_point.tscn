@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://do2jafh8cjh6j"]
+
+[ext_resource type="Script" path="res://src/wave/enemy_spawn_point.gd" id="1_a7x2n"]
+
+[node name="EnemySpawnPoint" type="Node2D"]
+process_mode = 4
+script = ExtResource("1_a7x2n")

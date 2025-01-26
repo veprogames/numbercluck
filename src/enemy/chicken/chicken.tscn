@@ -1,15 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsaqy3ab6pk0k"]
+[gd_scene load_steps=5 format=3 uid="uid://dsaqy3ab6pk0k"]
 
 [ext_resource type="Script" path="res://src/enemy/chicken/chicken.gd" id="1_65cjs"]
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/chicken/chicken_body.tscn" id="2_mphgy"]
-[ext_resource type="PackedScene" uid="uid://v6y7pt160a03" path="res://src/enemy/behavior/enemy_move_by_noise.tscn" id="3_ltur0"]
+[ext_resource type="PackedScene" uid="uid://bh41ogc1wjdj5" path="res://src/enemy/behavior/enemy_move_swivel.tscn" id="3_kak8n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gbmmg"]
 radius = 45.26
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_upu2e"]
-noise_type = 4
-frequency = 1.0
 
 [node name="Chicken" type="Area2D"]
 collision_layer = 2
@@ -24,7 +20,7 @@ suit_modulate = Color(0.415446, 0.672857, 0.917026, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gbmmg")
 
-[node name="EnemyMoveByNoise" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_ltur0")]
+[node name="EnemyMoveSwivel" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_kak8n")]
 target = NodePath("..")
-noise = SubResource("FastNoiseLite_upu2e")
-amplitude = 1250.0
+amplitude = Vector2(0, 50)
+period = Vector2(0, 2)

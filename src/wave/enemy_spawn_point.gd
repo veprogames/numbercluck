@@ -1,0 +1,2 @@
+class_name EnemySpawnPoint
+extends Node2D

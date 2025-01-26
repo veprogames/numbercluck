@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyv4xjqwihaf4"]
+
+[ext_resource type="Script" path="res://src/wave/wave.gd" id="1_8b76i"]
+
+[node name="Wave" type="Node"]
+script = ExtResource("1_8b76i")
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="SpawnTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.1
+autostart = true
+
+[connection signal="child_exiting_tree" from="Enemies" to="." method="_on_enemies_child_exiting_tree"]

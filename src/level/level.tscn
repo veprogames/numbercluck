@@ -1,130 +1,219 @@
-[gd_scene load_steps=4 format=3 uid="uid://csirhoma08qby"]
+[gd_scene load_steps=8 format=3 uid="uid://csirhoma08qby"]
 
+[ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="1_ib2h3"]
+[ext_resource type="PackedScene" uid="uid://bars4af1kns8g" path="res://src/wave/wave_sequence.tscn" id="1_slduv"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/chicken/chicken.tscn" id="1_uqv8x"]
+[ext_resource type="PackedScene" uid="uid://gefg41lx3axv" path="res://src/wave/enemy_spawn_target.tscn" id="2_271q5"]
+[ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="2_nmdmo"]
 [ext_resource type="PackedScene" uid="uid://bw6jtohhj1h22" path="res://src/player/player.tscn" id="3_a7exo"]
 [ext_resource type="Texture2D" uid="uid://wtcl004q24u2" path="res://assets/backgrounds/ci4.png" id="3_sv7tk"]
 
 [node name="Level" type="Node2D"]
 
-[node name="Chicken" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(310, 196)
+[node name="WaveSequence" parent="." instance=ExtResource("1_slduv")]
 
-[node name="Chicken2" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(438, 199)
+[node name="Wave" parent="WaveSequence" instance=ExtResource("1_ib2h3")]
+title = "LOL"
+time_between_spawns = 0.1
 
-[node name="Chicken3" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(569, 199)
+[node name="EnemySpawnPoint" parent="WaveSequence/Wave" instance=ExtResource("2_nmdmo")]
+position = Vector2(-184, 562)
 
-[node name="Chicken4" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(694, 199)
+[node name="EnemySpawnPoint2" parent="WaveSequence/Wave" instance=ExtResource("2_nmdmo")]
+position = Vector2(2151, 556)
 
-[node name="Chicken5" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(830, 196)
+[node name="EnemySpawnPoint3" parent="WaveSequence/Wave" instance=ExtResource("2_nmdmo")]
+position = Vector2(981, -154)
 
-[node name="Chicken6" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(313, 297)
+[node name="EnemySpawnTarget" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(375, 257)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken7" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(441, 300)
+[node name="EnemySpawnTarget2" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(375, 361)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken8" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(572, 300)
+[node name="EnemySpawnTarget3" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(372, 465)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken9" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(697, 300)
+[node name="EnemySpawnTarget4" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(372, 569)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken10" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(833, 297)
+[node name="EnemySpawnTarget5" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(372, 668)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken11" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(316, 406)
+[node name="EnemySpawnTarget6" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(476, 681)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken12" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(444, 409)
+[node name="EnemySpawnTarget7" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(575, 681)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken13" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(575, 409)
+[node name="EnemySpawnTarget8" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(838, 263)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken14" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(700, 409)
+[node name="EnemySpawnTarget9" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(838, 367)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken15" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(836, 406)
+[node name="EnemySpawnTarget10" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(835, 471)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken16" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(319, 518)
+[node name="EnemySpawnTarget11" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(835, 575)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken17" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(447, 521)
+[node name="EnemySpawnTarget12" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(835, 674)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken18" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(578, 521)
+[node name="EnemySpawnTarget13" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(976, 258)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken19" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(703, 521)
+[node name="EnemySpawnTarget14" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(979, 677)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken20" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(839, 518)
+[node name="EnemySpawnTarget15" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1110, 258)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken21" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(964, 201)
+[node name="EnemySpawnTarget16" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1123, 389)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken22" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1092, 204)
+[node name="EnemySpawnTarget17" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1118, 480)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken23" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1223, 204)
+[node name="EnemySpawnTarget18" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1118, 584)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken24" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1348, 204)
+[node name="EnemySpawnTarget19" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1123, 675)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken25" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1484, 201)
+[node name="EnemySpawnTarget20" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1353, 248)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken26" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(967, 302)
+[node name="EnemySpawnTarget21" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1350, 344)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken27" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1095, 305)
+[node name="EnemySpawnTarget22" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1353, 440)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken28" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1226, 305)
+[node name="EnemySpawnTarget23" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1356, 549)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken29" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1351, 305)
+[node name="EnemySpawnTarget24" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1351, 688)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken30" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1487, 302)
+[node name="EnemySpawnTarget25" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1490, 688)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken31" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(970, 411)
+[node name="EnemySpawnTarget26" parent="WaveSequence/Wave" instance=ExtResource("2_271q5")]
+position = Vector2(1605, 688)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken32" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1098, 414)
+[node name="Wave2" parent="WaveSequence" instance=ExtResource("1_ib2h3")]
+title = "XD"
+time_between_spawns = 0.1
 
-[node name="Chicken33" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1229, 414)
+[node name="EnemySpawnPoint" parent="WaveSequence/Wave2" instance=ExtResource("2_nmdmo")]
+position = Vector2(2023, -93)
 
-[node name="Chicken34" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1354, 414)
+[node name="EnemySpawnPoint2" parent="WaveSequence/Wave2" instance=ExtResource("2_nmdmo")]
+position = Vector2(-68, -113)
 
-[node name="Chicken35" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1490, 411)
+[node name="EnemySpawnTarget" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(461, 255)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken36" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(973, 523)
+[node name="EnemySpawnTarget2" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(537, 343)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken37" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1101, 526)
+[node name="EnemySpawnTarget3" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(623, 429)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken38" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1232, 526)
+[node name="EnemySpawnTarget4" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(699, 510)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken39" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1357, 526)
+[node name="EnemySpawnTarget5" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(780, 603)
+enemy = ExtResource("1_uqv8x")
 
-[node name="Chicken40" parent="." instance=ExtResource("1_uqv8x")]
-position = Vector2(1493, 523)
+[node name="EnemySpawnTarget6" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(576, 492)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget7" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(470, 626)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget8" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(694, 369)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget9" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(782, 276)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget10" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1097, 273)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget11" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1105, 366)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget12" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1102, 474)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget13" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1107, 567)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget14" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1104, 675)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget15" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1233, 680)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget16" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1339, 594)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget17" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1344, 476)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget18" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1354, 385)
+enemy = ExtResource("1_uqv8x")
+
+[node name="EnemySpawnTarget19" parent="WaveSequence/Wave2" instance=ExtResource("2_271q5")]
+position = Vector2(1223, 267)
+enemy = ExtResource("1_uqv8x")
 
 [node name="Player" parent="." instance=ExtResource("3_a7exo")]
 position = Vector2(985, 972)

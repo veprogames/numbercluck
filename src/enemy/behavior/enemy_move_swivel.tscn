@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh41ogc1wjdj5"]
+
+[ext_resource type="Script" path="res://src/enemy/behavior/enemy_move_swivel.gd" id="1_f3s36"]
+
+[node name="EnemyMoveSwivel" type="Node"]
+script = ExtResource("1_f3s36")
