@@ -1,7 +1,7 @@
 class_name ScoreCounter
-extends TextureRect
+extends Panel
 
-@onready var label: Label = $Label
+@onready var label: Label = $MarginContainer/Label
 
 @export var score: Score
 

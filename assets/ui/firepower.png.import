@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wtcl004q24u2"
-path="res://.godot/imported/ci4.png-b32d3d11c6f1e8de58a53a57c23575a3.ctex"
+uid="uid://bfw8ukkkqrd2o"
+path="res://.godot/imported/firepower.png-7ccdc1da66522a6a8e9ca2504def5db0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/ci4.png"
-dest_files=["res://.godot/imported/ci4.png-b32d3d11c6f1e8de58a53a57c23575a3.ctex"]
+source_file="res://assets/ui/firepower.png"
+dest_files=["res://.godot/imported/firepower.png-7ccdc1da66522a6a8e9ca2504def5db0.ctex"]
 
 [params]
 

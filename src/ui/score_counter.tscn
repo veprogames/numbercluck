@@ -1,24 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr6h7nhhb3ynm"]
+[gd_scene load_steps=4 format=3 uid="uid://dr6h7nhhb3ynm"]
 
-[ext_resource type="Texture2D" uid="uid://bt4duvl83ynke" path="res://assets/ui/score.png" id="1_33rfp"]
 [ext_resource type="Script" path="res://src/ui/score_counter.gd" id="2_eg0ep"]
 
-[node name="ScoreCounter" type="TextureRect"]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_33rfp")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ff1r"]
+bg_color = Color(0.0313726, 0.133333, 0.372549, 0.752941)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.109804, 0.713726, 1, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 8
+expand_margin_left = 16.0
+expand_margin_top = 16.0
+shadow_color = Color(0.00392157, 0.0705882, 0.34902, 0.313726)
+shadow_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_ys3ty"]
+font_size = 42
+
+[node name="ScoreCounter" type="Panel"]
+offset_right = 615.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6ff1r")
 script = ExtResource("2_eg0ep")
 
-[node name="Label" type="Label" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.507812
-anchor_right = 0.596748
-anchor_bottom = 0.507812
-offset_top = -11.5
-offset_bottom = 11.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
 text = "0"
+label_settings = SubResource("LabelSettings_ys3ty")
 horizontal_alignment = 2
-metadata/_edit_use_anchors_ = true

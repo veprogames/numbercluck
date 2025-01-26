@@ -1,10 +1,10 @@
 class_name PlayerUI
-extends TextureRect
+extends Panel
 
 @export var player: Player
 
-@onready var label_health: Label = $LabelHealth
-@onready var label_firepower: Label = $LabelFirepower
+@onready var label_health: Label = %LabelHealth
+@onready var label_firepower: Label = %LabelFirepower
 
 
 func _ready() -> void:
