@@ -27,10 +27,10 @@ func _draw() -> void:
 	if t == null:
 		t = 0.0
 	
-	draw_set_transform(Vector2(-64, -32), 0.4 * sin(4 * t))
+	draw_set_transform(Vector2(-72, -36), 0.4 * sin(4 * t))
 	draw_texture(wing, -wing.get_size() / 2)
 	
-	draw_set_transform(Vector2(64, -32), 0.4 * sin(4 * t), Vector2(-1, 1))
+	draw_set_transform(Vector2(72, -36), 0.4 * sin(4 * t), Vector2(-1, 1))
 	draw_texture(wing, -wing.get_size() / 2)
 	
 	draw_set_transform(Vector2(-32, 72), 0.3 * cos(4 * t) + 0.2)

@@ -14,7 +14,6 @@ var target_offset: Vector2 = Vector2.ZERO
 var moving_to_target: bool = false
 var moving_to_target_pos: Vector2 = Vector2.ZERO
 
-@onready var viewport_rect: Rect2 = get_viewport_rect().grow(-32)
 
 func _ready() -> void:
 	area_entered.connect(_on_area_entered)
@@ -30,8 +29,6 @@ func _physics_process(delta: float) -> void:
 	
 	target_offset = target_offset.lerp(Vector2.ZERO, 5 * delta)
 	position_offset = position_offset.lerp(target_offset, 10 * delta)
-	
-	target_position = target_position.clamp(viewport_rect.position, viewport_rect.end)
 	
 	position = target_position + position_offset
 	

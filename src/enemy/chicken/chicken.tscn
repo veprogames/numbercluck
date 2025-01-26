@@ -24,7 +24,7 @@ stream_1/stream = ExtResource("4_w0ks6")
 stream_2/stream = ExtResource("5_sxsxx")
 
 [sub_resource type="Gradient" id="Gradient_rignk"]
-offsets = PackedFloat32Array(0, 0.542714, 0.984925)
+offsets = PackedFloat32Array(0, 0.0753769, 0.984925)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_imf6t"]
@@ -45,11 +45,11 @@ color_ramp = SubResource("GradientTexture1D_imf6t")
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_65cjs")
-max_hp = 200.0
+max_hp = 100.0
 
 [node name="ChickenBody" parent="." instance=ExtResource("2_mphgy")]
 scale = Vector2(0.25, 0.25)
-suit_modulate = Color(0.415446, 0.672857, 0.917026, 1)
+suit_modulate = Color(0.627451, 0.0980392, 0.0980392, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gbmmg")
