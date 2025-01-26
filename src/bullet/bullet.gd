@@ -6,6 +6,9 @@ extends Area2D
 @export_category("Visual")
 @export var texture: Texture2D
 
+@export_category("Audio")
+@export var sound: AudioStream
+
 @export_category("Movement")
 @export var angle: float = 0.0
 @export var speed: Vector2

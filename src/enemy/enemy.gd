@@ -1,6 +1,8 @@
 class_name Enemy
 extends Area2D
 
+signal damaged
+
 @export var max_hp: float
 @onready var hp: float = max_hp
 
@@ -37,6 +39,7 @@ func _physics_process(delta: float) -> void:
 
 
 func damage(amount: float) -> void:
+	damaged.emit()
 	hp -= amount
 	if hp <= 0:
 		Events.enemy_died.emit(self)

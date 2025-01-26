@@ -4,6 +4,8 @@ extends Node2D
 @export var interval: float
 @export var angle: float = 0.0
 
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
 var active: bool = false
 var t: float = 0
 
@@ -21,6 +23,8 @@ func _physics_process(delta: float) -> void:
 		var b: Bullet = bullet.instantiate() as Bullet
 		b.global_position = global_position
 		b.angle += angle
+		audio_stream_player_2d.stream = b.sound
+		audio_stream_player_2d.play()
 		get_tree().current_scene.add_child(b)
 
 
