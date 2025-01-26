@@ -1,14 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://csirhoma08qby"]
+[gd_scene load_steps=11 format=3 uid="uid://csirhoma08qby"]
 
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="1_ib2h3"]
+[ext_resource type="PackedScene" uid="uid://85e3iw673mt3" path="res://src/level/score.tscn" id="1_lh72d"]
 [ext_resource type="PackedScene" uid="uid://bars4af1kns8g" path="res://src/wave/wave_sequence.tscn" id="1_slduv"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/chicken/chicken.tscn" id="1_uqv8x"]
 [ext_resource type="PackedScene" uid="uid://gefg41lx3axv" path="res://src/wave/enemy_spawn_target.tscn" id="2_271q5"]
 [ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="2_nmdmo"]
 [ext_resource type="PackedScene" uid="uid://bw6jtohhj1h22" path="res://src/player/player.tscn" id="3_a7exo"]
 [ext_resource type="Texture2D" uid="uid://wtcl004q24u2" path="res://assets/backgrounds/ci4.png" id="3_sv7tk"]
+[ext_resource type="PackedScene" uid="uid://dr6h7nhhb3ynm" path="res://src/ui/score_counter.tscn" id="9_1w3ay"]
+[ext_resource type="PackedScene" uid="uid://d1hyply7t8dwp" path="res://src/ui/player_ui.tscn" id="10_tb6jf"]
 
 [node name="Level" type="Node2D"]
+
+[node name="Score" parent="." instance=ExtResource("1_lh72d")]
 
 [node name="WaveSequence" parent="." instance=ExtResource("1_slduv")]
 
@@ -225,3 +230,11 @@ layer = -10
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("3_sv7tk")
+
+[node name="CanvasLayerUI" type="CanvasLayer" parent="."]
+
+[node name="ScoreCounter" parent="CanvasLayerUI" node_paths=PackedStringArray("score") instance=ExtResource("9_1w3ay")]
+score = NodePath("../../Score")
+
+[node name="PlayerUI" parent="CanvasLayerUI" node_paths=PackedStringArray("player") instance=ExtResource("10_tb6jf")]
+player = NodePath("../../Player")

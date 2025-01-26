@@ -39,12 +39,17 @@ func _physics_process(delta: float) -> void:
 func damage(amount: float) -> void:
 	hp -= amount
 	if hp <= 0:
+		Events.enemy_died.emit(self)
 		queue_free()
 
 
 func move_to_target_position(target: Vector2) -> void:
 	moving_to_target = true
 	moving_to_target_pos = target
+
+
+func get_score() -> float:
+	return 1000 * (max_hp / 100) ** 1.3
 
 
 func _on_area_entered(area: Area2D) -> void:

@@ -2,6 +2,8 @@
 class_name Player
 extends Node2D
 
+signal lives_changed(lives: int)
+
 @onready var padding: Vector2 = ($Sprite2D as Sprite2D).texture.get_size() * 1.2
 @onready var viewport_rect: Rect2 = get_viewport_rect()
 
@@ -11,7 +13,10 @@ extends Node2D
 
 var ShieldScene: PackedScene = preload("res://src/player/player_shield.tscn")
 
-var lives: int = 3
+var lives: int = 3 :
+	set(l):
+		lives = l
+		lives_changed.emit(l)
 
 var shield: PlayerShield
 
