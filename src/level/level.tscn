@@ -18,7 +18,7 @@
 [node name="WaveSequence" parent="." instance=ExtResource("1_slduv")]
 
 [node name="Wave" parent="WaveSequence" instance=ExtResource("1_ib2h3")]
-title = "LOL"
+title = "Laughing out Loud"
 time_between_spawns = 0.1
 
 [node name="EnemySpawnPoint" parent="WaveSequence/Wave" instance=ExtResource("2_nmdmo")]
@@ -135,7 +135,7 @@ position = Vector2(1605, 688)
 enemy = ExtResource("1_uqv8x")
 
 [node name="Wave2" parent="WaveSequence" instance=ExtResource("1_ib2h3")]
-title = "XD"
+title = "Rolling on Floor Laughing"
 time_between_spawns = 0.1
 
 [node name="EnemySpawnPoint" parent="WaveSequence/Wave2" instance=ExtResource("2_nmdmo")]

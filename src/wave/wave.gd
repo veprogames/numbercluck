@@ -8,12 +8,15 @@ signal finished
 
 @onready var enemies: Node = $Enemies
 @onready var spawn_timer: Timer = $SpawnTimer
+@onready var title_label: Title = $Title
 
 var spawn_points: Array
 var spawn_targets: Array
 
 
 func _ready() -> void:
+	title_label.text = title
+	
 	spawn_points = get_children().filter(func(node: Node) -> bool:
 		return node is EnemySpawnPoint
 	)
@@ -27,6 +30,10 @@ func _ready() -> void:
 
 
 func start() -> void:
+	title_label.start()
+	
+	await title_label.finished
+	
 	for target: EnemySpawnTarget in spawn_targets:
 		var spawn_position: Vector2 = Vector2.ZERO
 		if spawn_points.size() > 0:

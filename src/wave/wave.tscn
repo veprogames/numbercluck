@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyv4xjqwihaf4"]
+[gd_scene load_steps=3 format=3 uid="uid://dyv4xjqwihaf4"]
 
 [ext_resource type="Script" path="res://src/wave/wave.gd" id="1_8b76i"]
+[ext_resource type="PackedScene" uid="uid://cj05g7lk37njy" path="res://src/ui/title.tscn" id="2_rc0p3"]
 
 [node name="Wave" type="Node"]
 script = ExtResource("1_8b76i")
+
+[node name="Title" parent="." instance=ExtResource("2_rc0p3")]
 
 [node name="Enemies" type="Node" parent="."]
 

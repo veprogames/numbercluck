@@ -5,6 +5,8 @@ signal finished
 
 var waves: Array[Wave]
 
+@onready var title: Title = $Title
+
 
 func _ready() -> void:
 	for child: Node in get_children():
@@ -27,4 +29,6 @@ func _ready() -> void:
 
 
 func _on_finished() -> void:
+	title.start()
+	await title.finished
 	get_tree().quit()
