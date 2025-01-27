@@ -61,6 +61,7 @@ func damage() -> void:
 
 func add_shield() -> void:
 	var player_shield: PlayerShield = ShieldScene.instantiate() as PlayerShield
+	player_firepower.current_power = maxi(0, player_firepower.current_power - 3)
 	add_child(player_shield)
 	shield = player_shield
 	shield.tree_exited.connect(_on_shield_exited_tree)
