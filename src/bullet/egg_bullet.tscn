@@ -10,7 +10,7 @@ radius = 16.0
 collision_layer = 8
 script = ExtResource("1_sfhc0")
 texture = ExtResource("2_iybyn")
-speed = Vector2(0, 100)
+speed = Vector2(200, 0)
 damage = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

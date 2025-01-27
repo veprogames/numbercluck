@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="1_abc3k"]
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_hvf25"]
 [ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="2_w7lh4"]
-[ext_resource type="PackedScene" uid="uid://c45ejjcrpjbti" path="res://src/weapon/bullet_pod.tscn" id="3_4v2wf"]
 [ext_resource type="PackedScene" uid="uid://gefg41lx3axv" path="res://src/wave/enemy_spawn_target.tscn" id="3_kpfmw"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/chicken/chicken.tscn" id="4_6fh7v"]
 [ext_resource type="PackedScene" uid="uid://d1x18syexiisp" path="res://src/bullet/ion_bullet.tscn" id="4_7od8y"]
+[ext_resource type="PackedScene" uid="uid://ba5kipctklev" path="res://src/weapon/bullet_pod_player.tscn" id="6_dhbb4"]
 
 [sub_resource type="Gradient" id="Gradient_vrpgn"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 1, 0)
@@ -89,8 +89,8 @@ process_mode = 0
 position = Vector2(372, 668)
 enemy = ExtResource("4_6fh7v")
 
-[node name="BulletPod" parent="." instance=ExtResource("3_4v2wf")]
-position = Vector2(-1, -49)
+[node name="BulletPodPlayer" parent="." instance=ExtResource("6_dhbb4")]
+rotation = -1.57079
 bullet = ExtResource("4_7od8y")
 interval = 0.469
 

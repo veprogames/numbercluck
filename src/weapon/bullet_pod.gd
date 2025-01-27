@@ -1,34 +1,41 @@
+class_name BulletPod
 extends Node2D
 
 @export var bullet: PackedScene
 @export var interval: float
-@export var angle: float = 0.0
+@export var random_interval: float
 
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
-
-var active: bool = false
 var t: float = 0
+
+var audio_player: AudioStreamPlayer2D
 
 
 func _ready() -> void:
-	t = interval - 0.01
+	if get_child_count() > 0:
+		audio_player = get_children()[0] as AudioStreamPlayer2D
 
 
 func _physics_process(delta: float) -> void:
-	if active:
-		t += delta
+	if interval > 0:
+		t += 1 / interval * delta
 	
-	if t >= interval:
-		t -= interval
-		var b: Bullet = bullet.instantiate() as Bullet
-		b.global_position = global_position
-		b.angle += angle
-		audio_stream_player_2d.stream = b.sound
-		audio_stream_player_2d.play()
-		get_tree().current_scene.add_child(b)
+	if random_interval > 0 and randf() < delta / random_interval:
+		t += 1
+	
+	t = minf(1, t)
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	var click_event: InputEventMouseButton = event as InputEventMouseButton
-	if click_event:
-		active = click_event.pressed
+func shoot() -> void:
+	t -= 1
+	var bullet_: Bullet = create_bullet()
+	if is_instance_valid(audio_player):
+		audio_player.stream = bullet_.sound
+		audio_player.play()
+	get_tree().current_scene.add_child(bullet_)
+
+
+func create_bullet() -> Bullet:
+	var b: Bullet = bullet.instantiate() as Bullet
+	b.global_position = global_position
+	b.angle += rotation
+	return b

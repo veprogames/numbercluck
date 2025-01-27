@@ -61,9 +61,9 @@ period = Vector2(0, 2)
 
 [node name="BulletPodEnemy" parent="." instance=ExtResource("4_j7kvf")]
 position = Vector2(0, 23)
+rotation = 1.57079
 bullet = ExtResource("5_1da04")
 random_interval = 20.0
-angle = 1.571
 
 [node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("7_sbx4d")]
 stream = SubResource("AudioStreamRandomizer_707ws")

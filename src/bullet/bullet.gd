@@ -25,13 +25,13 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	rotation = speed.angle() + angle - PI / 2
+	rotation = speed.angle() + angle
 
 
 func _physics_process(delta: float) -> void:
 	if not Engine.is_editor_hint():
 		speed += acceleration * delta
-		position += speed.rotated(angle - PI / 2) * delta
+		position += speed.rotated(angle) * delta
 		
 		if !visible_rect.has_point(global_position):
 			queue_free()
