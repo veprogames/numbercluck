@@ -25,7 +25,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	rotation = speed.angle() + angle
+	rotation = get_bullet_rotation()
 
 
 func _physics_process(delta: float) -> void:
@@ -40,6 +40,10 @@ func _physics_process(delta: float) -> void:
 func _draw() -> void:
 	if texture:
 		draw_texture(texture, -texture.get_size() / 2)
+
+
+func get_bullet_rotation() -> float:
+	return speed.angle() + angle
 
 
 func _on_area_entered(area: Area2D) -> void:

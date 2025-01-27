@@ -1,0 +1,108 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds4pn67w135sr"]
+
+[ext_resource type="Script" path="res://src/player/player_firepower.gd" id="1_dsrc6"]
+[ext_resource type="PackedScene" uid="uid://ba5kipctklev" path="res://src/weapon/bullet_pod_player.tscn" id="2_7i3ou"]
+[ext_resource type="PackedScene" uid="uid://d1x18syexiisp" path="res://src/bullet/ion_bullet.tscn" id="3_arnuf"]
+[ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="4_icjx3"]
+
+[node name="PlayerFirepower" type="Node2D"]
+script = ExtResource("1_dsrc6")
+
+[node name="Levels" type="Node2D" parent="."]
+
+[node name="0" type="Node2D" parent="Levels"]
+
+[node name="BulletPodPlayer" parent="Levels/0" instance=ExtResource("2_7i3ou")]
+position = Vector2(0, -44)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="1" type="Node2D" parent="Levels"]
+
+[node name="BulletPodPlayer" parent="Levels/1" instance=ExtResource("2_7i3ou")]
+position = Vector2(-26, -25)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="BulletPodPlayer2" parent="Levels/1" instance=ExtResource("2_7i3ou")]
+position = Vector2(26, -25)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="2" type="Node2D" parent="Levels"]
+
+[node name="BulletPodPlayer3" parent="Levels/2" instance=ExtResource("2_7i3ou")]
+position = Vector2(0, -44)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="BulletPodPlayer" parent="Levels/2" instance=ExtResource("2_7i3ou")]
+position = Vector2(-26, -25)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="BulletPodPlayer2" parent="Levels/2" instance=ExtResource("2_7i3ou")]
+position = Vector2(26, -25)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="3" type="Node2D" parent="Levels"]
+
+[node name="BulletPodPlayer3" parent="Levels/3" instance=ExtResource("2_7i3ou")]
+position = Vector2(0, -44)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.25
+
+[node name="BulletPodPlayer" parent="Levels/3" instance=ExtResource("2_7i3ou")]
+position = Vector2(-26, -25)
+rotation = -1.8326
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="BulletPodPlayer2" parent="Levels/3" instance=ExtResource("2_7i3ou")]
+position = Vector2(26, -25)
+rotation = -1.309
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="4" type="Node2D" parent="Levels"]
+
+[node name="BulletPodPlayer3" parent="Levels/4" instance=ExtResource("2_7i3ou")]
+position = Vector2(-26, -25)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="BulletPodPlayer4" parent="Levels/4" instance=ExtResource("2_7i3ou")]
+position = Vector2(26, -25)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="BulletPodPlayer5" parent="Levels/4" instance=ExtResource("2_7i3ou")]
+position = Vector2(0, -44)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="BulletPodPlayer" parent="Levels/4" instance=ExtResource("2_7i3ou")]
+position = Vector2(-26, -25)
+rotation = -1.8326
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="BulletPodPlayer2" parent="Levels/4" instance=ExtResource("2_7i3ou")]
+position = Vector2(26, -25)
+rotation = -1.309
+bullet = ExtResource("3_arnuf")
+interval = 0.5
+
+[node name="HelperSprite" type="Sprite2D" parent="."]
+texture = ExtResource("4_icjx3")

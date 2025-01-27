@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0jdag12cyvpy"]
+
+[ext_resource type="Texture2D" uid="uid://8b0ra4tun5ka" path="res://assets/collectables/firepower.png" id="1_bikta"]
+[ext_resource type="Script" path="res://src/collectables/firepower.gd" id="1_xr2sq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fqppk"]
+radius = 24.0
+
+[node name="Firepower" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_xr2sq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bikta")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fqppk")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-32, -32, 64, 64)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

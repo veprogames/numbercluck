@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dsaqy3ab6pk0k"]
+[gd_scene load_steps=20 format=3 uid="uid://dsaqy3ab6pk0k"]
 
 [ext_resource type="Script" path="res://src/enemy/chicken/chicken.gd" id="1_65cjs"]
 [ext_resource type="AudioStream" uid="uid://b45nhm48v654h" path="res://assets/chicken/hit.ogg" id="2_7y8jg"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cjm1ebgv6lilf" path="res://src/common/audio/audio_on_enemy_damaged.tscn" id="8_5ib4d"]
 [ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="12_a7ipk"]
 [ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="13_hq8ad"]
+[ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/drop_firepower_on_death.tscn" id="14_cit6y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gbmmg"]
 radius = 45.26
@@ -79,4 +80,7 @@ process_material = SubResource("ParticleProcessMaterial_7t325")
 texture = ExtResource("13_hq8ad")
 lifetime = 0.8
 explosiveness = 0.77
+target = NodePath("..")
+
+[node name="DropFirepowerOnDeath" parent="." node_paths=PackedStringArray("target") instance=ExtResource("14_cit6y")]
 target = NodePath("..")

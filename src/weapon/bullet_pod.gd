@@ -38,4 +38,5 @@ func create_bullet() -> Bullet:
 	var b: Bullet = bullet.instantiate() as Bullet
 	b.global_position = global_position
 	b.angle += rotation
+	b.rotation = b.get_bullet_rotation()
 	return b

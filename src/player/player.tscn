@@ -1,12 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://bw6jtohhj1h22"]
+[gd_scene load_steps=14 format=3 uid="uid://bw6jtohhj1h22"]
 
 [ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="1_abc3k"]
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_hvf25"]
 [ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="2_w7lh4"]
 [ext_resource type="PackedScene" uid="uid://gefg41lx3axv" path="res://src/wave/enemy_spawn_target.tscn" id="3_kpfmw"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/chicken/chicken.tscn" id="4_6fh7v"]
-[ext_resource type="PackedScene" uid="uid://d1x18syexiisp" path="res://src/bullet/ion_bullet.tscn" id="4_7od8y"]
-[ext_resource type="PackedScene" uid="uid://ba5kipctklev" path="res://src/weapon/bullet_pod_player.tscn" id="6_dhbb4"]
+[ext_resource type="PackedScene" uid="uid://ds4pn67w135sr" path="res://src/player/player_firepower.tscn" id="6_p02w0"]
 
 [sub_resource type="Gradient" id="Gradient_vrpgn"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 1, 0)
@@ -36,7 +35,7 @@ radius = 76.26
 [sub_resource type="CircleShape2D" id="CircleShape2D_i0pew"]
 radius = 19.06
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" groups=["player"]]
 z_index = 1
 script = ExtResource("1_hvf25")
 
@@ -53,7 +52,7 @@ local_coords = true
 texture = ExtResource("1_abc3k")
 
 [node name="CollectionArea" type="Area2D" parent="."]
-collision_layer = 0
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectionArea"]
 shape = SubResource("CircleShape2D_xbqmh")
@@ -89,9 +88,8 @@ process_mode = 0
 position = Vector2(372, 668)
 enemy = ExtResource("4_6fh7v")
 
-[node name="BulletPodPlayer" parent="." instance=ExtResource("6_dhbb4")]
-rotation = -1.57079
-bullet = ExtResource("4_7od8y")
-interval = 0.469
+[node name="PlayerFirepower" parent="." instance=ExtResource("6_p02w0")]
 
+[connection signal="area_entered" from="CollectionArea" to="." method="_on_collection_area_area_entered"]
 [connection signal="area_entered" from="DamageArea" to="." method="_on_damage_area_area_entered"]
+[connection signal="firepower_changed" from="PlayerFirepower" to="." method="_on_player_firepower_firepower_changed"]

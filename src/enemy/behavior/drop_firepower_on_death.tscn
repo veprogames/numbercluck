@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn55ngnwmfex7"]
+
+[ext_resource type="Script" path="res://src/enemy/behavior/drop_firepower_on_death.gd" id="1_xll8m"]
+
+[node name="DropFirepowerOnDeath" type="Node2D"]
+script = ExtResource("1_xll8m")

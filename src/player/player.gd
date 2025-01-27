@@ -3,6 +3,7 @@ class_name Player
 extends Node2D
 
 signal lives_changed(lives: int)
+signal firepower_changed(fp: int)
 
 @onready var padding: Vector2 = ($Sprite2D as Sprite2D).texture.get_size() * 1.2
 @onready var viewport_rect: Rect2 = get_viewport_rect()
@@ -10,6 +11,7 @@ signal lives_changed(lives: int)
 @onready var position0: Vector2 = global_position
 
 @onready var damage_area: Area2D = $DamageArea
+@onready var player_firepower: PlayerFirepower = $PlayerFirepower
 
 var ShieldScene: PackedScene = preload("res://src/player/player_shield.tscn")
 
@@ -62,3 +64,24 @@ func add_shield() -> void:
 	add_child(player_shield)
 	shield = player_shield
 	shield.tree_exited.connect(_on_shield_exited_tree)
+
+
+func get_firepower() -> int:
+	return player_firepower.current_power
+
+
+func get_effective_firepower() -> int:
+	return player_firepower.get_effective_firepower()
+
+
+func get_excessive_firepower() -> int:
+	return get_firepower() - get_effective_firepower()
+
+
+func _on_collection_area_area_entered(area: Area2D) -> void:
+	if area is Firepower:
+		player_firepower.power_up()
+
+
+func _on_player_firepower_firepower_changed(fp: int) -> void:
+	firepower_changed.emit(fp)

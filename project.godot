@@ -35,6 +35,11 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+player=""
+level=""
+
 [gui]
 
 theme/custom="res://assets/themes/ui.tres"
@@ -45,6 +50,7 @@ theme/custom="res://assets/themes/ui.tres"
 2d_physics/layer_2="Enemy"
 2d_physics/layer_3="PlayerBullet"
 2d_physics/layer_4="EnemyBullet"
+2d_physics/layer_5="Firepower"
 
 [physics]
 
