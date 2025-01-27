@@ -9,6 +9,8 @@ var t: float = 0
 
 var audio_player: AudioStreamPlayer2D
 
+@onready var level: Node2D = get_tree().get_first_node_in_group(&"level")
+
 
 func _ready() -> void:
 	if get_child_count() > 0:
@@ -31,7 +33,8 @@ func shoot() -> void:
 	if is_instance_valid(audio_player):
 		audio_player.stream = bullet_.sound
 		audio_player.play()
-	get_tree().current_scene.add_child(bullet_)
+	if is_instance_valid(level):
+		level.add_child(bullet_)
 
 
 func create_bullet() -> Bullet:

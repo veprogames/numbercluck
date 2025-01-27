@@ -39,7 +39,7 @@ spread = 180.0
 initial_velocity_min = 10.0
 initial_velocity_max = 20.0
 gravity = Vector3(0, 0, 0)
-color = Color(1, 1, 1, 0.333333)
+color = Color(1, 1, 1, 0.501961)
 color_ramp = SubResource("GradientTexture1D_imf6t")
 
 [node name="Chicken" type="Area2D"]
@@ -75,11 +75,13 @@ stream = ExtResource("2_7y8jg")
 target = NodePath("..")
 
 [node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("12_a7ipk")]
-amount = 16
+amount = 24
 process_material = SubResource("ParticleProcessMaterial_7t325")
 texture = ExtResource("13_hq8ad")
 lifetime = 0.8
 explosiveness = 0.77
+visibility_rect = Rect2(-115.616, -116.059, 242.424, 223.17)
+local_coords = true
 target = NodePath("..")
 
 [node name="DropFirepowerOnDeath" parent="." node_paths=PackedStringArray("target") instance=ExtResource("14_cit6y")]

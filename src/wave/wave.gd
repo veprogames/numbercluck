@@ -13,6 +13,8 @@ signal finished
 var spawn_points: Array
 var spawn_targets: Array
 
+var finished_spawning: bool = false
+
 
 func _ready() -> void:
 	title_label.text = title
@@ -46,6 +48,10 @@ func start() -> void:
 		if time_between_spawns > 0:
 			spawn_timer.start()
 			await spawn_timer.timeout
+	
+	finished_spawning = true
+	
+	check_for_completion()
 
 
 func spawn(scene: PackedScene, from_pos: Vector2, goto_pos: Vector2 = Vector2.ZERO) -> void:
@@ -55,6 +61,10 @@ func spawn(scene: PackedScene, from_pos: Vector2, goto_pos: Vector2 = Vector2.ZE
 	enemies.add_child(enemy)
 
 
-func _on_enemies_child_exiting_tree(_node: Node) -> void:
-	if enemies.get_child_count() <= 1:
+func check_for_completion() -> void:
+	if enemies.get_child_count() <= 1 and finished_spawning:
 		finished.emit()
+
+
+func _on_enemies_child_exiting_tree(_node: Node) -> void:
+	check_for_completion()

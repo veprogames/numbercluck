@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func _on_target_tree_exiting() -> void:
 	global_position = target.global_position
+	await get_tree().physics_frame
 	emitting = true
 	await finished
 	queue_free()
