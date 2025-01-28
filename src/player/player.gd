@@ -5,10 +5,9 @@ extends Node2D
 signal damaged
 signal firepower_changed(fp: int)
 
-@onready var padding: Vector2 = ($Sprite2D as Sprite2D).texture.get_size() * 1.2
+@onready var visual: Node2D = $Visual
+@onready var padding: Vector2 = ($Visual/Sprite2D as Sprite2D).texture.get_size() * 1.2
 @onready var viewport_rect: Rect2 = get_viewport_rect()
-
-@onready var position0: Vector2 = global_position
 
 @onready var damage_area: Area2D = $DamageArea
 @onready var player_firepower: PlayerFirepower = $PlayerFirepower
@@ -19,6 +18,11 @@ var shield: PlayerShield
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	var tween: Tween = create_tween()
+	tween.tween_property(visual, ^"position:y", 0.0, 1) \
+		.set_ease(Tween.EASE_OUT) \
+		.set_trans(Tween.TRANS_CUBIC)
 	
 	add_shield()
 
@@ -54,7 +58,7 @@ func damage() -> void:
 func add_shield() -> void:
 	var player_shield: PlayerShield = ShieldScene.instantiate() as PlayerShield
 	player_firepower.current_power = maxi(0, player_firepower.current_power - 3)
-	add_child(player_shield)
+	visual.add_child(player_shield)
 	shield = player_shield
 	shield.tree_exited.connect(_on_shield_exited_tree)
 

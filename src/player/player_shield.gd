@@ -16,5 +16,5 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE * (1 + 0.2 * sin(2 + t * TAU) + 0.01 * 16.0 ** t))
+	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE * (1 + 0.2 * sin(2 + t * TAU) + 0.001 * 16.0 ** t))
 	draw_texture(ShieldTexture, -ShieldTexture.get_size() / 2, Color.WHITE * minf(1.0, 1.5 - t / 2))

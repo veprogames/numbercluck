@@ -1,9 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://bw6jtohhj1h22"]
+[gd_scene load_steps=23 format=3 uid="uid://bw6jtohhj1h22"]
 
 [ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="1_abc3k"]
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_hvf25"]
 [ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="2_w7lh4"]
+[ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="5_t5dkk"]
+[ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="6_33my5"]
 [ext_resource type="PackedScene" uid="uid://ds4pn67w135sr" path="res://src/player/player_firepower.tscn" id="6_p02w0"]
+[ext_resource type="AudioStream" uid="uid://dpulhle4ui1pv" path="res://assets/bullets/ion.ogg" id="7_i1w6s"]
 
 [sub_resource type="Gradient" id="Gradient_vrpgn"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 1, 0)
@@ -33,12 +36,69 @@ radius = 76.26
 [sub_resource type="CircleShape2D" id="CircleShape2D_i0pew"]
 radius = 19.06
 
+[sub_resource type="Gradient" id="Gradient_e6yrr"]
+colors = PackedColorArray(0.577008, 0.577008, 0.577008, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_747ng"]
+gradient = SubResource("Gradient_e6yrr")
+
+[sub_resource type="Gradient" id="Gradient_82e5w"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_t06nr"]
+gradient = SubResource("Gradient_82e5w")
+
+[sub_resource type="Curve" id="Curve_7fl2k"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_oesca"]
+curve = SubResource("Curve_7fl2k")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ar6iu"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 64.0
+angle_min = 1.07288e-05
+angle_max = 720.0
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 150.0
+gravity = Vector3(0, -20, 0)
+scale_max = 2.0
+scale_curve = SubResource("CurveTexture_oesca")
+color_ramp = SubResource("GradientTexture1D_t06nr")
+color_initial_ramp = SubResource("GradientTexture1D_747ng")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u1bst"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 32.0
+angle_min = 1.07288e-05
+angle_max = 720.0
+spread = 180.0
+initial_velocity_min = 300.0
+initial_velocity_max = 400.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -200.0
+linear_accel_max = -200.0
+scale_min = 0.5
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_oesca")
+color = Color(1, 0.68, 0.68, 1)
+color_ramp = SubResource("GradientTexture1D_t06nr")
+hue_variation_min = -2.23517e-08
+hue_variation_max = 0.13
+
 [node name="Player" type="Node2D" groups=["player"]]
 z_index = 1
 script = ExtResource("1_hvf25")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(1, 46)
+[node name="Visual" type="Node2D" parent="."]
+position = Vector2(0, 512)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Visual"]
+position = Vector2(0, 46)
 amount = 16
 process_material = SubResource("ParticleProcessMaterial_0y7dx")
 texture = ExtResource("2_w7lh4")
@@ -46,7 +106,7 @@ lifetime = 1.5
 visibility_rect = Rect2(-64, -63.9991, 128, 357.999)
 local_coords = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="Visual"]
 texture = ExtResource("1_abc3k")
 
 [node name="CollectionArea" type="Area2D" parent="."]
@@ -62,6 +122,31 @@ collision_mask = 10
 shape = SubResource("CircleShape2D_i0pew")
 
 [node name="PlayerFirepower" parent="." instance=ExtResource("6_p02w0")]
+
+[node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_t5dkk")]
+z_index = 2
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_ar6iu")
+texture = ExtResource("2_w7lh4")
+lifetime = 2.0
+explosiveness = 0.95
+target = NodePath("..")
+
+[node name="ParticlesOnVanish2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_t5dkk")]
+z_index = 2
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_u1bst")
+texture = ExtResource("2_w7lh4")
+lifetime = 2.0
+explosiveness = 0.95
+trail_enabled = true
+trail_lifetime = 0.5
+target = NodePath("..")
+
+[node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("6_33my5")]
+stream = ExtResource("7_i1w6s")
+pitch_scale = 0.4
+target = NodePath("..")
 
 [connection signal="area_entered" from="CollectionArea" to="." method="_on_collection_area_area_entered"]
 [connection signal="area_entered" from="DamageArea" to="." method="_on_damage_area_area_entered"]

@@ -29,10 +29,6 @@ func _ready() -> void:
 	current_power = min_power
 
 
-func _draw() -> void:
-	draw_texture(PlayerTexture, -PlayerTexture.get_size() / 2)
-
-
 func power_up() -> void:
 	current_power += 1
 

@@ -13,6 +13,7 @@ var lives: int = 3 :
 		lives_changed.emit(l)
 
 @onready var respawn_timer: Timer = $RespawnTimer
+@onready var viewport_rect: Rect2 = get_viewport().get_visible_rect()
 
 const PlayerScene: PackedScene = preload("res://src/player/player.tscn")
 
@@ -45,7 +46,7 @@ func _on_player_damaged() -> void:
 
 func respawn_player() -> Player:
 	var player_: Player = PlayerScene.instantiate()
-	player_.position = Vector2(800, 700)
+	player_.position = viewport_rect.position + viewport_rect.size * Vector2(0.5, 0.9)
 	player_.damaged.connect(_on_player_damaged)
 	add_child(player_)
 	player_spawned.emit(player_)
