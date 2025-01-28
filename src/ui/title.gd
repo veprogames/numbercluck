@@ -3,6 +3,8 @@ extends Label
 
 signal finished
 
+const Scene: PackedScene = preload("res://src/ui/title.tscn")
+
 
 func _ready() -> void:
 	visible_ratio = 0.0
@@ -18,3 +20,9 @@ func start() -> void:
 	await tween.finished
 	finished.emit()
 	queue_free()
+
+
+static func create(with_text: String) -> Title:
+	var title: Title = Scene.instantiate()
+	title.text = with_text
+	return title

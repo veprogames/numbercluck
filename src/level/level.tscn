@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/chicken/chicken.tscn" id="1_uqv8x"]
 [ext_resource type="PackedScene" uid="uid://gefg41lx3axv" path="res://src/wave/enemy_spawn_target.tscn" id="2_271q5"]
 [ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="2_nmdmo"]
-[ext_resource type="PackedScene" uid="uid://bw6jtohhj1h22" path="res://src/player/player.tscn" id="3_a7exo"]
 [ext_resource type="Texture2D" uid="uid://bmun2fmcflmmk" path="res://assets/backgrounds/blue_nebula.png" id="8_a6wcq"]
 [ext_resource type="PackedScene" uid="uid://dr6h7nhhb3ynm" path="res://src/ui/score_counter.tscn" id="9_1w3ay"]
 [ext_resource type="PackedScene" uid="uid://d1hyply7t8dwp" path="res://src/ui/player_ui.tscn" id="10_tb6jf"]
+[ext_resource type="PackedScene" uid="uid://brc3mmjs7pgw8" path="res://src/player/player_state.tscn" id="10_y8hov"]
 
 [node name="Level" type="Node2D" groups=["level"]]
 
@@ -220,9 +220,6 @@ enemy = ExtResource("1_uqv8x")
 position = Vector2(1223, 267)
 enemy = ExtResource("1_uqv8x")
 
-[node name="Player" parent="." instance=ExtResource("3_a7exo")]
-position = Vector2(985, 972)
-
 [node name="CanvasLayerBG" type="CanvasLayer" parent="."]
 layer = -10
 
@@ -240,5 +237,7 @@ stretch_mode = 1
 [node name="ScoreCounter" parent="CanvasLayerUI" node_paths=PackedStringArray("score") instance=ExtResource("9_1w3ay")]
 score = NodePath("../../Score")
 
-[node name="PlayerUI" parent="CanvasLayerUI" node_paths=PackedStringArray("player") instance=ExtResource("10_tb6jf")]
-player = NodePath("../../Player")
+[node name="PlayerUI" parent="CanvasLayerUI" node_paths=PackedStringArray("player_state") instance=ExtResource("10_tb6jf")]
+player_state = NodePath("../../PlayerState")
+
+[node name="PlayerState" parent="." instance=ExtResource("10_y8hov")]

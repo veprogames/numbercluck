@@ -3,6 +3,8 @@ extends Node2D
 
 var t: float = 0
 
+const ShieldTexture: Texture2D = preload("res://assets/player/shield.png")
+
 
 func _process(delta: float) -> void:
 	t += delta
@@ -14,5 +16,5 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	draw_circle(Vector2.ZERO, 100 + 20 * sin(2 + t * TAU) + 16.0 ** t, Color.WHITE, false, 3.0)
-	draw_circle(Vector2.ZERO, 100 + 20 * sin(t * TAU) + 16.0 ** t, Color.WHITE, false, 3.0)
+	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE * (1 + 0.2 * sin(2 + t * TAU) + 0.01 * 16.0 ** t))
+	draw_texture(ShieldTexture, -ShieldTexture.get_size() / 2, Color.WHITE * minf(1.0, 1.5 - t / 2))

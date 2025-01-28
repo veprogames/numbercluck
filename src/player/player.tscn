@@ -1,10 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bw6jtohhj1h22"]
+[gd_scene load_steps=12 format=3 uid="uid://bw6jtohhj1h22"]
 
 [ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="1_abc3k"]
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_hvf25"]
 [ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="2_w7lh4"]
-[ext_resource type="PackedScene" uid="uid://gefg41lx3axv" path="res://src/wave/enemy_spawn_target.tscn" id="3_kpfmw"]
-[ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/chicken/chicken.tscn" id="4_6fh7v"]
 [ext_resource type="PackedScene" uid="uid://ds4pn67w135sr" path="res://src/player/player_firepower.tscn" id="6_p02w0"]
 
 [sub_resource type="Gradient" id="Gradient_vrpgn"]
@@ -62,31 +60,6 @@ collision_mask = 10
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
 shape = SubResource("CircleShape2D_i0pew")
-
-[node name="EnemySpawnTarget" parent="DamageArea" instance=ExtResource("3_kpfmw")]
-process_mode = 0
-position = Vector2(375, 257)
-enemy = ExtResource("4_6fh7v")
-
-[node name="EnemySpawnTarget2" parent="DamageArea" instance=ExtResource("3_kpfmw")]
-process_mode = 0
-position = Vector2(375, 361)
-enemy = ExtResource("4_6fh7v")
-
-[node name="EnemySpawnTarget3" parent="DamageArea" instance=ExtResource("3_kpfmw")]
-process_mode = 0
-position = Vector2(372, 465)
-enemy = ExtResource("4_6fh7v")
-
-[node name="EnemySpawnTarget4" parent="DamageArea" instance=ExtResource("3_kpfmw")]
-process_mode = 0
-position = Vector2(372, 569)
-enemy = ExtResource("4_6fh7v")
-
-[node name="EnemySpawnTarget5" parent="DamageArea" instance=ExtResource("3_kpfmw")]
-process_mode = 0
-position = Vector2(372, 668)
-enemy = ExtResource("4_6fh7v")
 
 [node name="PlayerFirepower" parent="." instance=ExtResource("6_p02w0")]
 

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://brc3mmjs7pgw8"]
+
+[ext_resource type="Script" path="res://src/player/player_state.gd" id="1_7e6c7"]
+
+[node name="PlayerState" type="Node" groups=["player_state"]]
+script = ExtResource("1_7e6c7")
+
+[node name="RespawnTimer" type="Timer" parent="."]
+
+[connection signal="game_over" from="." to="." method="_on_game_over"]

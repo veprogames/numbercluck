@@ -2,7 +2,7 @@
 class_name Player
 extends Node2D
 
-signal lives_changed(lives: int)
+signal damaged
 signal firepower_changed(fp: int)
 
 @onready var padding: Vector2 = ($Sprite2D as Sprite2D).texture.get_size() * 1.2
@@ -15,15 +15,12 @@ signal firepower_changed(fp: int)
 
 var ShieldScene: PackedScene = preload("res://src/player/player_shield.tscn")
 
-var lives: int = 3 :
-	set(l):
-		lives = l
-		lives_changed.emit(l)
-
 var shield: PlayerShield
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	
+	add_shield()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -51,12 +48,7 @@ func _on_shield_exited_tree() -> void:
 
 
 func damage() -> void:
-	position = position0
-	lives -= 1
-	add_shield()
-
-	if lives <= 0:
-		queue_free()
+	damaged.emit()
 
 
 func add_shield() -> void:
