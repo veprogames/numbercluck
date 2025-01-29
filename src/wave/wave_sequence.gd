@@ -5,8 +5,6 @@ signal finished
 
 var waves: Array[Wave]
 
-@onready var title: Title = $Title
-
 
 func _ready() -> void:
 	for child: Node in get_children():
@@ -26,9 +24,13 @@ func _ready() -> void:
 	)
 	
 	waves[0].start()
+	
+	finished.connect(_on_finished)
 
 
 func _on_finished() -> void:
+	var title: Title = Title.create("Mission Complete!")
+	add_child(title)
 	title.start()
 	await title.finished
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://src/mission_selection/mission_selection.tscn")

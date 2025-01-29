@@ -86,4 +86,8 @@ func _on_game_over() -> void:
 	add_child(title)
 	title.start()
 	await title.finished
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://src/mission_selection/mission_selection.tscn")
+
+
+func _on_tree_exited() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

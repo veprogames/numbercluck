@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=3 format=3 uid="uid://bbquhfvixusbv"]
+
+[ext_resource type="Script" path="res://src/mission/mission_definition.gd" id="1_rfkd4"]
+[ext_resource type="PackedScene" uid="uid://c5p8rgkvethjf" path="res://src/wave/sequences/example_mission_sequence.tscn" id="2_7vp7o"]
+
+[resource]
+script = ExtResource("1_rfkd4")
+title = "Example Mission"
+wave_sequence = ExtResource("2_7vp7o")

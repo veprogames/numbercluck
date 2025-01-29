@@ -51,7 +51,8 @@ func start() -> void:
 	
 	finished_spawning = true
 	
-	check_for_completion()
+	if enemies.get_child_count() == 0:
+		check_for_completion()
 
 
 func spawn(scene: PackedScene, from_pos: Vector2, goto_pos: Vector2 = Vector2.ZERO) -> void:

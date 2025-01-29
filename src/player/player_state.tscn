@@ -9,3 +9,4 @@ script = ExtResource("1_7e6c7")
 wait_time = 2.0
 
 [connection signal="game_over" from="." to="." method="_on_game_over"]
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

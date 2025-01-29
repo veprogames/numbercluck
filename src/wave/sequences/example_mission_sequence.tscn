@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5p8rgkvethjf"]
+
+[ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_fo7ve"]
+[ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="1_oich7"]
+[ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="2_xmn0u"]
+[ext_resource type="PackedScene" uid="uid://gefg41lx3axv" path="res://src/wave/enemy_spawn_target.tscn" id="3_ljnwi"]
+[ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/chicken/chicken.tscn" id="4_g3wuq"]
+
+[node name="ExampleMissionSequence" type="Node"]
+script = ExtResource("1_fo7ve")
+
+[node name="Wave" parent="." instance=ExtResource("1_oich7")]
+title = "First Contact"
+
+[node name="EnemySpawnPoint" parent="Wave" instance=ExtResource("2_xmn0u")]
+position = Vector2(976, -221)
+
+[node name="EnemySpawnTarget" parent="Wave" instance=ExtResource("3_ljnwi")]
+position = Vector2(977, 265)
+enemy = ExtResource("4_g3wuq")
+
+[node name="Wave2" parent="." instance=ExtResource("1_oich7")]
+title = "Second Contact"
+
+[node name="EnemySpawnPoint" parent="Wave2" instance=ExtResource("2_xmn0u")]
+position = Vector2(976, -221)
+
+[node name="EnemySpawnTarget" parent="Wave2" instance=ExtResource("3_ljnwi")]
+position = Vector2(977, 265)
+enemy = ExtResource("4_g3wuq")
+
+[node name="EnemySpawnTarget2" parent="Wave2" instance=ExtResource("3_ljnwi")]
+position = Vector2(810, 180)
+enemy = ExtResource("4_g3wuq")
+
+[node name="EnemySpawnTarget3" parent="Wave2" instance=ExtResource("3_ljnwi")]
+position = Vector2(1138, 191)
+enemy = ExtResource("4_g3wuq")

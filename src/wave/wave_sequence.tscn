@@ -1,12 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bars4af1kns8g"]
+[gd_scene load_steps=2 format=3 uid="uid://bars4af1kns8g"]
 
 [ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_ay2xq"]
-[ext_resource type="PackedScene" uid="uid://cj05g7lk37njy" path="res://src/ui/title.tscn" id="2_u34gp"]
 
 [node name="WaveSequence" type="Node"]
 script = ExtResource("1_ay2xq")
-
-[node name="Title" parent="." instance=ExtResource("2_u34gp")]
-text = "Mission Complete!"
 
 [connection signal="finished" from="." to="." method="_on_finished"]
