@@ -15,10 +15,7 @@ func _ready() -> void:
 
 
 func get_drop_chance() -> float:
-	var player: Player = player_state.get_player()
-	if is_instance_valid(player):
-		return 0.1 / (10.0 + player.get_firepower()) * chance_multi
-	return 0.0
+	return 0.1 / (10.0 + player_state.firepower) * chance_multi
 
 
 func _on_target_exiting_tree() -> void:

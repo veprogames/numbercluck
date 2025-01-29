@@ -104,5 +104,13 @@ rotation = -1.309
 bullet = ExtResource("3_arnuf")
 interval = 0.5
 
+[node name="5" type="Node2D" parent="Levels"]
+
+[node name="BulletPodPlayer" parent="Levels/5" instance=ExtResource("2_7i3ou")]
+position = Vector2(0, -44)
+rotation = -1.5708
+bullet = ExtResource("3_arnuf")
+interval = 0.083
+
 [node name="HelperSprite" type="Sprite2D" parent="."]
 texture = ExtResource("4_icjx3")

@@ -150,4 +150,3 @@ target = NodePath("..")
 
 [connection signal="area_entered" from="CollectionArea" to="." method="_on_collection_area_area_entered"]
 [connection signal="area_entered" from="DamageArea" to="." method="_on_damage_area_area_entered"]
-[connection signal="firepower_changed" from="PlayerFirepower" to="." method="_on_player_firepower_firepower_changed"]

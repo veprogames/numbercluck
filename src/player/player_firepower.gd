@@ -13,11 +13,6 @@ var current_power: int = 0 :
 		load_firepower(power)
 		firepower_changed.emit(power)
 
-var min_power: int = 0
-var max_power: int = 5
-
-var PlayerTexture: Texture2D = preload("res://assets/player/spaceship.png")
-
 
 func _ready() -> void:
 	helper_sprite.queue_free()
@@ -26,15 +21,11 @@ func _ready() -> void:
 		firepower_level_nodes.append(node)
 		levels.remove_child(node)
 	
-	current_power = min_power
+	current_power = 0
 
 
 func power_up() -> void:
 	current_power += 1
-
-
-func get_effective_firepower() -> int:
-	return mini(current_power, max_power)
 
 
 func load_firepower(level: int) -> void:

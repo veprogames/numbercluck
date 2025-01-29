@@ -7,8 +7,8 @@ func _ready() -> void:
 	
 	t = 1
 	
-	if Input.is_action_pressed(&"player_shoot"):
-		super.shoot()
+	#if Input.is_action_pressed(&"player_shoot"):
+	#	super.shoot()
 
 
 func _physics_process(delta: float) -> void:

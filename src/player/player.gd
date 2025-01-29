@@ -2,8 +2,8 @@
 class_name Player
 extends Node2D
 
+signal firepower_collected
 signal damaged
-signal firepower_changed(fp: int)
 
 @onready var visual: Node2D = $Visual
 @onready var padding: Vector2 = ($Visual/Sprite2D as Sprite2D).texture.get_size() * 1.2
@@ -63,22 +63,6 @@ func add_shield() -> void:
 	shield.tree_exited.connect(_on_shield_exited_tree)
 
 
-func get_firepower() -> int:
-	return player_firepower.current_power
-
-
-func get_effective_firepower() -> int:
-	return player_firepower.get_effective_firepower()
-
-
-func get_excessive_firepower() -> int:
-	return get_firepower() - get_effective_firepower()
-
-
 func _on_collection_area_area_entered(area: Area2D) -> void:
 	if area is Firepower:
-		player_firepower.power_up()
-
-
-func _on_player_firepower_firepower_changed(fp: int) -> void:
-	firepower_changed.emit(fp)
+		firepower_collected.emit()
