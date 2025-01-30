@@ -20,8 +20,8 @@ var firepower: int = 0 :
 			player.player_firepower.current_power = fp
 		firepower_changed.emit(fp)
 
-var starting_firepower: int = 0
-var max_firepower: int = 5
+var min_firepower: int = int(Game.upgrades.min_firepower.get_effect())
+var max_firepower: int = int(Game.upgrades.max_firepower.get_effect())
 
 @onready var respawn_timer: Timer = $RespawnTimer
 @onready var viewport_rect: Rect2 = get_viewport().get_visible_rect()
@@ -31,6 +31,7 @@ const PlayerScene: PackedScene = preload("res://src/player/player.tscn")
 
 func _ready() -> void:
 	player = respawn_player()
+	firepower = min_firepower
 
 
 func get_player() -> Player:
@@ -55,6 +56,7 @@ func _on_player_damaged() -> void:
 	lives -= 1
 	@warning_ignore("integer_division")
 	firepower = maxi(firepower / 2, firepower - 3)
+	firepower = maxi(firepower, min_firepower)
 	player.damaged.disconnect(_on_player_damaged)
 	player.firepower_collected.disconnect(_on_player_firepower_collected)
 	player.queue_free()
