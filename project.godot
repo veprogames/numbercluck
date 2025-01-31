@@ -54,6 +54,10 @@ player_shoot={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://assets/locale/locale.en.translation", "res://assets/locale/locale.de.translation")
+
 [layer_names]
 
 2d_physics/layer_1="Player"

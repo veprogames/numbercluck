@@ -4,6 +4,8 @@ extends Node
 static var saved_score: float = 0.0
 static var upgrades: ContentUpgrades = ContentUpgrades.new()
 
+static var settings: GameSettings = GameSettings.new()
+
 static var SAVE_PATH: String = "user://game.save"
 
 static func save_game() -> void:
@@ -12,6 +14,9 @@ static func save_game() -> void:
 		"upgrades": {
 			"min_firepower": upgrades.min_firepower.level,
 			"max_firepower": upgrades.max_firepower.level,
+		},
+		"settings": {
+			"locale": settings.locale
 		}
 	}
 	
@@ -41,3 +46,4 @@ static func load_game() -> void:
 	Game.saved_score = data.saved_score
 	Game.upgrades.min_firepower.level = data.upgrades.min_firepower
 	Game.upgrades.max_firepower.level = data.upgrades.max_firepower
+	Game.settings.locale = data.settings.locale

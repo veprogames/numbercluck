@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvv1p7lfkb6sd"]
+[gd_scene load_steps=4 format=3 uid="uid://dvv1p7lfkb6sd"]
 
 [ext_resource type="Script" path="res://src/main_menu/main_menu.gd" id="1_miujf"]
 [ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_ohl4x"]
+[ext_resource type="PackedScene" uid="uid://d2aq0bqjmo40f" path="res://src/ui/language_button.tscn" id="3_85dq7"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_miujf")
@@ -37,19 +38,19 @@ grow_vertical = 2
 
 [node name="ButtonMissions" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "Missions"
+text = "menu.missions"
 
 [node name="ButtonShop" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "Shop"
+text = "menu.upgrades"
 
 [node name="ButtonQuit" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "Quit"
+text = "menu.quit"
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "Support the Original:"
+text = "menu.support_the_original"
 horizontal_alignment = 1
 
 [node name="ButtonIA" type="Button" parent="CanvasLayer/VBoxContainer"]
@@ -59,6 +60,14 @@ text = "interactionstudios.com"
 [node name="ButtonIASteam" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "iA on Steam"
+
+[node name="LanguageButton" parent="CanvasLayer" instance=ExtResource("3_85dq7")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -16.0
+offset_bottom = 0.0
+grow_vertical = 0
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonMissions" to="." method="_on_button_missions_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonShop" to="." method="_on_button_shop_pressed"]

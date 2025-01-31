@@ -29,7 +29,7 @@ func _ready() -> void:
 
 
 func _on_finished() -> void:
-	var title: Title = Title.create("Mission Complete!")
+	var title: Title = Title.create("mission.win")
 	add_child(title)
 	title.start()
 	await title.finished

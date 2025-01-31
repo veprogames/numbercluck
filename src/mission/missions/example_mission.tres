@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource("1_rfkd4")
-title = "Example Mission"
+title = "missions.0"
 wave_sequence = ExtResource("2_7vp7o")

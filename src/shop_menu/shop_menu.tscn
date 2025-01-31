@@ -16,7 +16,7 @@ offset_bottom = 1024.0
 [node name="ButtonMainMenu" type="Button" parent="CanvasLayer"]
 offset_right = 16.0
 offset_bottom = 16.0
-text = "Main Menu"
+text = "menu.main_menu"
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 15

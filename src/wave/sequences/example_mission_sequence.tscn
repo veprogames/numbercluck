@@ -10,7 +10,7 @@
 script = ExtResource("1_fo7ve")
 
 [node name="Wave" parent="." instance=ExtResource("1_oich7")]
-title = "First Contact"
+title = "wave.first_contact"
 
 [node name="EnemySpawnPoint" parent="Wave" instance=ExtResource("2_xmn0u")]
 position = Vector2(976, -221)

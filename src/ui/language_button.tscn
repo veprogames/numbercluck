@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2aq0bqjmo40f"]
+
+[ext_resource type="Script" path="res://src/ui/language_button.gd" id="1_o0cud"]
+
+[node name="LanguageButton" type="Button"]
+offset_right = 16.0
+offset_bottom = 16.0
+script = ExtResource("1_o0cud")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
