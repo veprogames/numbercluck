@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ds4pn67w135sr"]
+[gd_scene load_steps=6 format=3 uid="uid://ds4pn67w135sr"]
 
 [ext_resource type="Script" path="res://src/player/player_firepower.gd" id="1_dsrc6"]
 [ext_resource type="PackedScene" uid="uid://ba5kipctklev" path="res://src/weapon/bullet_pod_player.tscn" id="2_7i3ou"]
+[ext_resource type="Script" path="res://src/player/player_firepower_level_tool.gd" id="2_guvqg"]
 [ext_resource type="PackedScene" uid="uid://d1x18syexiisp" path="res://src/bullet/ion_bullet.tscn" id="3_arnuf"]
 [ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="4_icjx3"]
 
@@ -11,6 +12,7 @@ script = ExtResource("1_dsrc6")
 [node name="Levels" type="Node2D" parent="."]
 
 [node name="0" type="Node2D" parent="Levels"]
+script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/0" instance=ExtResource("2_7i3ou")]
 position = Vector2(0, -44)
@@ -19,6 +21,7 @@ bullet = ExtResource("3_arnuf")
 interval = 0.5
 
 [node name="1" type="Node2D" parent="Levels"]
+script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/1" instance=ExtResource("2_7i3ou")]
 position = Vector2(-26, -25)
@@ -33,6 +36,7 @@ bullet = ExtResource("3_arnuf")
 interval = 0.5
 
 [node name="2" type="Node2D" parent="Levels"]
+script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer3" parent="Levels/2" instance=ExtResource("2_7i3ou")]
 position = Vector2(0, -44)
@@ -53,6 +57,7 @@ bullet = ExtResource("3_arnuf")
 interval = 0.5
 
 [node name="3" type="Node2D" parent="Levels"]
+script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer3" parent="Levels/3" instance=ExtResource("2_7i3ou")]
 position = Vector2(0, -44)
@@ -73,6 +78,7 @@ bullet = ExtResource("3_arnuf")
 interval = 0.5
 
 [node name="4" type="Node2D" parent="Levels"]
+script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer3" parent="Levels/4" instance=ExtResource("2_7i3ou")]
 position = Vector2(-26, -25)
@@ -105,6 +111,7 @@ bullet = ExtResource("3_arnuf")
 interval = 0.5
 
 [node name="5" type="Node2D" parent="Levels"]
+script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/5" instance=ExtResource("2_7i3ou")]
 position = Vector2(0, -44)
