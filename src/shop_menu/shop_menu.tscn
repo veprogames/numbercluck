@@ -1,13 +1,15 @@
 [gd_scene load_steps=4 format=3 uid="uid://1ty4ejmxyogj"]
 
 [ext_resource type="Script" path="res://src/shop_menu/shop_menu.gd" id="1_c8stv"]
-[ext_resource type="PackedScene" uid="uid://fkm4605pjvfr" path="res://src/ui/game_background.tscn" id="2_sfooa"]
+[ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_7sj2y"]
 [ext_resource type="PackedScene" uid="uid://8v1xjxdn6brq" path="res://src/ui/upgrade_card.tscn" id="2_wdcmq"]
 
 [node name="ShopMenu" type="Node2D"]
 script = ExtResource("1_c8stv")
 
-[node name="GameBackground" parent="." instance=ExtResource("2_sfooa")]
+[node name="ScrollingBackground" parent="." instance=ExtResource("2_7sj2y")]
+offset_right = 1024.0
+offset_bottom = 1024.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

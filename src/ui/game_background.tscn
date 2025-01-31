@@ -1,10 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://fkm4605pjvfr"]
+[gd_scene load_steps=3 format=3 uid="uid://d7scecsob300"]
 
-[ext_resource type="Script" path="res://src/ui/game_background.gd" id="1_en2ml"]
 [ext_resource type="Texture2D" uid="uid://bmun2fmcflmmk" path="res://assets/backgrounds/blue_nebula.png" id="1_hkxin"]
 
+[sub_resource type="GDScript" id="GDScript_u8gjh"]
+script/source = "class_name GameBackground
+extends ParallaxBackground
+
+@onready var parallax_layer: ParallaxLayer = $ParallaxLayer
+
+func _ready() -> void:
+	parallax_layer.motion_offset.y = get_yscroll()
+	
+
+func _process(_delta: float) -> void:
+	parallax_layer.motion_offset.y = get_yscroll()
+
+
+func get_yscroll() -> float:
+	return Time.get_ticks_msec() * 0.05
+"
+
 [node name="GameBackground" type="ParallaxBackground"]
-script = ExtResource("1_en2ml")
+script = SubResource("GDScript_u8gjh")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(2048, 2048)

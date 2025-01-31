@@ -1,14 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfb6h3vaxsoo0"]
 
 [ext_resource type="Script" path="res://src/mission_selection/mission_selection.gd" id="1_oeulx"]
-[ext_resource type="PackedScene" uid="uid://fkm4605pjvfr" path="res://src/ui/game_background.tscn" id="2_qie0l"]
 [ext_resource type="PackedScene" uid="uid://4tr0q6ojfdge" path="res://src/mission_selection/mission_button.tscn" id="2_ucfnq"]
+[ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_xwkgo"]
 [ext_resource type="Resource" uid="uid://bbquhfvixusbv" path="res://src/mission/missions/example_mission.tres" id="3_nao0i"]
 
 [node name="MissionSelection" type="Node2D"]
 script = ExtResource("1_oeulx")
 
-[node name="GameBackground" parent="." instance=ExtResource("2_qie0l")]
+[node name="ScrollingBackground" parent="." instance=ExtResource("2_xwkgo")]
+offset_right = 1024.0
+offset_bottom = 1024.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
