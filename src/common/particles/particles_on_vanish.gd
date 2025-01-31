@@ -3,9 +3,13 @@ extends GPUParticles2D
 
 @export var target: Node2D
 
+@onready var tree: SceneTree = get_tree()
+
 
 func _ready() -> void:
-	reparent.call_deferred(get_tree().current_scene)
+	var effect_container: Node = get_tree().get_first_node_in_group(&"effect_container")
+	if is_instance_valid(effect_container):
+		reparent.call_deferred(effect_container)
 	
 	emitting = false
 	
@@ -14,8 +18,12 @@ func _ready() -> void:
 
 func _on_target_tree_exiting() -> void:
 	global_position = target.global_position
-	if get_tree():
-		await get_tree().physics_frame
+	if is_instance_valid(tree):
+		await tree.physics_frame
+	_start_emitting.call_deferred()
+
+
+func _start_emitting() -> void:
 	emitting = true
 	await finished
 	queue_free()

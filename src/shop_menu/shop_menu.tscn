@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://1ty4ejmxyogj"]
+[gd_scene load_steps=4 format=3 uid="uid://1ty4ejmxyogj"]
 
 [ext_resource type="Script" path="res://src/shop_menu/shop_menu.gd" id="1_c8stv"]
+[ext_resource type="PackedScene" uid="uid://fkm4605pjvfr" path="res://src/ui/game_background.tscn" id="2_sfooa"]
 [ext_resource type="PackedScene" uid="uid://8v1xjxdn6brq" path="res://src/ui/upgrade_card.tscn" id="2_wdcmq"]
 
 [node name="ShopMenu" type="Node2D"]
 script = ExtResource("1_c8stv")
+
+[node name="GameBackground" parent="." instance=ExtResource("2_sfooa")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -13,17 +16,32 @@ offset_right = 16.0
 offset_bottom = 16.0
 text = "Main Menu"
 
-[node name="UpgradeCard" parent="CanvasLayer" instance=ExtResource("2_wdcmq")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -18.5
-offset_top = -57.0
-offset_right = 18.5
-offset_bottom = 57.0
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 128
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/h_separation = 64
+theme_override_constants/v_separation = 64
+columns = 2
+
+[node name="UpgradeCardMinFirepower" parent="CanvasLayer/MarginContainer2/GridContainer" instance=ExtResource("2_wdcmq")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="UpgradeCardMaxFirepower" parent="CanvasLayer/MarginContainer2/GridContainer" instance=ExtResource("2_wdcmq")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
 
 [connection signal="pressed" from="CanvasLayer/ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]

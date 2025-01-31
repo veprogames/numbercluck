@@ -2,6 +2,7 @@ class_name PlayerState
 extends Node
 
 signal player_spawned(player: Player)
+signal player_damaged
 signal lives_changed(lives: int)
 signal firepower_changed(fp: int)
 signal game_over
@@ -54,6 +55,7 @@ func get_excessive_firepower() -> int:
 
 func _on_player_damaged() -> void:
 	lives -= 1
+	player_damaged.emit()
 	@warning_ignore("integer_division")
 	firepower = maxi(firepower / 2, firepower - 3)
 	firepower = maxi(firepower, min_firepower)

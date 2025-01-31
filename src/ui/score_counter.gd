@@ -11,4 +11,4 @@ func _ready() -> void:
 
 
 func _on_score_changed(new_score: float) -> void:
-	label.text = "%.0f" % new_score
+	label.text = F.t(new_score)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://fkm4605pjvfr"]
+
+[ext_resource type="Script" path="res://src/ui/game_background.gd" id="1_en2ml"]
+[ext_resource type="Texture2D" uid="uid://bmun2fmcflmmk" path="res://assets/backgrounds/blue_nebula.png" id="1_hkxin"]
+
+[node name="GameBackground" type="ParallaxBackground"]
+script = ExtResource("1_en2ml")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(2048, 2048)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxLayer"]
+offset_right = 1024.0
+offset_bottom = 1024.0
+scale = Vector2(2, 2)
+texture = ExtResource("1_hkxin")
+stretch_mode = 1
