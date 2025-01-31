@@ -29,6 +29,7 @@ func _ready() -> void:
 
 
 func _on_finished() -> void:
+	Events.mission_completed.emit()
 	var title: Title = Title.create("mission.win")
 	add_child(title)
 	title.start()

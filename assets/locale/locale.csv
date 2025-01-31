@@ -11,3 +11,6 @@ menu.main_menu,Main Menu,Menü
 mission.game_over,Game Over!,Game Over!
 mission.win,Mission Complete!,Mission Geschafft!
 menu.language,Language,Sprache
+help.upgrades,Successfully finish Missions to get save more score. Spend them here for Upgrades!,"Schließe erfolgreich Missionen ab, um Punkte zu sammeln und hier Verbesserungen zu kaufen!"
+currency.score,Score,Punkte
+delimiter.thousand,",",.

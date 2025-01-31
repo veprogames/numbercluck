@@ -1,7 +1,11 @@
 class_name Game
 extends Node
 
-static var saved_score: float = 0.0
+static var saved_score: float = 0.0 :
+	set(score):
+		saved_score = score
+		Events.saved_score_changed.emit(score)
+
 static var upgrades: ContentUpgrades = ContentUpgrades.new()
 
 static var settings: GameSettings = GameSettings.new()

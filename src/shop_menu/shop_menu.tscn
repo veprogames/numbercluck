@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://1ty4ejmxyogj"]
+[gd_scene load_steps=5 format=3 uid="uid://1ty4ejmxyogj"]
 
 [ext_resource type="Script" path="res://src/shop_menu/shop_menu.gd" id="1_c8stv"]
 [ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_7sj2y"]
 [ext_resource type="PackedScene" uid="uid://8v1xjxdn6brq" path="res://src/ui/upgrade_card.tscn" id="2_wdcmq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pnl8r"]
+font_size = 72
 
 [node name="ShopMenu" type="Node2D"]
 script = ExtResource("1_c8stv")
@@ -30,18 +33,31 @@ theme_override_constants/margin_top = 128
 theme_override_constants/margin_right = 128
 theme_override_constants/margin_bottom = 128
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer2"]
+layout_mode = 2
+
+[node name="LabelSavedScore" type="Label" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_pnl8r")
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "help.upgrades"
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/h_separation = 64
 theme_override_constants/v_separation = 64
 columns = 2
 
-[node name="UpgradeCardMinFirepower" parent="CanvasLayer/MarginContainer2/GridContainer" instance=ExtResource("2_wdcmq")]
+[node name="UpgradeCardMinFirepower" parent="CanvasLayer/MarginContainer2/VBoxContainer/GridContainer" instance=ExtResource("2_wdcmq")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="UpgradeCardMaxFirepower" parent="CanvasLayer/MarginContainer2/GridContainer" instance=ExtResource("2_wdcmq")]
+[node name="UpgradeCardMaxFirepower" parent="CanvasLayer/MarginContainer2/VBoxContainer/GridContainer" instance=ExtResource("2_wdcmq")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
