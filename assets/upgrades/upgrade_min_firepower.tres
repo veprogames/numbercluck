@@ -14,6 +14,7 @@ formula = "2500000 * 1.35 ** x"
 [resource]
 script = ExtResource("1_xt0km")
 title = "Minimum Firepower"
+description = "Your Firepower starts at and can't fall below $$effect$$."
 price_formula = SubResource("Resource_pakew")
 effect_formula = SubResource("Resource_1bji5")
 max_level = -1

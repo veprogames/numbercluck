@@ -3,6 +3,7 @@ extends PanelContainer
 
 @onready var label_title: Label = %LabelTitle
 @onready var button_buy: Button = %ButtonBuy
+@onready var label_description: RichTextLabel = %LabelDescription
 
 var upgrade: Upgrade :
 	set(upg):
@@ -15,6 +16,8 @@ var upgrade: Upgrade :
 
 func update_ui() -> void:
 	label_title.text = upgrade.definition.title
+	label_description.text = tr(upgrade.definition.description) \
+		.replace("$$effect$$", "[color=lime]%s[/color]" % F.t(upgrade.get_effect()))
 	button_buy.text = F.t(upgrade.get_price())
 
 

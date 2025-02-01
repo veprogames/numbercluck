@@ -15,7 +15,20 @@ layout_mode = 2
 [node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "title"
+text = "Title"
+
+[node name="LabelDescription" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+text = "Description sdasdasdasd"
+fit_content = true
+scroll_active = false
+drag_and_drop_selection_enabled = false
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="ButtonBuy" type="Button" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

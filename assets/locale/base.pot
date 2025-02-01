@@ -110,8 +110,16 @@ msgstr ""
 msgid "Minimum Firepower"
 msgstr ""
 
+#: assets/upgrades/upgrade_min_firepower.tres
+msgid "Your Firepower starts at and can't fall below $$effect$$."
+msgstr ""
+
 #: assets/upgrades/upgrade_max_firepower.tres
 msgid "Maximum Firepower"
+msgstr ""
+
+#: assets/upgrades/upgrade_max_firepower.tres
+msgid "Your Firepower is capped at $$effect$$. You can collect more, but your damage won't increase."
 msgstr ""
 
 #: assets/missions/mission_a_new_beginning.tres

@@ -20,11 +20,11 @@ shadow_color = Color(0.00392157, 0.0705882, 0.34902, 0.313726)
 shadow_size = 8
 
 [sub_resource type="LabelSettings" id="LabelSettings_ys3ty"]
-font_size = 42
+font_size = 56
 
 [node name="ScoreCounter" type="Panel"]
-offset_right = 615.0
-offset_bottom = 64.0
+offset_right = 450.0
+offset_bottom = 80.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6ff1r")
 script = ExtResource("2_eg0ep")
 

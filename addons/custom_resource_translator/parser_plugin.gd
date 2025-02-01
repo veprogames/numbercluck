@@ -10,6 +10,7 @@ func _parse_file(path: String, msgids: Array[String], msgids_context_plural: Arr
 	if res is UpgradeDefinition:
 		var def: UpgradeDefinition = res as UpgradeDefinition
 		msgids.append(def.title)
+		msgids.append(def.description)
 	
 	if res is MissionDefinition:
 		var def: MissionDefinition = res as MissionDefinition

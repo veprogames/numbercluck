@@ -17,8 +17,10 @@ offset_bottom = 1024.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ButtonMainMenu" type="Button" parent="CanvasLayer"]
-offset_right = 16.0
-offset_bottom = 16.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 141.0
+offset_bottom = 87.0
 text = "Main Menu"
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]

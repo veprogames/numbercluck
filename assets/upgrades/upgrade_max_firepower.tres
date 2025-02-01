@@ -14,6 +14,7 @@ formula = "500000 * 1.35 ** x"
 [resource]
 script = ExtResource("1_5c7id")
 title = "Maximum Firepower"
+description = "Your Firepower is capped at $$effect$$. You can collect more, but your damage won't increase."
 price_formula = SubResource("Resource_pjerm")
 effect_formula = SubResource("Resource_ldkpc")
 max_level = -1

@@ -116,9 +116,22 @@ msgstr "Zeig ihm wer der Boss ist!"
 msgid "Minimum Firepower"
 msgstr "Minimale Feuerkraft"
 
+#: assets/upgrades/upgrade_min_firepower.tres
+msgid "Your Firepower starts at and can't fall below $$effect$$."
+msgstr ""
+"Du startest mit $$effect$$ Feuerkraft und kannst nicht darunter fallen."
+
 #: assets/upgrades/upgrade_max_firepower.tres
 msgid "Maximum Firepower"
 msgstr "Maximale Feuerkraft"
+
+#: assets/upgrades/upgrade_max_firepower.tres
+msgid ""
+"Your Firepower is capped at $$effect$$. You can collect more, but your "
+"damage won't increase."
+msgstr ""
+"Deine Feuerkraft ist auf $$effect$$ limitiert. Du kannst zwar mehr "
+"Feuerkraft sammeln, aber dein Schaden wird nicht weiter erhöht."
 
 #: assets/missions/mission_a_new_beginning.tres
 msgid "A new Beginning"

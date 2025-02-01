@@ -7,6 +7,7 @@ var current: String :
 		if not is_node_ready():
 			await ready
 		TranslationServer.set_locale(locale)
+		Game.settings.locale = locale
 		Game.save_game()
 		match locale:
 			"en_US":
