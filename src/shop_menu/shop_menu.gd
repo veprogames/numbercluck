@@ -12,7 +12,7 @@ func _ready() -> void:
 	
 	label_saved_score.text = "%s: %s" % [tr("Score"), F.t(Game.saved_score)]
 	Events.saved_score_changed.connect(func(score: float) -> void:
-		label_saved_score.text = "%s: %s" % [tr("Score"), F.t(Game.saved_score)]
+		label_saved_score.text = "%s: %s" % [tr("Score"), F.t(score)]
 	)
 
 

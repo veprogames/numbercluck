@@ -132,6 +132,10 @@ msgstr "Sprache"
 msgid "Unknown Language"
 msgstr "Unbekannte Sprache"
 
+#: src/wave/wave_sequence.gd
+msgid "Mission Complete!"
+msgstr "Mission geschafft!"
+
 #: src/shop_menu/shop_menu.gd
 msgid "Score"
 msgstr "Punkte"
