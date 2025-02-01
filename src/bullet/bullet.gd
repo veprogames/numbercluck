@@ -21,6 +21,7 @@ extends Area2D
 
 
 func _ready() -> void:
+	collision_priority = 2
 	area_entered.connect(_on_area_entered)
 
 

@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvv1p7lfkb6sd"]
+[gd_scene load_steps=6 format=3 uid="uid://dvv1p7lfkb6sd"]
 
 [ext_resource type="Script" path="res://src/main_menu/main_menu.gd" id="1_miujf"]
 [ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_ohl4x"]
 [ext_resource type="PackedScene" uid="uid://d2aq0bqjmo40f" path="res://src/ui/language_button.tscn" id="3_85dq7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ya86g"]
+font_size = 144
+
+[sub_resource type="LabelSettings" id="LabelSettings_ledtl"]
+font_size = 72
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_miujf")
@@ -21,7 +27,21 @@ offset_left = -86.0
 offset_right = 86.0
 offset_bottom = 47.0
 grow_horizontal = 2
-text = "Chicken Invaders?"
+text = "Chicken Invaders"
+label_settings = SubResource("LabelSettings_ya86g")
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -106.0
+offset_top = 150.0
+offset_right = 106.0
+offset_bottom = 254.0
+grow_horizontal = 2
+text = "Fanmade"
+label_settings = SubResource("LabelSettings_ledtl")
+horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8

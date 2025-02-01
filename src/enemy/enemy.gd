@@ -3,6 +3,7 @@ extends Area2D
 
 signal damaged
 
+@export var score: float
 @export var max_hp: float
 @onready var hp: float = max_hp
 
@@ -36,6 +37,9 @@ func _physics_process(delta: float) -> void:
 
 
 func damage(amount: float) -> void:
+	if hp <= 0:
+		return
+	
 	damaged.emit()
 	hp -= amount
 	if hp <= 0:
@@ -46,10 +50,6 @@ func damage(amount: float) -> void:
 func move_to_target_position(target: Vector2) -> void:
 	moving_to_target = true
 	moving_to_target_pos = target
-
-
-func get_score() -> float:
-	return 1000 * (max_hp / 100) ** 1.3
 
 
 func _on_area_entered(area: Area2D) -> void:

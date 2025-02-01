@@ -46,6 +46,7 @@ color_ramp = SubResource("GradientTexture1D_imf6t")
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_65cjs")
+score = 1000.0
 max_hp = 100.0
 
 [node name="ChickenBody" parent="." instance=ExtResource("2_mphgy")]

@@ -7,6 +7,9 @@ signal lives_changed(lives: int)
 signal firepower_changed(fp: int)
 signal game_over
 
+@onready var respawn_timer: Timer = $RespawnTimer
+@onready var viewport_rect: Rect2 = get_viewport().get_visible_rect()
+
 var player: Player
 
 var lives: int = 3 :
@@ -24,8 +27,7 @@ var firepower: int = 0 :
 var min_firepower: int = int(Game.upgrades.min_firepower.get_effect())
 var max_firepower: int = int(Game.upgrades.max_firepower.get_effect())
 
-@onready var respawn_timer: Timer = $RespawnTimer
-@onready var viewport_rect: Rect2 = get_viewport().get_visible_rect()
+var mission_completed: bool = false
 
 const PlayerScene: PackedScene = preload("res://src/player/player.tscn")
 
@@ -33,6 +35,9 @@ const PlayerScene: PackedScene = preload("res://src/player/player.tscn")
 func _ready() -> void:
 	player = respawn_player()
 	firepower = min_firepower
+	Events.mission_completed.connect(func() -> void:
+		mission_completed = true
+	)
 
 
 func get_player() -> Player:
@@ -54,6 +59,9 @@ func get_excessive_firepower() -> int:
 
 
 func _on_player_damaged() -> void:
+	if mission_completed:
+		return
+	
 	lives -= 1
 	player_damaged.emit()
 	@warning_ignore("integer_division")

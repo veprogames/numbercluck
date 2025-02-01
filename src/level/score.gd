@@ -15,7 +15,7 @@ func _ready() -> void:
 
 
 func _on_enemy_died(enemy: Enemy) -> void:
-	score += enemy.get_score()
+	score += enemy.score
 
 
 func _on_mission_completed() -> void:
