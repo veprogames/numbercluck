@@ -1,0 +1,620 @@
+[gd_scene load_steps=12 format=3 uid="uid://cyi6dsbuhw218"]
+
+[ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_syysi"]
+[ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_mc0sr"]
+[ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="3_ht2lm"]
+[ext_resource type="PackedScene" uid="uid://gefg41lx3axv" path="res://src/wave/enemy_spawn_target.tscn" id="4_6imxk"]
+[ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/enemies/chicken/red_chicken.tscn" id="5_ifja7"]
+[ext_resource type="PackedScene" uid="uid://txv8v6x063px" path="res://src/enemy/enemies/chicken/cyan_chicken.tscn" id="6_sriey"]
+[ext_resource type="PackedScene" uid="uid://bvtw1m8um6svb" path="res://src/enemy/enemies/chicken/yellow_chicken.tscn" id="7_b3lyx"]
+[ext_resource type="Script" path="res://src/wave/enemy_spawn_point.gd" id="8_fwes1"]
+[ext_resource type="PackedScene" uid="uid://cbdiw5nxlkfp6" path="res://src/enemy/enemies/chicken/green_chicken.tscn" id="9_pixp1"]
+[ext_resource type="PackedScene" uid="uid://c6w8vfqscbcbt" path="res://src/enemy/enemies/chicken/silver_chicken.tscn" id="10_fddde"]
+[ext_resource type="PackedScene" uid="uid://da0g4mg8h0vkv" path="res://src/enemy/enemies/chicken/cyan_chicken_boss.tscn" id="11_1ige4"]
+
+[node name="WaveSeqTheWingedThreat" type="Node"]
+script = ExtResource("1_syysi")
+
+[node name="Wave" parent="." instance=ExtResource("2_mc0sr")]
+title = "Second Contact"
+
+[node name="EnemySpawnPoint" parent="Wave" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="EnemySpawnTarget" parent="Wave" instance=ExtResource("4_6imxk")]
+position = Vector2(660, 400)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget2" parent="Wave" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 400)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget3" parent="Wave" instance=ExtResource("4_6imxk")]
+position = Vector2(1260, 400)
+enemy = ExtResource("7_b3lyx")
+
+[node name="Wave2" parent="." instance=ExtResource("2_mc0sr")]
+title = "Mixed Invasion"
+time_between_spawns = 0.25
+
+[node name="EnemySpawnPoint" type="Node2D" parent="Wave2"]
+position = Vector2(960, -300)
+script = ExtResource("8_fwes1")
+
+[node name="EnemySpawnTarget" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(360, 200)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget2" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(660, 200)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget3" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 200)
+enemy = ExtResource("7_b3lyx")
+
+[node name="EnemySpawnTarget4" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(1260, 200)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget5" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(1560, 200)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget6" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(360, 400)
+enemy = ExtResource("7_b3lyx")
+
+[node name="EnemySpawnTarget7" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(660, 400)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget8" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 400)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget9" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(1260, 400)
+enemy = ExtResource("7_b3lyx")
+
+[node name="EnemySpawnTarget10" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(1560, 400)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget11" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(360, 600)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget12" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(660, 600)
+enemy = ExtResource("7_b3lyx")
+
+[node name="EnemySpawnTarget13" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 600)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget14" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(1260, 600)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget15" parent="Wave2" instance=ExtResource("4_6imxk")]
+position = Vector2(1560, 600)
+enemy = ExtResource("7_b3lyx")
+
+[node name="Wave3" parent="." instance=ExtResource("2_mc0sr")]
+title = "A new Color... Again?"
+
+[node name="EnemySpawnPoint" parent="Wave3" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="EnemySpawnTarget" parent="Wave3" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 400)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget2" parent="Wave3" instance=ExtResource("4_6imxk")]
+position = Vector2(660, 400)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget3" parent="Wave3" instance=ExtResource("4_6imxk")]
+position = Vector2(1260, 400)
+enemy = ExtResource("9_pixp1")
+
+[node name="Wave4" parent="." instance=ExtResource("2_mc0sr")]
+title = "RGB"
+time_between_spawns = 0.1
+
+[node name="EnemySpawnPoint" parent="Wave4" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="EnemySpawnTarget" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(257, 173)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget2" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(320, 236)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget3" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(247, 309)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget4" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(388, 382)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget5" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(416, 306)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget6" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(300, 445)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget7" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(406, 553)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget8" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(277, 654)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget9" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(222, 543)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget10" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(396, 724)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget11" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1342, 192)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget12" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1481, 298)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget13" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1378, 474)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget14" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1529, 713)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget15" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1524, 484)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget16" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1393, 645)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget17" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1476, 511)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget18" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1395, 352)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget19" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1576, 213)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget20" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1553, 596)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget21" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(856, 662)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget22" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1017, 491)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget23" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(861, 345)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget24" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1083, 164)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget25" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1060, 345)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget26" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(1050, 610)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget27" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(937, 532)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget28" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 310)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget29" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(897, 192)
+enemy = ExtResource("9_pixp1")
+
+[node name="EnemySpawnTarget30" parent="Wave4" instance=ExtResource("4_6imxk")]
+position = Vector2(978, 711)
+enemy = ExtResource("9_pixp1")
+
+[node name="Wave5" parent="." instance=ExtResource("2_mc0sr")]
+title = "Chromatic"
+time_between_spawns = 0.1
+
+[node name="EnemySpawnPoint" parent="Wave5" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="EnemySpawnTarget" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 400)
+enemy = ExtResource("10_fddde")
+
+[node name="EnemySpawnTarget2" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(814, 541)
+enemy = ExtResource("10_fddde")
+
+[node name="EnemySpawnTarget3" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(796, 274)
+enemy = ExtResource("10_fddde")
+
+[node name="EnemySpawnTarget4" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(1131, 287)
+enemy = ExtResource("10_fddde")
+
+[node name="EnemySpawnTarget5" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(1154, 577)
+enemy = ExtResource("10_fddde")
+
+[node name="EnemySpawnTarget6" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(970, 716)
+enemy = ExtResource("10_fddde")
+
+[node name="EnemySpawnTarget7" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(673, 398)
+enemy = ExtResource("10_fddde")
+
+[node name="EnemySpawnTarget8" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(963, 126)
+enemy = ExtResource("10_fddde")
+
+[node name="EnemySpawnTarget9" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(1263, 403)
+enemy = ExtResource("10_fddde")
+
+[node name="EnemySpawnTarget10" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(787, 108)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget11" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(658, 239)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget12" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(1278, 723)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget13" parent="Wave5" instance=ExtResource("4_6imxk")]
+position = Vector2(1386, 557)
+enemy = ExtResource("6_sriey")
+
+[node name="Wave6" parent="." instance=ExtResource("2_mc0sr")]
+title = "Beware, from below!"
+time_between_spawns = 0.3
+
+[node name="EnemySpawnPoint" type="Node2D" parent="Wave6"]
+position = Vector2(960, 1380)
+script = ExtResource("8_fwes1")
+
+[node name="EnemySpawnTarget" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(360, 309)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget2" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(660, 309)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget3" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 309)
+enemy = ExtResource("7_b3lyx")
+
+[node name="EnemySpawnTarget4" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(1260, 309)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget5" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(1560, 309)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget6" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(360, 509)
+enemy = ExtResource("7_b3lyx")
+
+[node name="EnemySpawnTarget7" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(660, 509)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget8" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 509)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget9" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(1260, 509)
+enemy = ExtResource("7_b3lyx")
+
+[node name="EnemySpawnTarget10" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(1560, 509)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget11" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(360, 709)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget12" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(660, 709)
+enemy = ExtResource("7_b3lyx")
+
+[node name="EnemySpawnTarget13" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(960, 709)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget14" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(1260, 709)
+enemy = ExtResource("6_sriey")
+
+[node name="EnemySpawnTarget15" parent="Wave6" instance=ExtResource("4_6imxk")]
+position = Vector2(1560, 709)
+enemy = ExtResource("7_b3lyx")
+
+[node name="Wave7" parent="." instance=ExtResource("2_mc0sr")]
+title = "Crowded"
+time_between_spawns = 0.05
+
+[node name="EnemySpawnPoint" parent="Wave7" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="EnemySpawnTarget" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(294, 253)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget2" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(411, 370)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget3" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(275, 491)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget4" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(539, 517)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget5" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(524, 313)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget6" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(430, 468)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget7" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(456, 215)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget8" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(490, 483)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget9" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(607, 600)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget10" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(471, 721)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget11" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(735, 747)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget12" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(720, 543)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget13" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(626, 698)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget14" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(652, 445)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget15" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(573, 219)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget16" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(690, 336)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget17" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(554, 457)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget18" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(818, 483)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget19" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(803, 279)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget20" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(709, 434)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget21" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(735, 181)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget22" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(811, 464)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget23" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(928, 581)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget24" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(792, 702)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget25" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1056, 728)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget26" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1041, 524)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget27" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(947, 679)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget28" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(973, 426)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget29" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1000, 226)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget30" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1117, 343)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget31" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(981, 464)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget32" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1245, 490)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget33" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1230, 286)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget34" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1136, 441)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget35" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1162, 188)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget36" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1230, 471)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget37" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1347, 588)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget38" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1211, 709)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget39" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1475, 735)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget40" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1460, 531)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget41" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1366, 686)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget42" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1392, 433)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget43" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1317, 222)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget44" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1434, 339)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget45" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1298, 460)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget46" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1562, 486)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget47" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1547, 282)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget48" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1453, 437)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget49" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1479, 184)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget50" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1449, 505)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget51" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1566, 622)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget52" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1430, 743)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget53" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1694, 769)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget54" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1679, 565)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget55" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1585, 720)
+enemy = ExtResource("5_ifja7")
+
+[node name="EnemySpawnTarget56" parent="Wave7" instance=ExtResource("4_6imxk")]
+position = Vector2(1611, 467)
+enemy = ExtResource("5_ifja7")
+
+[node name="Wave8" parent="." instance=ExtResource("2_mc0sr")]
+title = "Show 'em who's Boss!"
+
+[node name="EnemySpawnPoint" type="Node2D" parent="Wave8"]
+position = Vector2(960, -300)
+script = ExtResource("8_fwes1")
+
+[node name="EnemySpawnTarget" parent="Wave8" instance=ExtResource("4_6imxk")]
+position = Vector2(480, 400)
+enemy = ExtResource("11_1ige4")
+
+[node name="EnemySpawnTarget2" parent="Wave8" instance=ExtResource("4_6imxk")]
+position = Vector2(1440, 400)
+enemy = ExtResource("11_1ige4")

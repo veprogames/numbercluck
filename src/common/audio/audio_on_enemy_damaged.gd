@@ -10,5 +10,3 @@ func _ready() -> void:
 
 func _on_enemy_damaged() -> void:
 	play()
-	await finished
-	queue_free()

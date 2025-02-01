@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfb6h3vaxsoo0"]
+[gd_scene load_steps=3 format=3 uid="uid://dfb6h3vaxsoo0"]
 
 [ext_resource type="Script" path="res://src/mission_selection/mission_selection.gd" id="1_oeulx"]
-[ext_resource type="PackedScene" uid="uid://4tr0q6ojfdge" path="res://src/mission_selection/mission_button.tscn" id="2_ucfnq"]
 [ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_xwkgo"]
-[ext_resource type="Resource" uid="uid://dg4uacbyguiw4" path="res://assets/missions/mission_a_new_beginning.tres" id="4_mio63"]
 
 [node name="MissionSelection" type="Node2D"]
 script = ExtResource("1_oeulx")
@@ -14,24 +12,23 @@ offset_bottom = 1024.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MissionButton" parent="CanvasLayer" instance=ExtResource("2_ucfnq")]
+[node name="VBoxContainerMissions" type="VBoxContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -8.0
-offset_top = -8.0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-definition = ExtResource("4_mio63")
 
 [node name="ButtonMainMenu" type="Button" parent="CanvasLayer"]
 offset_right = 109.0
 offset_bottom = 55.0
 text = "Main Menu"
 
-[connection signal="mission_selected" from="CanvasLayer/MissionButton" to="." method="_on_mission_button_mission_selected"]
 [connection signal="pressed" from="CanvasLayer/ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]

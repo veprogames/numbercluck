@@ -7,3 +7,4 @@
 script = ExtResource("1_33t5i")
 title = "A new Beginning"
 wave_sequence = ExtResource("2_adc7b")
+chapter = 1

@@ -10,6 +10,8 @@
 # res://src/player/player_state.gd
 # res://src/wave/wave_sequence.gd
 # res://src/shop_menu/shop_menu.gd
+# res://src/wave/sequences/wave_seq_the_winged_threat.tscn
+# res://assets/missions/mission_the_winged_threat.tres
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -83,6 +85,7 @@ msgid "Stronger Chickens"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Mixed Invasion"
 msgstr ""
 
@@ -99,6 +102,7 @@ msgid "Calm Before the Storm"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Show 'em who's Boss!"
 msgstr ""
 
@@ -124,4 +128,32 @@ msgstr ""
 
 #: src/shop_menu/shop_menu.gd
 msgid "Score"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Second Contact"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "A new Color... Again?"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "RGB"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Chromatic"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Beware, from below!"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Crowded"
+msgstr ""
+
+#: assets/missions/mission_the_winged_threat.tres
+msgid "The Winged Threat"
 msgstr ""

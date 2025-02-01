@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=3 format=3 uid="uid://bnbpoj46k7do8"]
+
+[ext_resource type="Script" path="res://src/mission/mission_definition.gd" id="1_f4p3d"]
+[ext_resource type="PackedScene" uid="uid://cyi6dsbuhw218" path="res://src/wave/sequences/wave_seq_the_winged_threat.tscn" id="2_y0wnr"]
+
+[resource]
+script = ExtResource("1_f4p3d")
+title = "The Winged Threat"
+wave_sequence = ExtResource("2_y0wnr")
+chapter = 2

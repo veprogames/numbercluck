@@ -91,6 +91,7 @@ msgid "Stronger Chickens"
 msgstr "Stärkere Hühner"
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Mixed Invasion"
 msgstr "Gemischte Invasion"
 
@@ -107,6 +108,7 @@ msgid "Calm Before the Storm"
 msgstr "Ruhe vor dem Sturm"
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Show 'em who's Boss!"
 msgstr "Zeig ihm wer der Boss ist!"
 
@@ -133,3 +135,31 @@ msgstr "Unbekannte Sprache"
 #: src/shop_menu/shop_menu.gd
 msgid "Score"
 msgstr "Punkte"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Second Contact"
+msgstr "Zweiter Kontakt"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "A new Color... Again?"
+msgstr "Eine neue Farbe, schon wieder?"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "RGB"
+msgstr "RGB"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Chromatic"
+msgstr "Chromatisch"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Beware, from below!"
+msgstr "Achtung, von unten!"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Crowded"
+msgstr "Überfüllt"
+
+#: assets/missions/mission_the_winged_threat.tres
+msgid "The Winged Threat"
+msgstr "Die geflügelte Bedrohung"
