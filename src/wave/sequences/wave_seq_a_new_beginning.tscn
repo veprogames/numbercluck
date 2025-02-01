@@ -13,7 +13,7 @@
 script = ExtResource("1_urfbg")
 
 [node name="Wave" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.first_contact"
+title = "First Contact"
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave"]
 position = Vector2(960, -300)
@@ -24,7 +24,7 @@ position = Vector2(960, 400)
 enemy = ExtResource("5_o733k")
 
 [node name="Wave2" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.invasion"
+title = "Invasion"
 time_between_spawns = 0.25
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave2"]
@@ -72,7 +72,7 @@ position = Vector2(1560, 500)
 enemy = ExtResource("5_o733k")
 
 [node name="Wave3" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.another_one"
+title = "Another One"
 time_between_spawns = 0.2
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave3"]
@@ -120,7 +120,7 @@ position = Vector2(1560, 500)
 enemy = ExtResource("5_o733k")
 
 [node name="Wave4" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.stronger_chickens"
+title = "Stronger Chickens"
 time_between_spawns = 0.5
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave4"]
@@ -140,7 +140,7 @@ position = Vector2(1210, 300)
 enemy = ExtResource("6_4fxgm")
 
 [node name="Wave5" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.mixed_invasion"
+title = "Mixed Invasion"
 time_between_spawns = 0.25
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave5"]
@@ -208,7 +208,7 @@ position = Vector2(1560, 600)
 enemy = ExtResource("6_4fxgm")
 
 [node name="Wave6" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.another_one"
+title = "Another One"
 time_between_spawns = 0.2
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave6"]
@@ -276,7 +276,7 @@ position = Vector2(1560, 600)
 enemy = ExtResource("5_o733k")
 
 [node name="Wave7" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.a_new_color"
+title = "A new Color"
 time_between_spawns = 0.5
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave7"]
@@ -300,7 +300,7 @@ position = Vector2(1260, 500)
 enemy = ExtResource("7_tb4mw")
 
 [node name="Wave8" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.thanks"
+title = "Thanks for Playing! Enjoy!"
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave8"]
 position = Vector2(960, -300)
@@ -363,7 +363,7 @@ position = Vector2(1086, 226)
 enemy = ExtResource("6_4fxgm")
 
 [node name="Wave9" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.calm_before_storm"
+title = "Calm Before the Storm"
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave9"]
 position = Vector2(960, -300)
@@ -374,7 +374,7 @@ position = Vector2(960, 400)
 enemy = ExtResource("7_tb4mw")
 
 [node name="Wave10" parent="." instance=ExtResource("2_68qxi")]
-title = "wave.show_em_whos_boss"
+title = "Show 'em who's Boss!"
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave10"]
 position = Vector2(960, -300)

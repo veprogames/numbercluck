@@ -19,7 +19,7 @@ offset_bottom = 1024.0
 [node name="ButtonMainMenu" type="Button" parent="CanvasLayer"]
 offset_right = 16.0
 offset_bottom = 16.0
-text = "menu.main_menu"
+text = "Main Menu"
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 15
@@ -44,7 +44,7 @@ label_settings = SubResource("LabelSettings_pnl8r")
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
 layout_mode = 2
-text = "help.upgrades"
+text = "Successfully finish Missions to get save more score. Spend them here for Upgrades!"
 
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer/MarginContainer2/VBoxContainer"]
 layout_mode = 2

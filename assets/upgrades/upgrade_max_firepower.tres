@@ -13,7 +13,7 @@ formula = "500000 * 1.35 ** x"
 
 [resource]
 script = ExtResource("1_5c7id")
-title = "upgrades.min_firepower"
+title = "Maximum Firepower"
 price_formula = SubResource("Resource_pjerm")
 effect_formula = SubResource("Resource_ldkpc")
 max_level = -1

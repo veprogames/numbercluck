@@ -16,7 +16,7 @@ static func t(num: float) -> String:
 	for i: int in len(reversed):
 		var char_: String = reversed[i]
 		if i % 3 == 0 and i > 0:
-			result += TranslationServer.tr("delimiter.thousand")
+			result += "." if TranslationServer.get_locale() == "de_DE" else ","
 		result += char_
 	
 	return result.reverse()

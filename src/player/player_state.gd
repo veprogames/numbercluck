@@ -94,7 +94,7 @@ func respawn_player() -> Player:
 
 
 func _on_game_over() -> void:
-	var title: Title = Title.create("mission.game_over")
+	var title: Title = Title.create("Game Over!")
 	add_child(title)
 	title.start()
 	await title.finished

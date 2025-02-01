@@ -10,9 +10,9 @@ var current: String :
 		Game.save_game()
 		match locale:
 			"en_US":
-				text = "%s: English" % tr(&"menu.language")
+				text = "%s: English" % tr("Language")
 			"de_DE":
-				text = "%s: Deutsch" % tr(&"menu.language")
+				text = "%s: Deutsch" % tr("Language")
 			_:
 				text = "Unknown Language"
 

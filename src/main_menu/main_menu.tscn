@@ -58,19 +58,19 @@ grow_vertical = 2
 
 [node name="ButtonMissions" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "menu.missions"
+text = "Missions"
 
 [node name="ButtonShop" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "menu.upgrades"
+text = "Upgrades"
 
 [node name="ButtonQuit" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "menu.quit"
+text = "Quit"
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "menu.support_the_original"
+text = "Support the Original"
 horizontal_alignment = 1
 
 [node name="ButtonIA" type="Button" parent="CanvasLayer/VBoxContainer"]

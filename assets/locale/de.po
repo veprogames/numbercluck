@@ -1,0 +1,135 @@
+# LANGUAGE translation for Chicken 2 for the following files:
+# res://src/main_menu/main_menu.tscn
+# res://src/mission_selection/mission_selection.tscn
+# res://src/shop_menu/shop_menu.tscn
+# res://src/wave/sequences/wave_seq_a_new_beginning.tscn
+# res://assets/upgrades/upgrade_min_firepower.tres
+# res://assets/upgrades/upgrade_max_firepower.tres
+# res://assets/missions/mission_a_new_beginning.tres
+# res://src/ui/language_button.gd
+# res://src/player/player_state.gd
+# res://src/wave/wave_sequence.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chicken 2\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#: src/main_menu/main_menu.tscn
+msgid "Chicken Invaders"
+msgstr "Chicken Invaders"
+
+#: src/main_menu/main_menu.tscn
+msgid "Fanmade"
+msgstr "Fanmade"
+
+#: src/main_menu/main_menu.tscn
+msgid "Missions"
+msgstr "Missionen"
+
+#: src/main_menu/main_menu.tscn
+msgid "Upgrades"
+msgstr "Upgrades"
+
+#: src/main_menu/main_menu.tscn
+msgid "Quit"
+msgstr "Beenden"
+
+#: src/main_menu/main_menu.tscn
+msgid "Support the Original"
+msgstr "Unterstütze das Original"
+
+#: src/main_menu/main_menu.tscn
+msgid "interactionstudios.com"
+msgstr "interactionstudios.com"
+
+#: src/main_menu/main_menu.tscn
+msgid "iA on Steam"
+msgstr "iA bei Steam"
+
+#: src/mission_selection/mission_selection.tscn src/shop_menu/shop_menu.tscn
+msgid "Main Menu"
+msgstr "Hauptmenü"
+
+#: src/shop_menu/shop_menu.tscn
+msgid "0"
+msgstr "0"
+
+#: src/shop_menu/shop_menu.tscn
+msgid ""
+"Successfully finish Missions to get save more score. Spend them here for "
+"Upgrades!"
+msgstr ""
+"Schließe erfolgreich Missionen ab, um Punkte zu sammeln und hier "
+"Verbesserungen zu kaufen!"
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "First Contact"
+msgstr "Erster Kontakt"
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Invasion"
+msgstr "Invasion"
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Another One"
+msgstr "Nochmal"
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Stronger Chickens"
+msgstr "Stärkere Hühner"
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Mixed Invasion"
+msgstr "Gemischte Invasion"
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "A new Color"
+msgstr "Eine neue Farbe"
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Thanks for Playing! Enjoy!"
+msgstr "Danke fürs Spielen! Viel Spaß!"
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Calm Before the Storm"
+msgstr "Ruhe vor dem Sturm"
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Show 'em who's Boss!"
+msgstr "Zeig ihm wer der Boss ist!"
+
+#: assets/upgrades/upgrade_min_firepower.tres
+msgid "Minimum Firepower"
+msgstr "Minimale Feuerkraft"
+
+#: assets/upgrades/upgrade_max_firepower.tres
+msgid "Maximum Firepower"
+msgstr "Maximale Feuerkraft"
+
+#: assets/missions/mission_a_new_beginning.tres
+msgid "A new Beginning"
+msgstr "Ein neues Abenteuer"
+
+#: src/ui/language_button.gd
+msgid "Language"
+msgstr "Sprache"
+
+#: src/ui/language_button.gd
+msgid "Unknown Language"
+msgstr "Unbekannte Sprache"
+
+#: src/shop_menu/shop_menu.gd
+msgid "Score"
+msgstr "Punkte"

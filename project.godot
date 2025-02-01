@@ -35,6 +35,10 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/custom_resource_translator/plugin.cfg")
+
 [global_group]
 
 player=""
@@ -56,7 +60,8 @@ player_shoot={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://assets/locale/locale.en.translation", "res://assets/locale/locale.de.translation")
+locale/translations=PackedStringArray("res://assets/locale/de.po")
+locale/translations_pot_files=PackedStringArray("res://src/main_menu/main_menu.tscn", "res://src/mission_selection/mission_selection.tscn", "res://src/shop_menu/shop_menu.tscn", "res://src/wave/sequences/wave_seq_a_new_beginning.tscn", "res://assets/upgrades/upgrade_min_firepower.tres", "res://assets/upgrades/upgrade_max_firepower.tres", "res://assets/missions/mission_a_new_beginning.tres", "res://src/ui/language_button.gd", "res://src/player/player_state.gd", "res://src/wave/wave_sequence.gd", "res://src/shop_menu/shop_menu.gd")
 
 [layer_names]
 

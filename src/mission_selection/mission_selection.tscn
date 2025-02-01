@@ -31,7 +31,7 @@ definition = ExtResource("4_mio63")
 [node name="ButtonMainMenu" type="Button" parent="CanvasLayer"]
 offset_right = 109.0
 offset_bottom = 55.0
-text = "menu.main_menu"
+text = "Main Menu"
 
 [connection signal="mission_selected" from="CanvasLayer/MissionButton" to="." method="_on_mission_button_mission_selected"]
 [connection signal="pressed" from="CanvasLayer/ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]

@@ -5,5 +5,5 @@
 
 [resource]
 script = ExtResource("1_33t5i")
-title = "mission.a_new_beginning"
+title = "A new Beginning"
 wave_sequence = ExtResource("2_adc7b")

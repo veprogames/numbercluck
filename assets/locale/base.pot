@@ -1,0 +1,127 @@
+# LANGUAGE translation for Chicken 2 for the following files:
+# res://src/main_menu/main_menu.tscn
+# res://src/mission_selection/mission_selection.tscn
+# res://src/shop_menu/shop_menu.tscn
+# res://src/wave/sequences/wave_seq_a_new_beginning.tscn
+# res://assets/upgrades/upgrade_min_firepower.tres
+# res://assets/upgrades/upgrade_max_firepower.tres
+# res://assets/missions/mission_a_new_beginning.tres
+# res://src/ui/language_button.gd
+# res://src/player/player_state.gd
+# res://src/wave/wave_sequence.gd
+# res://src/shop_menu/shop_menu.gd
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chicken 2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: src/main_menu/main_menu.tscn
+msgid "Chicken Invaders"
+msgstr ""
+
+#: src/main_menu/main_menu.tscn
+msgid "Fanmade"
+msgstr ""
+
+#: src/main_menu/main_menu.tscn
+msgid "Missions"
+msgstr ""
+
+#: src/main_menu/main_menu.tscn
+msgid "Upgrades"
+msgstr ""
+
+#: src/main_menu/main_menu.tscn
+msgid "Quit"
+msgstr ""
+
+#: src/main_menu/main_menu.tscn
+msgid "Support the Original"
+msgstr ""
+
+#: src/main_menu/main_menu.tscn
+msgid "interactionstudios.com"
+msgstr ""
+
+#: src/main_menu/main_menu.tscn
+msgid "iA on Steam"
+msgstr ""
+
+#: src/mission_selection/mission_selection.tscn
+#: src/shop_menu/shop_menu.tscn
+msgid "Main Menu"
+msgstr ""
+
+#: src/shop_menu/shop_menu.tscn
+msgid "0"
+msgstr ""
+
+#: src/shop_menu/shop_menu.tscn
+msgid "Successfully finish Missions to get save more score. Spend them here for Upgrades!"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "First Contact"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Invasion"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Another One"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Stronger Chickens"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Mixed Invasion"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "A new Color"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Thanks for Playing! Enjoy!"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Calm Before the Storm"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_a_new_beginning.tscn
+msgid "Show 'em who's Boss!"
+msgstr ""
+
+#: assets/upgrades/upgrade_min_firepower.tres
+msgid "Minimum Firepower"
+msgstr ""
+
+#: assets/upgrades/upgrade_max_firepower.tres
+msgid "Maximum Firepower"
+msgstr ""
+
+#: assets/missions/mission_a_new_beginning.tres
+msgid "A new Beginning"
+msgstr ""
+
+#: src/ui/language_button.gd
+msgid "Language"
+msgstr ""
+
+#: src/ui/language_button.gd
+msgid "Unknown Language"
+msgstr ""
+
+#: src/shop_menu/shop_menu.gd
+msgid "Score"
+msgstr ""
