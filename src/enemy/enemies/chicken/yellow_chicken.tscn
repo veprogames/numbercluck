@@ -1,0 +1,94 @@
+[gd_scene load_steps=20 format=3 uid="uid://bvtw1m8um6svb"]
+
+[ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_vgix0"]
+[ext_resource type="PackedScene" uid="uid://bh41ogc1wjdj5" path="res://src/enemy/behavior/enemy_move_swivel.tscn" id="2_gk0ls"]
+[ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="3_m3eph"]
+[ext_resource type="PackedScene" uid="uid://4vcu6y6bedtt" path="res://src/bullet/egg_bullet.tscn" id="4_nimjp"]
+[ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="5_ijkwt"]
+[ext_resource type="AudioStream" uid="uid://dmo0jn74bh1qm" path="res://assets/chicken/death1.ogg" id="6_u686j"]
+[ext_resource type="AudioStream" uid="uid://0o77mu32cv22" path="res://assets/chicken/death2.ogg" id="7_upin5"]
+[ext_resource type="AudioStream" uid="uid://w0pwmn27ovj5" path="res://assets/chicken/death3.ogg" id="8_4xdsq"]
+[ext_resource type="PackedScene" uid="uid://cjm1ebgv6lilf" path="res://src/common/audio/audio_on_enemy_damaged.tscn" id="9_pda6h"]
+[ext_resource type="AudioStream" uid="uid://b45nhm48v654h" path="res://assets/chicken/hit.ogg" id="10_f5po3"]
+[ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="11_r2qwe"]
+[ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="12_ssxjr"]
+[ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/drop_firepower_on_death.tscn" id="13_bx0v5"]
+
+[sub_resource type="GDScript" id="GDScript_ptf1q"]
+script/source = "@icon(\"uid://coivio5vqtpwj\")
+class_name Chicken
+extends Enemy
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gbmmg"]
+radius = 45.26
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_707ws"]
+streams_count = 3
+stream_0/stream = ExtResource("6_u686j")
+stream_1/stream = ExtResource("7_upin5")
+stream_2/stream = ExtResource("8_4xdsq")
+
+[sub_resource type="Gradient" id="Gradient_rignk"]
+offsets = PackedFloat32Array(0, 0.0753769, 0.984925)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_imf6t"]
+gradient = SubResource("Gradient_rignk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7t325"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 64.0
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, 0, 0)
+color = Color(1, 1, 1, 0.501961)
+color_ramp = SubResource("GradientTexture1D_imf6t")
+
+[node name="YellowChicken" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1300.0
+max_hp = 300.0
+
+[node name="ChickenBody" parent="." instance=ExtResource("1_vgix0")]
+scale = Vector2(0.25, 0.25)
+suit_modulate = Color(0.831373, 0.831373, 0.141176, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gbmmg")
+
+[node name="EnemyMoveSwivel" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_gk0ls")]
+target = NodePath("..")
+amplitude = Vector2(0, 50)
+period = Vector2(0, 2)
+
+[node name="BulletPodEnemy" parent="." instance=ExtResource("3_m3eph")]
+position = Vector2(0, 23)
+rotation = 1.57079
+bullet = ExtResource("4_nimjp")
+random_interval = 16.0
+
+[node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_ijkwt")]
+stream = SubResource("AudioStreamRandomizer_707ws")
+target = NodePath("..")
+
+[node name="AudioOnEnemyDamaged" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_pda6h")]
+stream = ExtResource("10_f5po3")
+target = NodePath("..")
+
+[node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_r2qwe")]
+amount = 24
+process_material = SubResource("ParticleProcessMaterial_7t325")
+texture = ExtResource("12_ssxjr")
+lifetime = 0.8
+explosiveness = 0.77
+visibility_rect = Rect2(-115.616, -116.059, 242.424, 223.17)
+local_coords = true
+target = NodePath("..")
+
+[node name="DropFirepowerOnDeath" parent="." node_paths=PackedStringArray("target") instance=ExtResource("13_bx0v5")]
+target = NodePath("..")

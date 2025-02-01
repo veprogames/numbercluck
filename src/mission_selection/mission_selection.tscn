@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/mission_selection/mission_selection.gd" id="1_oeulx"]
 [ext_resource type="PackedScene" uid="uid://4tr0q6ojfdge" path="res://src/mission_selection/mission_button.tscn" id="2_ucfnq"]
 [ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_xwkgo"]
-[ext_resource type="Resource" uid="uid://bbquhfvixusbv" path="res://src/mission/missions/example_mission.tres" id="3_nao0i"]
+[ext_resource type="Resource" uid="uid://dg4uacbyguiw4" path="res://assets/missions/mission_a_new_beginning.tres" id="4_mio63"]
 
 [node name="MissionSelection" type="Node2D"]
 script = ExtResource("1_oeulx")
@@ -26,7 +26,7 @@ offset_right = 8.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-definition = ExtResource("3_nao0i")
+definition = ExtResource("4_mio63")
 
 [node name="ButtonMainMenu" type="Button" parent="CanvasLayer"]
 offset_right = 109.0
