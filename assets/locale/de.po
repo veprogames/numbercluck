@@ -180,3 +180,15 @@ msgstr "Überfüllt"
 #: assets/missions/mission_the_winged_threat.tres
 msgid "The Winged Threat"
 msgstr "Die geflügelte Bedrohung"
+
+#: src/global/f.gd
+msgid "Bil."
+msgstr "Mrd."
+
+#: src/global/f.gd
+msgid "Quint."
+msgstr "Tril."
+
+#: src/global/f.gd
+msgid "Oct."
+msgstr "Qrd."

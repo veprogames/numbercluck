@@ -17,8 +17,8 @@ var upgrade: Upgrade :
 func update_ui() -> void:
 	label_title.text = upgrade.definition.title
 	label_description.text = tr(upgrade.definition.description) \
-		.replace("$$effect$$", "[color=lime]%s[/color]" % F.t(upgrade.get_effect()))
-	button_buy.text = F.t(upgrade.get_price())
+		.replace("$$effect$$", "[color=lime]%s[/color]" % upgrade.format_effect())
+	button_buy.text = F.n(upgrade.get_price())
 
 
 func _on_button_buy_pressed() -> void:

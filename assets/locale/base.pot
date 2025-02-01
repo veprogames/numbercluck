@@ -12,6 +12,7 @@
 # res://src/shop_menu/shop_menu.gd
 # res://src/wave/sequences/wave_seq_the_winged_threat.tscn
 # res://assets/missions/mission_the_winged_threat.tres
+# res://src/global/f.gd
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -168,4 +169,16 @@ msgstr ""
 
 #: assets/missions/mission_the_winged_threat.tres
 msgid "The Winged Threat"
+msgstr ""
+
+#: src/global/f.gd
+msgid "Bil."
+msgstr ""
+
+#: src/global/f.gd
+msgid "Quint."
+msgstr ""
+
+#: src/global/f.gd
+msgid "Oct."
 msgstr ""

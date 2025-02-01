@@ -36,3 +36,7 @@ func buy() -> bool:
 	level += 1
 	bought.emit()
 	return true
+
+
+func format_effect() -> String:
+	return definition.effect_display_options.format(get_effect())

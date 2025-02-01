@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 	current_score = lerpf(current_score, target_score, 4 * delta)
 	current_score = move_toward(current_score, target_score, target_score * 0.1 * delta)
 	
-	label.text = F.t(current_score)
+	label.text = F.n(current_score)
 
 
 func _on_score_changed(new_score: float) -> void:
