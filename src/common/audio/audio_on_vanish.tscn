@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://src/common/audio/audio_on_vanish.gd" id="1_nrdv4"]
 
 [node name="AudioOnVanish" type="AudioStreamPlayer2D"]
+bus = &"Sounds"
 script = ExtResource("1_nrdv4")
