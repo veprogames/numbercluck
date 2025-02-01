@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://da0g4mg8h0vkv"]
+[gd_scene load_steps=27 format=3 uid="uid://da0g4mg8h0vkv"]
 
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_0vr3l"]
 [ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="3_bxtc3"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://b45nhm48v654h" path="res://assets/chicken/hit.ogg" id="10_7cnq7"]
 [ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="11_1johc"]
 [ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="12_6n44r"]
+[ext_resource type="Texture2D" uid="uid://daaaja22f51wf" path="res://assets/particles/spark.png" id="12_6wke8"]
 [ext_resource type="PackedScene" uid="uid://v6y7pt160a03" path="res://src/enemy/behavior/enemy_move_by_noise.tscn" id="13_8sr4o"]
 [ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/drop_firepower_on_death.tscn" id="13_wx0tq"]
 
@@ -29,23 +30,58 @@ stream_0/stream = ExtResource("6_1344q")
 stream_1/stream = ExtResource("7_wlhyj")
 stream_2/stream = ExtResource("8_66qsl")
 
-[sub_resource type="Gradient" id="Gradient_rignk"]
+[sub_resource type="Gradient" id="Gradient_gn53v"]
 offsets = PackedFloat32Array(0, 0.0753769, 0.984925)
 colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_imf6t"]
-gradient = SubResource("Gradient_rignk")
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uyhia"]
+gradient = SubResource("Gradient_gn53v")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7t325"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5ijsy"]
 particle_flag_disable_z = true
 emission_shape = 1
-emission_sphere_radius = 64.0
+emission_sphere_radius = 256.0
 spread = 180.0
 initial_velocity_min = 10.0
 initial_velocity_max = 20.0
 gravity = Vector3(0, 0, 0)
+scale_min = 4.0
+scale_max = 4.0
 color = Color(1, 1, 1, 0.501961)
-color_ramp = SubResource("GradientTexture1D_imf6t")
+color_ramp = SubResource("GradientTexture1D_uyhia")
+
+[sub_resource type="Gradient" id="Gradient_m0axa"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4bk7o"]
+gradient = SubResource("Gradient_m0axa")
+
+[sub_resource type="Curve" id="Curve_s2351"]
+_data = [Vector2(0, 1), 0.0, -2.86134, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_bbkyi"]
+curve = SubResource("Curve_s2351")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_umrhd"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 32.0
+angle_min = 1.07288e-05
+angle_max = 720.0
+spread = 180.0
+initial_velocity_min = 600.0
+initial_velocity_max = 800.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -200.0
+linear_accel_max = -200.0
+scale_min = 0.5
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_bbkyi")
+color = Color(0.91, 0.2639, 0.2639, 1)
+color_ramp = SubResource("GradientTexture1D_4bk7o")
+hue_variation_min = -2.23517e-08
+hue_variation_max = 0.13
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_wl8ni"]
 frequency = 0.4
@@ -71,6 +107,7 @@ random_interval = 1.0
 
 [node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_40pfm")]
 stream = SubResource("AudioStreamRandomizer_707ws")
+pitch_scale = 0.3
 target = NodePath("..")
 
 [node name="AudioOnEnemyDamaged" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_hpquf")]
@@ -78,13 +115,24 @@ stream = ExtResource("10_7cnq7")
 target = NodePath("..")
 
 [node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_1johc")]
-amount = 24
-process_material = SubResource("ParticleProcessMaterial_7t325")
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_5ijsy")
 texture = ExtResource("12_6n44r")
-lifetime = 0.8
-explosiveness = 0.77
+lifetime = 3.0
+explosiveness = 0.9
 visibility_rect = Rect2(-115.616, -116.059, 242.424, 223.17)
 local_coords = true
+target = NodePath("..")
+
+[node name="ParticlesOnVanish2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_1johc")]
+z_index = 2
+amount = 96
+process_material = SubResource("ParticleProcessMaterial_umrhd")
+texture = ExtResource("12_6wke8")
+lifetime = 2.0
+explosiveness = 0.95
+trail_enabled = true
+trail_lifetime = 0.5
 target = NodePath("..")
 
 [node name="DropFirepowerOnDeath" parent="." node_paths=PackedStringArray("target") instance=ExtResource("13_wx0tq")]

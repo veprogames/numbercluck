@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bw6jtohhj1h22"]
+[gd_scene load_steps=28 format=3 uid="uid://bw6jtohhj1h22"]
 
 [ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="1_abc3k"]
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_hvf25"]
@@ -43,11 +43,11 @@ colors = PackedColorArray(0.577008, 0.577008, 0.577008, 1, 1, 1, 1, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_747ng"]
 gradient = SubResource("Gradient_e6yrr")
 
-[sub_resource type="Gradient" id="Gradient_82e5w"]
+[sub_resource type="Gradient" id="Gradient_783xp"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_t06nr"]
-gradient = SubResource("Gradient_82e5w")
+gradient = SubResource("Gradient_783xp")
 
 [sub_resource type="Curve" id="Curve_jfk1i"]
 _data = [Vector2(0, 0.505494), 0.0, 1.24725, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -73,11 +73,17 @@ color = Color(1, 1, 1, 0.529412)
 color_ramp = SubResource("GradientTexture1D_t06nr")
 color_initial_ramp = SubResource("GradientTexture1D_747ng")
 
+[sub_resource type="Gradient" id="Gradient_82e5w"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_stq8v"]
+gradient = SubResource("Gradient_82e5w")
+
 [sub_resource type="Curve" id="Curve_gtlkq"]
 _data = [Vector2(0, 1), 0.0, -2.86134, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_oesca"]
+[sub_resource type="CurveTexture" id="CurveTexture_4em2y"]
 curve = SubResource("Curve_gtlkq")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u1bst"]
@@ -94,9 +100,9 @@ linear_accel_min = -200.0
 linear_accel_max = -200.0
 scale_min = 0.5
 scale_max = 0.6
-scale_curve = SubResource("CurveTexture_oesca")
+scale_curve = SubResource("CurveTexture_4em2y")
 color = Color(0.91, 0.2639, 0.2639, 1)
-color_ramp = SubResource("GradientTexture1D_t06nr")
+color_ramp = SubResource("GradientTexture1D_stq8v")
 hue_variation_min = -2.23517e-08
 hue_variation_max = 0.13
 
@@ -144,6 +150,7 @@ target = NodePath("..")
 
 [node name="ParticlesOnVanish2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_t5dkk")]
 z_index = 2
+emitting = true
 amount = 64
 process_material = SubResource("ParticleProcessMaterial_u1bst")
 texture = ExtResource("6_8cxs4")
