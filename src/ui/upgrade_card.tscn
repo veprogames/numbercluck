@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://8v1xjxdn6brq"]
+[gd_scene load_steps=3 format=3 uid="uid://8v1xjxdn6brq"]
 
 [ext_resource type="Script" path="res://src/ui/upgrade_card.gd" id="1_c81pv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0yjmb"]
+font_size = 48
 
 [node name="UpgradeCard" type="PanelContainer"]
 custom_minimum_size = Vector2(240, 0)
@@ -16,6 +19,7 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "Title"
+label_settings = SubResource("LabelSettings_0yjmb")
 
 [node name="LabelDescription" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

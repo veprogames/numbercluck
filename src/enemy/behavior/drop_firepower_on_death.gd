@@ -15,7 +15,7 @@ func _ready() -> void:
 
 
 func get_drop_chance() -> float:
-	return 0.1 / (10.0 + player_state.firepower) * chance_multi
+	return 0.01 * Game.upgrades.firepower_chance.get_effect() * chance_multi
 
 
 func _on_target_exiting_tree() -> void:

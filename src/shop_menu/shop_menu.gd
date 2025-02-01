@@ -3,12 +3,15 @@ extends Node2D
 
 @onready var upgrade_card_min_firepower: UpgradeCard = %UpgradeCardMinFirepower
 @onready var upgrade_card_max_firepower: UpgradeCard = %UpgradeCardMaxFirepower
+@onready var upgrade_card_firepower_chance: UpgradeCard = %UpgradeCardFirepowerChance
+
 @onready var label_saved_score: Label = %LabelSavedScore
 
 
 func _ready() -> void:
 	upgrade_card_min_firepower.upgrade = Game.upgrades.min_firepower
 	upgrade_card_max_firepower.upgrade = Game.upgrades.max_firepower
+	upgrade_card_firepower_chance.upgrade = Game.upgrades.firepower_chance
 	
 	label_saved_score.text = "%s: %s" % [tr("Score"), F.n(Game.saved_score)]
 	Events.saved_score_changed.connect(func(score: float) -> void:

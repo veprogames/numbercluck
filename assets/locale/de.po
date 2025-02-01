@@ -192,3 +192,11 @@ msgstr "Tril."
 #: src/global/f.gd
 msgid "Oct."
 msgstr "Qrd."
+
+#: assets/upgrades/upgrade_firepower_chance.tres
+msgid "Firepower Chance"
+msgstr "Feuerkraft-Chance"
+
+#: assets/upgrades/upgrade_firepower_chance.tres
+msgid "Enemies drop Firepower $$effect$$ as likely."
+msgstr "Gegner lassen $$effect$$ so oft Feuerkraft fallen"

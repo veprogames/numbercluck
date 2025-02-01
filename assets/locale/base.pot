@@ -13,6 +13,7 @@
 # res://src/wave/sequences/wave_seq_the_winged_threat.tscn
 # res://assets/missions/mission_the_winged_threat.tres
 # res://src/global/f.gd
+# res://assets/upgrades/upgrade_firepower_chance.tres
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -181,4 +182,12 @@ msgstr ""
 
 #: src/global/f.gd
 msgid "Oct."
+msgstr ""
+
+#: assets/upgrades/upgrade_firepower_chance.tres
+msgid "Firepower Chance"
+msgstr ""
+
+#: assets/upgrades/upgrade_firepower_chance.tres
+msgid "Enemies drop Firepower $$effect$$ as likely."
 msgstr ""

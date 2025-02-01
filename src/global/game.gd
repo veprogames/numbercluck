@@ -20,6 +20,7 @@ static func save_game() -> void:
 		"upgrades": {
 			"min_firepower": upgrades.min_firepower.level,
 			"max_firepower": upgrades.max_firepower.level,
+			"firepower_chance": upgrades.firepower_chance.level,
 		},
 		"settings": {
 			"locale": settings.locale
@@ -52,4 +53,5 @@ static func load_game() -> void:
 	Game.saved_score = data.saved_score
 	Game.upgrades.min_firepower.level = data.upgrades.min_firepower
 	Game.upgrades.max_firepower.level = data.upgrades.max_firepower
+	Game.upgrades.firepower_chance.level = data.upgrades.firepower_chance
 	Game.settings.locale = data.settings.locale

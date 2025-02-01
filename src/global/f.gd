@@ -24,6 +24,9 @@ static func n(num: float, places: int = 0) -> String:
 	var mantissa: String = F.t(num / 10.0 ** (9 * index), places)
 	var suffix: String = suffixes[index]
 	
+	if len(suffix) == 0:
+		return mantissa
+	
 	return "%s %s" % [mantissa, suffix]
 
 
