@@ -5,30 +5,30 @@ extends Node2D
 @export var interval: float
 @export var random_interval: float
 
-var t: float = 0
-
 var audio_player: AudioStreamPlayer2D
 
 @onready var level: Node2D = get_tree().get_first_node_in_group(&"level")
 
+var next_shot: int = Time.get_ticks_usec()
+
 
 func _ready() -> void:
+	next_shot += int(interval * 1000000.0)
+	
 	if get_child_count() > 0:
 		audio_player = get_children()[0] as AudioStreamPlayer2D
 
 
 func _physics_process(delta: float) -> void:
-	if interval > 0:
-		t += 1 / interval * delta
-	
 	if random_interval > 0 and randf() < delta / random_interval:
-		t += 1
-	
-	t = minf(1, t)
+		shoot()
 
 
 func shoot() -> void:
-	t = 0
+	if interval > 0:
+		var skips: int = int((Time.get_ticks_usec() - next_shot) / 1000000.0 / interval)
+		next_shot += int(skips * interval * 1000000.0)
+	next_shot += int(interval * 1000000.0)
 	var bullet_: Bullet = create_bullet()
 	if is_instance_valid(audio_player):
 		audio_player.stream = bullet_.sound
@@ -43,3 +43,7 @@ func create_bullet() -> Bullet:
 	b.angle += rotation
 	b.rotation = b.get_bullet_rotation()
 	return b
+
+
+func can_shoot() -> bool:
+	return interval > 0 and Time.get_ticks_usec() >= next_shot

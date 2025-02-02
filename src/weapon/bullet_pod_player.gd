@@ -8,8 +8,6 @@ extends BulletPod
 func _ready() -> void:
 	super._ready()
 	
-	t = 1
-	
 	if is_instance_valid(audio_player):
 		audio_player.pitch_scale = pitch_scale
 		audio_player.volume_db = linear_to_db(volume_linear)
@@ -18,5 +16,5 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
 	   
-	if Input.is_action_pressed(&"player_shoot") and t >= 1:
+	if Input.is_action_pressed(&"player_shoot") and can_shoot():
 		super.shoot()
