@@ -55,17 +55,21 @@ offset_right = 49.5
 offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 32
 
 [node name="ButtonMissions" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_type_variation = &"ButtonLarge"
 text = "Missions"
 
 [node name="ButtonShop" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_type_variation = &"ButtonLarge"
 text = "Upgrades"
 
 [node name="ButtonQuit" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
+theme_type_variation = &"ButtonLarge"
 text = "Quit"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer"]

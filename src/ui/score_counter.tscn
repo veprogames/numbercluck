@@ -21,6 +21,8 @@ shadow_size = 8
 
 [sub_resource type="LabelSettings" id="LabelSettings_ys3ty"]
 font_size = 56
+shadow_color = Color(0, 0, 0, 0.313726)
+shadow_offset = Vector2(2, 2)
 
 [node name="ScoreCounter" type="Panel"]
 offset_right = 450.0

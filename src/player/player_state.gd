@@ -39,10 +39,14 @@ const FirepowerScene: PackedScene = preload("res://src/collectables/firepower.ts
 func _ready() -> void:
 	player = respawn_player()
 	firepower = min_firepower
-	firepower = 3
 	Events.mission_completed.connect(func() -> void:
 		mission_completed = true
 	)
+
+
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed(&"ui_cancel"):
+		get_tree().change_scene_to_file("res://src/main_menu/main_menu.tscn")
 
 
 func get_player() -> Player:

@@ -23,6 +23,11 @@ func _ready() -> void:
 		v_box_container_missions.add_child(btn)
 
 
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed(&"ui_cancel"):
+		get_tree().change_scene_to_file("res://src/main_menu/main_menu.tscn")
+
+
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://src/level/level.tscn")
 
