@@ -3,6 +3,7 @@
 /android/
 
 *.png~
+*.kra~
 *autosave.kra
 
 export/

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d0jdag12cyvpy"]
 
-[ext_resource type="Texture2D" uid="uid://8b0ra4tun5ka" path="res://assets/collectables/firepower.png" id="1_bikta"]
 [ext_resource type="Script" path="res://src/collectables/firepower.gd" id="1_xr2sq"]
+[ext_resource type="PackedScene" uid="uid://b1wbaspy50ihp" path="res://src/collectables/firepower_trail.tscn" id="9_4mhto"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fqppk"]
 radius = 24.0
@@ -10,14 +10,29 @@ radius = 24.0
 collision_layer = 16
 script = ExtResource("1_xr2sq")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_bikta")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fqppk")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 rect = Rect2(-32, -32, 64, 64)
+
+[node name="FirepowerTrail" parent="." instance=ExtResource("9_4mhto")]
+modulate = Color(1, 0, 0.0166664, 1)
+rotation = -0.523598
+points = PackedVector2Array(23.4523, 8.16424, 23.2334, 8.25178, 23.0122, 8.33849, 22.7887, 8.42437, 22.5629, 8.5094, 22.3349, 8.59358, 22.1046, 8.67691, 21.8721, 8.75937, 21.6374, 8.84095, 21.4006, 8.92164, 21.1616, 9.00145, 20.9205, 9.08035, 20.6774, 9.15835, 20.4321, 9.23543, 20.1848, 9.31159, 19.9355, 9.38682, 19.6842, 9.4611, 19.4309, 9.53444, 19.1757, 9.60683, 18.9185, 9.67826, 18.6595, 9.74872, 18.3986, 9.8182, 18.1359, 9.88671, 17.8713, 9.95422, 17.605, 10.0207, 17.3369, 10.0863, 17.0671, 10.1508, 16.7955, 10.2143, 16.5223, 10.2767, 16.2475, 10.3382)
+color = Color(1, 0, 0.0166664, 1)
+
+[node name="FirepowerTrail2" parent="." instance=ExtResource("9_4mhto")]
+modulate = Color(1, 1, 0, 1)
+rotation = 3.66519
+points = PackedVector2Array(-8.43811, -11.5753, -8.12902, -11.6063, -7.81912, -11.6363, -7.50843, -11.665, -7.197, -11.6926, -6.88484, -11.719, -6.57199, -11.7442, -6.25849, -11.7683, -5.94437, -11.7911, -5.62964, -11.8128, -5.31436, -11.8334, -4.99854, -11.8527, -4.68222, -11.8708, -4.36544, -11.8878, -4.04822, -11.9036, -3.73059, -11.9182, -3.41259, -11.9316, -3.09425, -11.9438, -2.7756, -11.9548, -2.45667, -11.9646, -2.1375, -11.9732, -1.81811, -11.9806, -1.49855, -11.9868, -1.17883, -11.9919, -0.858991, -11.9957, -0.539069, -11.9983, -0.219093, -11.9997, 0.100906, -11.9999, 0.420894, -11.999, 0.74084, -11.9968)
+color = Color(1, 0.768627, 0, 1)
+
+[node name="FirepowerTrail3" parent="." instance=ExtResource("9_4mhto")]
+modulate = Color(0, 1, 0.0156863, 1)
+rotation = 1.5708
+points = PackedVector2Array(-9.00183, 11.5154, -9.30845, 11.4811, -9.61414, 11.4456, -9.91887, 11.409, -10.2226, 11.3712, -10.5253, 11.3323, -10.827, 11.2923, -11.1276, 11.2511, -11.427, 11.2088, -11.7254, 11.1654, -12.0225, 11.1209, -12.3185, 11.0752, -12.6132, 11.0285, -12.9066, 10.9806, -13.1988, 10.9317, -13.4897, 10.8817, -13.7792, 10.8305, -14.0673, 10.7783, -14.354, 10.725, -14.6393, 10.6707, -14.9231, 10.6152, -15.2054, 10.5587, -15.4862, 10.5012, -15.7655, 10.4426, -16.0431, 10.3829, -16.3192, 10.3223, -16.5936, 10.2606, -16.8664, 10.1978, -17.1375, 10.1341, -17.4069, 10.0693)
+color = Color(0, 1, 0.0156863, 1)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

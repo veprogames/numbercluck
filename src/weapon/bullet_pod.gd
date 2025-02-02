@@ -25,9 +25,6 @@ func _physics_process(delta: float) -> void:
 
 
 func shoot() -> void:
-	if interval > 0:
-		var skips: int = int((Time.get_ticks_usec() - next_shot) / 1000000.0 / interval)
-		next_shot += int(skips * interval * 1000000.0)
 	next_shot += int(interval * 1000000.0)
 	var bullet_: Bullet = create_bullet()
 	if is_instance_valid(audio_player):

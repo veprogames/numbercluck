@@ -16,5 +16,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	super._physics_process(delta)
 	   
-	if Input.is_action_pressed(&"player_shoot") and can_shoot():
-		super.shoot()
+	if can_shoot():
+		if Time.get_ticks_usec() > next_shot + int(interval * 1000000.0):
+			next_shot += int(interval * 1000000.0)
+		if Input.is_action_pressed(&"player_shoot"):
+			super.shoot()
