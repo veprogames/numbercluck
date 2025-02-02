@@ -13,8 +13,6 @@ var next_shot: int = Time.get_ticks_usec()
 
 
 func _ready() -> void:
-	next_shot += int(interval * 1000000.0)
-	
 	if get_child_count() > 0:
 		audio_player = get_children()[0] as AudioStreamPlayer2D
 
@@ -25,7 +23,9 @@ func _physics_process(delta: float) -> void:
 
 
 func shoot() -> void:
-	next_shot += int(interval * 1000000.0)
+	# not optimal
+	var overshot_us: int = mini(16000, Time.get_ticks_usec() - next_shot)
+	next_shot = Time.get_ticks_usec() - overshot_us + int(interval * 1000000.0)
 	var bullet_: Bullet = create_bullet()
 	if is_instance_valid(audio_player):
 		audio_player.stream = bullet_.sound

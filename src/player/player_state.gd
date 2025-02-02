@@ -39,6 +39,7 @@ const FirepowerScene: PackedScene = preload("res://src/collectables/firepower.ts
 func _ready() -> void:
 	player = respawn_player()
 	firepower = min_firepower
+	firepower = 3
 	Events.mission_completed.connect(func() -> void:
 		mission_completed = true
 	)
