@@ -15,7 +15,7 @@ func refresh() -> void:
 				calc_dps += bullet.damage / pod.interval
 				bullet.queue_free()
 		var desired: float = get_desired_dps(index)
-		print("[%d] %s DPS, %s Desired" % [index, F.n(calc_dps), F.n(desired)])
+		print("[%d] %s DPS, %s Desired" % [index, str(calc_dps), str(desired)])
 
 
 func get_desired_dps(index: int) -> float:

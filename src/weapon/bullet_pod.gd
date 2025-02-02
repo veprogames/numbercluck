@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 
 
 func shoot() -> void:
-	t -= 1
+	t = 0
 	var bullet_: Bullet = create_bullet()
 	if is_instance_valid(audio_player):
 		audio_player.stream = bullet_.sound
