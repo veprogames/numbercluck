@@ -92,7 +92,8 @@ func _on_player_damaged() -> void:
 
 
 func _on_player_firepower_collected() -> void:
-	firepower += 1
+	if firepower < max_firepower:
+		firepower += 1
 
 
 func respawn_player() -> Player:

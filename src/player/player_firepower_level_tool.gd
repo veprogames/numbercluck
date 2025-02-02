@@ -19,4 +19,4 @@ func refresh() -> void:
 
 
 func get_desired_dps(index: int) -> float:
-	return 200 + 200 * index + 30 * 1.25 ** index
+	return 300 + 300 * index + 50 * 1.25 ** index

@@ -19,7 +19,7 @@ position = Vector2(0, -44)
 rotation = -1.5708
 pitch_scale = 0.7
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="1" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
@@ -30,7 +30,7 @@ rotation = -1.5708
 pitch_scale = 0.8
 volume_linear = 0.5
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer2" parent="Levels/1" instance=ExtResource("2_7i3ou")]
 position = Vector2(26, -25)
@@ -38,7 +38,7 @@ rotation = -1.5708
 pitch_scale = 0.8
 volume_linear = 0.5
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="2" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
@@ -49,7 +49,7 @@ rotation = -1.5708
 pitch_scale = 0.9
 volume_linear = 0.33
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer" parent="Levels/2" instance=ExtResource("2_7i3ou")]
 position = Vector2(-26, -25)
@@ -57,7 +57,7 @@ rotation = -1.5708
 pitch_scale = 0.9
 volume_linear = 0.33
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer2" parent="Levels/2" instance=ExtResource("2_7i3ou")]
 position = Vector2(26, -25)
@@ -65,7 +65,7 @@ rotation = -1.5708
 pitch_scale = 0.9
 volume_linear = 0.33
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="3" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
@@ -76,21 +76,21 @@ rotation = -1.5708
 pitch_scale = 1.1
 volume_linear = 0.33
 bullet = ExtResource("3_arnuf")
-interval = 0.25
+interval = 0.15
 
 [node name="BulletPodPlayer" parent="Levels/3" instance=ExtResource("2_7i3ou")]
 position = Vector2(-26, -25)
 rotation = -1.8326
 volume_linear = 0.33
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer2" parent="Levels/3" instance=ExtResource("2_7i3ou")]
 position = Vector2(26, -25)
 rotation = -1.309
 volume_linear = 0.33
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="4" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
@@ -101,7 +101,7 @@ rotation = -1.5708
 pitch_scale = 1.05
 volume_linear = 0.2
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer4" parent="Levels/4" instance=ExtResource("2_7i3ou")]
 position = Vector2(26, -25)
@@ -109,7 +109,7 @@ rotation = -1.5708
 pitch_scale = 1.05
 volume_linear = 0.2
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer5" parent="Levels/4" instance=ExtResource("2_7i3ou")]
 position = Vector2(0, -44)
@@ -117,7 +117,7 @@ rotation = -1.5708
 pitch_scale = 1.05
 volume_linear = 0.2
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer" parent="Levels/4" instance=ExtResource("2_7i3ou")]
 position = Vector2(-26, -25)
@@ -125,7 +125,7 @@ rotation = -1.8326
 pitch_scale = 1.05
 volume_linear = 0.2
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer2" parent="Levels/4" instance=ExtResource("2_7i3ou")]
 position = Vector2(26, -25)
@@ -133,29 +133,45 @@ rotation = -1.309
 pitch_scale = 1.05
 volume_linear = 0.2
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="5" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/5" instance=ExtResource("2_7i3ou")]
-position = Vector2(0, -44)
+position = Vector2(-6, -42)
 rotation = -1.5708
 pitch_scale = 1.3
 volume_linear = 0.5
 bullet = ExtResource("3_arnuf")
-interval = 0.083
+interval = 0.1
+
+[node name="BulletPodPlayer2" parent="Levels/5" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+pitch_scale = 1.3
+volume_linear = 0.5
+bullet = ExtResource("3_arnuf")
+interval = 0.1
 
 [node name="6" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/6" instance=ExtResource("2_7i3ou")]
-position = Vector2(0, -44)
+position = Vector2(-6, -42)
 rotation = -1.5708
 pitch_scale = 1.3
 volume_linear = 0.5
 bullet = ExtResource("3_arnuf")
-interval = 0.083
+interval = 0.1
+
+[node name="BulletPodPlayer6" parent="Levels/6" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+pitch_scale = 1.3
+volume_linear = 0.5
+bullet = ExtResource("3_arnuf")
+interval = 0.1
 
 [node name="BulletPodPlayer2" parent="Levels/6" instance=ExtResource("2_7i3ou")]
 position = Vector2(-26, -25)
@@ -163,7 +179,7 @@ rotation = -1.83259
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer3" parent="Levels/6" instance=ExtResource("2_7i3ou")]
 position = Vector2(-38, 20)
@@ -171,7 +187,7 @@ rotation = -2.00713
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer4" parent="Levels/6" instance=ExtResource("2_7i3ou")]
 position = Vector2(26, -25)
@@ -179,7 +195,7 @@ rotation = -1.309
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer5" parent="Levels/6" instance=ExtResource("2_7i3ou")]
 position = Vector2(37, 22)
@@ -187,18 +203,26 @@ rotation = -1.0472
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="7" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/7" instance=ExtResource("2_7i3ou")]
-position = Vector2(0, -44)
+position = Vector2(-6, -42)
 rotation = -1.5708
 pitch_scale = 1.3
 volume_linear = 0.5
 bullet = ExtResource("3_arnuf")
-interval = 0.083
+interval = 0.1
+
+[node name="BulletPodPlayer6" parent="Levels/7" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+pitch_scale = 1.3
+volume_linear = 0.5
+bullet = ExtResource("3_arnuf")
+interval = 0.1
 
 [node name="BulletPodPlayer2" parent="Levels/7" instance=ExtResource("2_7i3ou")]
 position = Vector2(-26, -25)
@@ -206,7 +230,7 @@ rotation = -1.83259
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer3" parent="Levels/7" instance=ExtResource("2_7i3ou")]
 position = Vector2(-38, 20)
@@ -214,7 +238,7 @@ rotation = -2.0944
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer4" parent="Levels/7" instance=ExtResource("2_7i3ou")]
 position = Vector2(26, -25)
@@ -222,7 +246,7 @@ rotation = -1.309
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer5" parent="Levels/7" instance=ExtResource("2_7i3ou")]
 position = Vector2(37, 22)
@@ -230,18 +254,26 @@ rotation = -1.0472
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="8" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/8" instance=ExtResource("2_7i3ou")]
-position = Vector2(0, -44)
+position = Vector2(-6, -42)
 rotation = -1.5708
 pitch_scale = 1.3
 volume_linear = 0.5
 bullet = ExtResource("3_arnuf")
-interval = 0.083
+interval = 0.1
+
+[node name="BulletPodPlayer8" parent="Levels/8" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+pitch_scale = 1.3
+volume_linear = 0.5
+bullet = ExtResource("3_arnuf")
+interval = 0.1
 
 [node name="BulletPodPlayer2" parent="Levels/8" instance=ExtResource("2_7i3ou")]
 position = Vector2(-20, -27)
@@ -249,7 +281,7 @@ rotation = -1.83259
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer7" parent="Levels/8" instance=ExtResource("2_7i3ou")]
 position = Vector2(-32, -22)
@@ -257,7 +289,7 @@ rotation = -1.83259
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer4" parent="Levels/8" instance=ExtResource("2_7i3ou")]
 position = Vector2(19, -28)
@@ -265,7 +297,7 @@ rotation = -1.309
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer6" parent="Levels/8" instance=ExtResource("2_7i3ou")]
 position = Vector2(33, -23)
@@ -273,7 +305,7 @@ rotation = -1.309
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer3" parent="Levels/8" instance=ExtResource("2_7i3ou")]
 position = Vector2(-38, 20)
@@ -281,7 +313,7 @@ rotation = -2.0944
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer5" parent="Levels/8" instance=ExtResource("2_7i3ou")]
 position = Vector2(37, 22)
@@ -289,18 +321,26 @@ rotation = -1.0472
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="9" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/9" instance=ExtResource("2_7i3ou")]
-position = Vector2(0, -44)
+position = Vector2(-6, -42)
 rotation = -1.5708
 pitch_scale = 1.3
 volume_linear = 0.5
 bullet = ExtResource("3_arnuf")
-interval = 0.083
+interval = 0.1
+
+[node name="BulletPodPlayer10" parent="Levels/9" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+pitch_scale = 1.3
+volume_linear = 0.5
+bullet = ExtResource("3_arnuf")
+interval = 0.1
 
 [node name="BulletPodPlayer2" parent="Levels/9" instance=ExtResource("2_7i3ou")]
 position = Vector2(-20, -27)
@@ -308,7 +348,7 @@ rotation = -1.83259
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer7" parent="Levels/9" instance=ExtResource("2_7i3ou")]
 position = Vector2(-32, -22)
@@ -316,7 +356,7 @@ rotation = -1.83259
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer4" parent="Levels/9" instance=ExtResource("2_7i3ou")]
 position = Vector2(19, -28)
@@ -324,7 +364,7 @@ rotation = -1.309
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer6" parent="Levels/9" instance=ExtResource("2_7i3ou")]
 position = Vector2(33, -23)
@@ -332,50 +372,58 @@ rotation = -1.309
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer3" parent="Levels/9" instance=ExtResource("2_7i3ou")]
-position = Vector2(-29, 18)
+position = Vector2(-27, 17)
 rotation = -2.0944
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer8" parent="Levels/9" instance=ExtResource("2_7i3ou")]
-position = Vector2(-43, 24)
+position = Vector2(-44, 24)
 rotation = -2.0944
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer5" parent="Levels/9" instance=ExtResource("2_7i3ou")]
-position = Vector2(29, 19)
+position = Vector2(27, 18)
 rotation = -1.0472
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer9" parent="Levels/9" instance=ExtResource("2_7i3ou")]
-position = Vector2(43, 25)
+position = Vector2(45, 26)
 rotation = -1.0472
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="10" type="Node2D" parent="Levels"]
 script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/10" instance=ExtResource("2_7i3ou")]
-position = Vector2(0, -44)
+position = Vector2(-6, -42)
 rotation = -1.5708
 pitch_scale = 1.3
 volume_linear = 0.5
 bullet = ExtResource("3_arnuf")
-interval = 0.083
+interval = 0.1
+
+[node name="BulletPodPlayer10" parent="Levels/10" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+pitch_scale = 1.3
+volume_linear = 0.5
+bullet = ExtResource("3_arnuf")
+interval = 0.1
 
 [node name="BulletPodPlayer2" parent="Levels/10" instance=ExtResource("2_7i3ou")]
 position = Vector2(-20, -27)
@@ -383,7 +431,7 @@ rotation = -1.83259
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer7" parent="Levels/10" instance=ExtResource("2_7i3ou")]
 position = Vector2(-32, -22)
@@ -391,7 +439,7 @@ rotation = -1.83259
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer4" parent="Levels/10" instance=ExtResource("2_7i3ou")]
 position = Vector2(19, -28)
@@ -399,7 +447,7 @@ rotation = -1.309
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer6" parent="Levels/10" instance=ExtResource("2_7i3ou")]
 position = Vector2(33, -23)
@@ -407,37 +455,39 @@ rotation = -1.309
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer3" parent="Levels/10" instance=ExtResource("2_7i3ou")]
-position = Vector2(-29, 18)
+position = Vector2(-27, 17)
 rotation = -2.0944
+pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 0.5
+interval = 0.3
 
 [node name="BulletPodPlayer8" parent="Levels/10" instance=ExtResource("2_7i3ou")]
-position = Vector2(-43, 24)
+position = Vector2(-44, 24)
 rotation = -2.0944
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.6
 
 [node name="BulletPodPlayer5" parent="Levels/10" instance=ExtResource("2_7i3ou")]
-position = Vector2(29, 19)
-rotation = -1.0472
-volume_linear = 0.25
-bullet = ExtResource("3_arnuf")
-interval = 0.5
-
-[node name="BulletPodPlayer9" parent="Levels/10" instance=ExtResource("2_7i3ou")]
-position = Vector2(43, 25)
+position = Vector2(27, 18)
 rotation = -1.0472
 pitch_scale = 0.9
 volume_linear = 0.25
 bullet = ExtResource("3_arnuf")
-interval = 1.0
+interval = 0.3
+
+[node name="BulletPodPlayer9" parent="Levels/10" instance=ExtResource("2_7i3ou")]
+position = Vector2(45, 26)
+rotation = -1.0472
+pitch_scale = 0.9
+volume_linear = 0.25
+bullet = ExtResource("3_arnuf")
+interval = 0.6
 
 [node name="HelperSprite" type="Sprite2D" parent="."]
 texture = ExtResource("4_icjx3")

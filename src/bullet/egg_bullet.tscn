@@ -8,9 +8,11 @@ radius = 16.0
 
 [node name="EggBullet" type="Area2D"]
 collision_layer = 8
+collision_priority = 2.0
 script = ExtResource("1_sfhc0")
 texture = ExtResource("2_iybyn")
-speed = Vector2(200, 0)
+speed = Vector2(250, 0)
+acceleration = Vector2(50, 0)
 damage = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
