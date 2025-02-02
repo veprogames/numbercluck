@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://csirhoma08qby"]
+[gd_scene load_steps=8 format=3 uid="uid://csirhoma08qby"]
 
 [ext_resource type="PackedScene" uid="uid://85e3iw673mt3" path="res://src/level/score.tscn" id="1_lh72d"]
 [ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_edi1w"]
+[ext_resource type="PackedScene" uid="uid://ddnal1daj2roi" path="res://src/ui/boss_bar.tscn" id="5_ludgw"]
 [ext_resource type="PackedScene" uid="uid://dmadk3p2xaxw7" path="res://src/level/level_camera.tscn" id="6_033fb"]
 [ext_resource type="PackedScene" uid="uid://dr6h7nhhb3ynm" path="res://src/ui/score_counter.tscn" id="9_1w3ay"]
 [ext_resource type="PackedScene" uid="uid://d1hyply7t8dwp" path="res://src/ui/player_ui.tscn" id="10_tb6jf"]
@@ -22,6 +23,16 @@ score = NodePath("../../Score")
 
 [node name="PlayerUI" parent="CanvasLayerUI" node_paths=PackedStringArray("player_state") instance=ExtResource("10_tb6jf")]
 player_state = NodePath("../../PlayerState")
+
+[node name="BossBar" parent="CanvasLayerUI" instance=ExtResource("5_ludgw")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_top = 12.0
+offset_right = 320.0
+offset_bottom = 63.0
+grow_horizontal = 2
 
 [node name="PlayerState" parent="." instance=ExtResource("10_y8hov")]
 

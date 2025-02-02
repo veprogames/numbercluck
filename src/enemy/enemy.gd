@@ -1,7 +1,8 @@
 class_name Enemy
 extends Area2D
 
-signal damaged
+signal damaged(enemy: Enemy)
+signal died(enemy: Enemy)
 
 @export var score: float
 @export var max_hp: float
@@ -40,9 +41,10 @@ func damage(amount: float) -> void:
 	if hp <= 0:
 		return
 	
-	damaged.emit()
+	damaged.emit(self)
 	hp -= amount
 	if hp <= 0:
+		died.emit(self)
 		Events.enemy_died.emit(self)
 		queue_free()
 

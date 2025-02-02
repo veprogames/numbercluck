@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddnal1daj2roi"]
+
+[ext_resource type="Script" path="res://src/ui/boss_bar.gd" id="1_2mcla"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ijleg"]
+font_size = 48
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.313726)
+shadow_offset = Vector2(2, 2)
+
+[node name="BossBar" type="ProgressBar" groups=["boss_bar"]]
+custom_minimum_size = Vector2(640, 0)
+offset_right = 4.0
+offset_bottom = 51.0
+max_value = 1.0
+step = 0.0
+show_percentage = false
+script = ExtResource("1_2mcla")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -31.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_ijleg")
+horizontal_alignment = 1

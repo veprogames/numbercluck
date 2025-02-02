@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv22g7s1dlt8m"]
+
+[ext_resource type="Script" path="res://src/enemy/behavior/add_to_boss_bar.gd" id="1_8xa6m"]
+
+[node name="AddToBossBar" type="Node"]
+script = ExtResource("1_8xa6m")

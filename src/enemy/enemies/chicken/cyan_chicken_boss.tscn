@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://da0g4mg8h0vkv"]
+[gd_scene load_steps=28 format=3 uid="uid://da0g4mg8h0vkv"]
 
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_0vr3l"]
 [ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="3_bxtc3"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://daaaja22f51wf" path="res://assets/particles/spark.png" id="12_6wke8"]
 [ext_resource type="PackedScene" uid="uid://v6y7pt160a03" path="res://src/enemy/behavior/enemy_move_by_noise.tscn" id="13_8sr4o"]
 [ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/add_firepower_progress_on_death.tscn" id="13_wx0tq"]
+[ext_resource type="PackedScene" uid="uid://cv22g7s1dlt8m" path="res://src/enemy/behavior/add_to_boss_bar.tscn" id="15_esikb"]
 
 [sub_resource type="GDScript" id="GDScript_ptf1q"]
 script/source = "@icon(\"uid://coivio5vqtpwj\")
@@ -143,3 +144,6 @@ chance_multi = 1000.0
 target = NodePath("..")
 noise = SubResource("FastNoiseLite_wl8ni")
 amplitude = Vector2(1200, 675)
+
+[node name="AddToBossBar" parent="." node_paths=PackedStringArray("target") instance=ExtResource("15_esikb")]
+target = NodePath("..")

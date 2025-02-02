@@ -8,5 +8,5 @@ func _ready() -> void:
 	target.damaged.connect(_on_enemy_damaged)
 
 
-func _on_enemy_damaged() -> void:
+func _on_enemy_damaged(_enemy: Enemy) -> void:
 	play()

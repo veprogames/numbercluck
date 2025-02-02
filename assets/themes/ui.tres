@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://7h4y27wblsv2"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://7h4y27wblsv2"]
 
 [ext_resource type="FontFile" uid="uid://l1te5ju02vef" path="res://assets/fonts/teko/Teko-Regular.ttf" id="1_4cacl"]
 
@@ -110,6 +110,30 @@ expand_margin_bottom = 8.0
 shadow_color = Color(0.00392157, 0.0705882, 0.34902, 0.313726)
 shadow_size = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7fm0"]
+bg_color = Color(0.0313726, 0.133333, 0.372549, 0.752941)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.109804, 0.713726, 1, 1)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.00392157, 0.0705882, 0.34902, 0.313726)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d23ka"]
+bg_color = Color(0.11, 0.718167, 1, 0)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.11, 0.718167, 1, 0.627451)
+shadow_size = 8
+
 [resource]
 default_font = ExtResource("1_4cacl")
 default_font_size = 32
@@ -130,6 +154,8 @@ MarginContainer/constants/margin_right = 16
 MarginContainer/constants/margin_top = 16
 Panel/styles/panel = SubResource("StyleBoxFlat_6rtbu")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_3hkeo")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_p7fm0")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_d23ka")
 RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0.313726)
 RichTextLabel/constants/line_separation = -12
 RichTextLabel/constants/shadow_offset_x = 2
