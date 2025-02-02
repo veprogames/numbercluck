@@ -1,4 +1,4 @@
-class_name DropFirepowerOnDeath
+class_name AddFirepowerProgressOnDeath
 extends Node2D
 
 @export var target: Enemy
@@ -14,12 +14,16 @@ func _ready() -> void:
 	target.tree_exiting.connect(_on_target_exiting_tree)
 
 
-func get_drop_chance() -> float:
-	return 0.01 * Game.upgrades.firepower_chance.get_effect() * chance_multi
+func get_added_amount() -> float:
+	return minf(
+		1.0,
+		randf_range(0.005, 0.015) * 2 * chance_multi * Game.upgrades.firepower_chance.get_effect()
+	)
 
 
 func _on_target_exiting_tree() -> void:
-	if is_instance_valid(level) and randf() < get_drop_chance():
-		var fp: Firepower = FirepowerScene.instantiate()
-		fp.global_position = global_position
-		level.add_child(fp)
+	if is_instance_valid(level) and is_instance_valid(player_state):
+		player_state.firepower_progress += get_added_amount()
+		
+	if player_state.can_spawn_firepower():
+		player_state.spawn_firepower(global_position)

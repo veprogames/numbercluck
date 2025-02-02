@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://b45nhm48v654h" path="res://assets/chicken/hit.ogg" id="10_omqpd"]
 [ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="11_0o67f"]
 [ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="12_v1q6f"]
-[ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/drop_firepower_on_death.tscn" id="13_jopte"]
+[ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/add_firepower_progress_on_death.tscn" id="13_jopte"]
 
 [sub_resource type="GDScript" id="GDScript_ptf1q"]
 script/source = "@icon(\"uid://coivio5vqtpwj\")
@@ -90,5 +90,5 @@ visibility_rect = Rect2(-115.616, -116.059, 242.424, 223.17)
 local_coords = true
 target = NodePath("..")
 
-[node name="DropFirepowerOnDeath" parent="." node_paths=PackedStringArray("target") instance=ExtResource("13_jopte")]
+[node name="AddFirepowerProgressOnDeath" parent="." node_paths=PackedStringArray("target") instance=ExtResource("13_jopte")]
 target = NodePath("..")

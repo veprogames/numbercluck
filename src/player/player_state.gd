@@ -9,6 +9,7 @@ signal game_over
 
 @onready var respawn_timer: Timer = $RespawnTimer
 @onready var viewport_rect: Rect2 = get_viewport().get_visible_rect()
+@onready var level: Node2D = get_tree().get_first_node_in_group(&"level")
 
 var player: Player
 
@@ -27,9 +28,12 @@ var firepower: int = 0 :
 var min_firepower: int = int(Game.upgrades.min_firepower.get_effect())
 var max_firepower: int = int(Game.upgrades.max_firepower.get_effect())
 
+var firepower_progress: float = randf()
+
 var mission_completed: bool = false
 
 const PlayerScene: PackedScene = preload("res://src/player/player.tscn")
+const FirepowerScene: PackedScene = preload("res://src/collectables/firepower.tscn")
 
 
 func _ready() -> void:
@@ -58,15 +62,19 @@ func get_excessive_firepower() -> int:
 	return firepower - get_effective_firepower()
 
 
+func get_normalized_firepower() -> int:
+	return firepower - min_firepower
+
+
 func _on_player_damaged() -> void:
 	if mission_completed:
 		return
 	
 	lives -= 1
 	player_damaged.emit()
-	@warning_ignore("integer_division")
-	firepower = maxi(firepower / 2, firepower - 3)
-	firepower = maxi(firepower, min_firepower)
+	#@warning_ignore("integer_division")
+	var target_fp: int = min_firepower + int(get_normalized_firepower() / 1.5)
+	firepower = maxi(target_fp, min_firepower)
 	player.damaged.disconnect(_on_player_damaged)
 	player.firepower_collected.disconnect(_on_player_firepower_collected)
 	player.queue_free()
@@ -91,6 +99,21 @@ func respawn_player() -> Player:
 	player_.player_firepower.current_power = get_effective_firepower()
 	player_spawned.emit(player_)
 	return player_
+
+
+func add_firepower_progress(progress: float) -> void:
+	firepower_progress += progress
+
+
+func can_spawn_firepower() -> bool:
+	return firepower_progress >= 1.0
+
+
+func spawn_firepower(position: Vector2) -> void:
+	firepower_progress -= 1.0
+	var fp: Firepower = FirepowerScene.instantiate()
+	fp.global_position = position
+	level.add_child(fp)
 
 
 func _on_game_over() -> void:
