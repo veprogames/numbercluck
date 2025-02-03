@@ -21,6 +21,7 @@ static func save_game() -> void:
 			"min_firepower": upgrades.min_firepower.level,
 			"max_firepower": upgrades.max_firepower.level,
 			"firepower_chance": upgrades.firepower_chance.level,
+			"booster_count": upgrades.booster_count.level,
 		},
 		"settings": {
 			"locale": settings.locale
@@ -51,7 +52,12 @@ static func load_game() -> void:
 	file.close()
 	
 	Game.saved_score = data.saved_score
-	Game.upgrades.min_firepower.level = data.upgrades.min_firepower
-	Game.upgrades.max_firepower.level = data.upgrades.max_firepower
-	Game.upgrades.firepower_chance.level = data.upgrades.firepower_chance
+	if "min_firepower" in data.upgrades:
+		Game.upgrades.min_firepower.level = data.upgrades.min_firepower
+	if "max_firepower" in data.upgrades:
+		Game.upgrades.max_firepower.level = data.upgrades.max_firepower
+	if "firepower_chance" in data.upgrades:
+		Game.upgrades.firepower_chance.level = data.upgrades.firepower_chance
+	if "booster_count" in data.upgrades:
+		Game.upgrades.booster_count.level = data.upgrades.booster_count
 	Game.settings.locale = data.settings.locale

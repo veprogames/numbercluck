@@ -3,9 +3,11 @@ extends Panel
 
 @export var player_state: PlayerState
 
+@onready var h_box_container_wrapper: HBoxContainer = $HBoxContainerWrapper
 @onready var label_health: Label = %LabelHealth
 @onready var label_firepower: Label = %LabelFirepower
 @onready var label_boosters: Label = %LabelBoosters
+@onready var h_box_container_boosters: HBoxContainer = %HBoxContainerBoosters
 
 
 func _ready() -> void:
@@ -25,7 +27,11 @@ func _ready() -> void:
 			label_firepower.text = "%d" % fp
 	)
 	
-	label_boosters.text = "%d" % player_state.boosters
-	player_state.boosters_changed.connect(func(boosts: int) -> void:
-		label_boosters.text = "%d" % boosts
-	)
+	if Game.upgrades.booster_count.level > 0:
+		label_boosters.text = "%d" % player_state.boosters
+		player_state.boosters_changed.connect(func(boosts: int) -> void:
+			label_boosters.text = "%d" % boosts
+		)
+	else:
+		h_box_container_boosters.queue_free()
+		h_box_container_wrapper.add_theme_constant_override(&"separation", 160)

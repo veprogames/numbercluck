@@ -199,4 +199,16 @@ msgstr "Feuerkraft-Chance"
 
 #: assets/upgrades/upgrade_firepower_chance.tres
 msgid "Enemies drop Firepower $$effect$$ as likely."
-msgstr "Gegner lassen $$effect$$ so oft Feuerkraft fallen"
+msgstr "Gegner lassen $$effect$$ so oft Feuerkraft fallen."
+
+#: assets/upgrades/upgrade_booster_count.tres
+msgid "Booster Count"
+msgstr "Booster-Menge"
+
+#: assets/upgrades/upgrade_booster_count.tres
+msgid ""
+"You start a Mission with $$effect$$ Boosters. Boosters greatly increase your "
+"firerate for a short amount of time."
+msgstr ""
+"Du erhält $$effect$$ Booster, wenn du eine Mission startest. Ein Booster "
+"erhöht für eine kurze Zeit deutlich deine Feuerrate."
