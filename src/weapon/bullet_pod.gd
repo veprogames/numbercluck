@@ -22,11 +22,11 @@ func _physics_process(delta: float) -> void:
 		shoot()
 
 
-func shoot() -> void:
+func shoot(angle_offset: float = 0) -> void:
 	# not optimal
 	var overshot_us: int = mini(16000, Time.get_ticks_usec() - next_shot)
 	next_shot = Time.get_ticks_usec() - overshot_us + int(interval * 1000000.0)
-	var bullet_: Bullet = create_bullet()
+	var bullet_: Bullet = create_bullet(angle_offset)
 	if is_instance_valid(audio_player):
 		audio_player.stream = bullet_.sound
 		audio_player.play()
@@ -34,10 +34,10 @@ func shoot() -> void:
 		level.add_child(bullet_)
 
 
-func create_bullet() -> Bullet:
+func create_bullet(angle_offset: float = 0) -> Bullet:
 	var b: Bullet = bullet.instantiate() as Bullet
 	b.global_position = global_position
-	b.angle += rotation
+	b.angle += rotation + angle_offset
 	b.rotation = b.get_bullet_rotation()
 	return b
 

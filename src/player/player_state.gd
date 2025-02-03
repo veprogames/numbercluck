@@ -18,7 +18,9 @@ signal game_over
 
 signal lives_changed(lives: int)
 signal firepower_changed(fp: int)
+signal boosters_changed(boosts: int)
 
+@onready var boost_timer: Timer = $BoostTimer
 @onready var respawn_timer: Timer = $RespawnTimer
 @onready var viewport_rect: Rect2 = get_viewport().get_visible_rect()
 @onready var level: Node2D = get_tree().get_first_node_in_group(&"level")
@@ -38,6 +40,11 @@ var firepower: int = 0 :
 		if is_instance_valid(player):
 			player.player_firepower.current_power = fp
 		firepower_changed.emit(fp)
+
+var boosters: int = 0 :
+	set(b):
+		boosters = b
+		boosters_changed.emit(b)
 
 var min_firepower: int = int(Game.upgrades.min_firepower.get_effect())
 var max_firepower: int = int(Game.upgrades.max_firepower.get_effect())
@@ -59,6 +66,10 @@ func _ready() -> void:
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed(&"ui_cancel"):
 		get_tree().change_scene_to_file("res://src/main_menu/main_menu.tscn")
+	if Input.is_action_just_released(&"player_boost"):
+		if boosters > 0 and state != PlayerStates.BOOSTED:
+			boosters -= 1
+			set_state(PlayerStates.BOOSTED)
 
 
 func get_player() -> Player:
@@ -69,6 +80,10 @@ func get_player() -> Player:
 
 func is_dead() -> bool:
 	return lives <= 0
+
+
+func is_boosted() -> bool:
+	return state == PlayerStates.BOOSTED
 
 
 func get_effective_firepower() -> int:
@@ -173,3 +188,9 @@ func _on_player_damaged() -> void:
 		respawn_timer.start()
 		await respawn_timer.timeout
 		set_state(PlayerStates.NORMAL)
+
+
+func _on_boost_started() -> void:
+	boost_timer.start()
+	await boost_timer.timeout
+	set_state(PlayerStates.NORMAL)

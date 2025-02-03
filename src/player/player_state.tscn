@@ -6,8 +6,14 @@
 script = ExtResource("1_7e6c7")
 
 [node name="RespawnTimer" type="Timer" parent="."]
+process_callback = 0
 wait_time = 2.0
 
+[node name="BoostTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 5.0
+
+[connection signal="boost_started" from="." to="." method="_on_boost_started"]
 [connection signal="game_over" from="." to="." method="_on_game_over"]
 [connection signal="player_damaged" from="." to="." method="_on_player_damaged"]
 [connection signal="player_spawned" from="." to="." method="_on_player_spawned"]

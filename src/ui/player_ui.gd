@@ -5,6 +5,7 @@ extends Panel
 
 @onready var label_health: Label = %LabelHealth
 @onready var label_firepower: Label = %LabelFirepower
+@onready var label_boosters: Label = %LabelBoosters
 
 
 func _ready() -> void:
@@ -22,4 +23,9 @@ func _ready() -> void:
 			]
 		else:
 			label_firepower.text = "%d" % fp
+	)
+	
+	label_boosters.text = "%d" % player_state.boosters
+	player_state.boosters_changed.connect(func(boosts: int) -> void:
+		label_boosters.text = "%d" % boosts
 	)
