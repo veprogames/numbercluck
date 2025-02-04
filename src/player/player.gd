@@ -10,13 +10,18 @@ signal damaged
 @onready var viewport_rect: Rect2 = get_viewport_rect()
 
 @onready var damage_area: Area2D = $DamageArea
-@onready var player_firepower: PlayerFirepower = $PlayerFirepower
+var player_firepower: PlayerFirepower
 
 var ShieldScene: PackedScene = preload("res://src/player/player_shield.tscn")
+var PlayerFirepowerScene: PackedScene = preload("res://src/player/player_firepower.tscn")
 
 var shield: PlayerShield
 
 func _ready() -> void:
+	# add at runtime to prevent (Parse Error: Busy) in player.tscn due to cyclic reference
+	player_firepower = PlayerFirepowerScene.instantiate()
+	add_child(player_firepower)
+	
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	var tween: Tween = create_tween()

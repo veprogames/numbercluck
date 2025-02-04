@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bw6jtohhj1h22"]
+[gd_scene load_steps=27 format=3 uid="uid://bw6jtohhj1h22"]
 
 [ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="1_abc3k"]
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_hvf25"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="5_t5dkk"]
 [ext_resource type="Texture2D" uid="uid://daaaja22f51wf" path="res://assets/particles/spark.png" id="6_8cxs4"]
 [ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="6_33my5"]
-[ext_resource type="PackedScene" uid="uid://ds4pn67w135sr" path="res://src/player/player_firepower.tscn" id="6_p02w0"]
 [ext_resource type="AudioStream" uid="uid://dpulhle4ui1pv" path="res://assets/bullets/ion.ogg" id="7_i1w6s"]
 
 [sub_resource type="Gradient" id="Gradient_vrpgn"]
@@ -137,8 +136,6 @@ collision_mask = 10
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
 shape = SubResource("CircleShape2D_i0pew")
 
-[node name="PlayerFirepower" parent="." instance=ExtResource("6_p02w0")]
-
 [node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_t5dkk")]
 z_index = 2
 amount = 64
@@ -150,7 +147,6 @@ target = NodePath("..")
 
 [node name="ParticlesOnVanish2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_t5dkk")]
 z_index = 2
-emitting = true
 amount = 64
 process_material = SubResource("ParticleProcessMaterial_u1bst")
 texture = ExtResource("6_8cxs4")

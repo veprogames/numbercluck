@@ -41,7 +41,7 @@ var firepower: int = 0 :
 			player.player_firepower.current_power = fp
 		firepower_changed.emit(fp)
 
-var boosters: int = Game.upgrades.booster_count.get_effect() :
+var boosters: int = int(Game.upgrades.booster_count.get_effect()) :
 	set(b):
 		boosters = b
 		boosters_changed.emit(b)
