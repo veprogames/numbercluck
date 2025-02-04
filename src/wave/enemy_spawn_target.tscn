@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://gefg41lx3axv"]
-
-[ext_resource type="Script" path="res://src/wave/enemy_spawn_target.gd" id="1_3xab7"]
-
-[node name="EnemySpawnTarget" type="Node2D"]
-process_mode = 4
-script = ExtResource("1_3xab7")
