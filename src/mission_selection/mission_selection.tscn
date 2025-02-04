@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfb6h3vaxsoo0"]
+[gd_scene load_steps=5 format=3 uid="uid://dfb6h3vaxsoo0"]
 
 [ext_resource type="Script" path="res://src/mission_selection/mission_selection.gd" id="1_oeulx"]
 [ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_xwkgo"]
+[ext_resource type="PackedScene" uid="uid://4tr0q6ojfdge" path="res://src/mission_selection/mission_button.tscn" id="3_ufegd"]
+[ext_resource type="Resource" uid="uid://bbquhfvixusbv" path="res://src/mission/missions/example_mission.tres" id="4_l7pll"]
 
 [node name="MissionSelection" type="Node2D"]
 script = ExtResource("1_oeulx")
@@ -33,4 +35,12 @@ offset_right = 141.0
 offset_bottom = 87.0
 text = "Main Menu"
 
+[node name="MissionButton" parent="CanvasLayer" instance=ExtResource("3_ufegd")]
+offset_left = 925.0
+offset_top = 57.0
+offset_right = 941.0
+offset_bottom = 73.0
+definition = ExtResource("4_l7pll")
+
 [connection signal="pressed" from="CanvasLayer/ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]
+[connection signal="mission_selected" from="CanvasLayer/MissionButton" to="." method="_on_mission_button_mission_selected"]

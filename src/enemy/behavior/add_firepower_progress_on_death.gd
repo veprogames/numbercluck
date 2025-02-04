@@ -11,7 +11,7 @@ const FirepowerScene: PackedScene = preload("res://src/collectables/firepower.ts
 
 
 func _ready() -> void:
-	target.tree_exiting.connect(_on_target_exiting_tree)
+	target.died.connect(_on_target_died)
 
 
 func get_added_amount() -> float:
@@ -21,7 +21,7 @@ func get_added_amount() -> float:
 	)
 
 
-func _on_target_exiting_tree() -> void:
+func _on_target_died(_enemy: Enemy) -> void:
 	if is_instance_valid(level) and is_instance_valid(player_state):
 		player_state.firepower_progress += get_added_amount()
 		

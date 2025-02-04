@@ -10,8 +10,9 @@ signal finished
 @onready var spawn_timer: Timer = $SpawnTimer
 @onready var title_label: Title = $Title
 
-var spawn_points: Array
-var spawn_targets: Array
+var spawn_points: Array[EnemySpawnPoint]
+var spawn_targets: Array[EnemySpawnTarget]
+var spawn_enemies: Array[Enemy]
 
 var finished_spawning: bool = false
 
@@ -19,13 +20,14 @@ var finished_spawning: bool = false
 func _ready() -> void:
 	title_label.text = title
 	
-	spawn_points = get_children().filter(func(node: Node) -> bool:
-		return node is EnemySpawnPoint
-	)
-	
-	spawn_targets = get_children().filter(func(node: Node) -> bool:
-		return node is EnemySpawnTarget
-	)
+	for child: Node in get_children():
+		if child is EnemySpawnPoint:
+			spawn_points.append(child)
+		elif child is EnemySpawnTarget:
+			spawn_targets.append(child)
+		elif child is Enemy:
+			spawn_enemies.append(child)
+			remove_child(child)
 	
 	if time_between_spawns > 0:
 		spawn_timer.wait_time = time_between_spawns
@@ -39,11 +41,25 @@ func start() -> void:
 	for target: EnemySpawnTarget in spawn_targets:
 		var spawn_position: Vector2 = Vector2.ZERO
 		if spawn_points.size() > 0:
-			@warning_ignore("unsafe_cast") # can't type array properly when using Array.filter
+			@warning_ignore("unsafe_cast")
 			var spawn_point: EnemySpawnPoint = spawn_points.pick_random() as EnemySpawnPoint
 			spawn_position = spawn_point.position
 		
 		spawn(target.enemy, spawn_position, target.position)
+		
+		if time_between_spawns > 0:
+			spawn_timer.start()
+			await spawn_timer.timeout
+	
+	for enemy: Enemy in spawn_enemies:
+		var spawn_position: Vector2 = Vector2.ZERO
+		if spawn_points.size() > 0:
+			@warning_ignore("unsafe_cast")
+			var spawn_point: EnemySpawnPoint = spawn_points.pick_random() as EnemySpawnPoint
+			spawn_position = spawn_point.position
+		
+		enemy.target_position = spawn_position
+		spawn_enemy(enemy, spawn_position, enemy.position)
 		
 		if time_between_spawns > 0:
 			spawn_timer.start()
@@ -57,6 +73,12 @@ func start() -> void:
 
 func spawn(scene: PackedScene, from_pos: Vector2, goto_pos: Vector2 = Vector2.ZERO) -> void:
 	var enemy: Enemy = scene.instantiate() as Enemy
+	enemy.position = from_pos
+	enemy.move_to_target_position(goto_pos)
+	enemies.add_child(enemy)
+
+
+func spawn_enemy(enemy: Enemy, from_pos: Vector2, goto_pos: Vector2 = Vector2.ZERO) -> void:
 	enemy.position = from_pos
 	enemy.move_to_target_position(goto_pos)
 	enemies.add_child(enemy)

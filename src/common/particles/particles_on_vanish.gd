@@ -9,6 +9,7 @@ extends GPUParticles2D
 func _ready() -> void:
 	var effect_container: Node = get_tree().get_first_node_in_group(&"effect_container")
 	if is_instance_valid(effect_container):
+		owner = null
 		reparent.call_deferred(effect_container)
 	
 	emitting = false
@@ -17,6 +18,8 @@ func _ready() -> void:
 
 
 func _on_target_tree_exiting() -> void:
+	if not is_inside_tree():
+		return
 	global_position = target.global_position
 	if is_instance_valid(tree):
 		await tree.physics_frame

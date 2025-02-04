@@ -44,3 +44,7 @@ func select_mission(definition: MissionDefinition) -> void:
 	level.add_child(sequence)
 	get_tree().root.add_child(level)
 	get_tree().current_scene = level
+
+
+func _on_mission_button_mission_selected(definition: MissionDefinition) -> void:
+	select_mission(definition)

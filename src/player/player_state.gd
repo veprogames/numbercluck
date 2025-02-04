@@ -120,7 +120,7 @@ func spawn_firepower(position: Vector2) -> void:
 	firepower_progress -= 1.0
 	var fp: Firepower = FirepowerScene.instantiate()
 	fp.global_position = position
-	level.add_child(fp)
+	level.add_child.call_deferred(fp)
 
 
 func set_state(new_state: PlayerStates) -> void:

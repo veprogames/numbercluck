@@ -1,13 +1,36 @@
-[gd_scene load_steps=9 format=3 uid="uid://daqmur6h7gqf2"]
+[gd_scene load_steps=12 format=3 uid="uid://daqmur6h7gqf2"]
 
 [ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_urfbg"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_68qxi"]
 [ext_resource type="Script" path="res://src/wave/enemy_spawn_point.gd" id="3_i1pmi"]
-[ext_resource type="PackedScene" uid="uid://gefg41lx3axv" path="res://src/wave/enemy_spawn_target.tscn" id="4_npbma"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/enemies/chicken/red_chicken.tscn" id="5_o733k"]
 [ext_resource type="PackedScene" uid="uid://txv8v6x063px" path="res://src/enemy/enemies/chicken/cyan_chicken.tscn" id="6_4fxgm"]
 [ext_resource type="PackedScene" uid="uid://bvtw1m8um6svb" path="res://src/enemy/enemies/chicken/yellow_chicken.tscn" id="7_tb4mw"]
 [ext_resource type="PackedScene" uid="uid://da0g4mg8h0vkv" path="res://src/enemy/enemies/chicken/cyan_chicken_boss.tscn" id="8_1tfb7"]
+
+[sub_resource type="GDScript" id="GDScript_ptf1q"]
+script/source = "@icon(\"uid://coivio5vqtpwj\")
+class_name Chicken
+extends Enemy
+"
+
+[sub_resource type="GDScript" id="GDScript_fpraa"]
+script/source = "@icon(\"uid://coivio5vqtpwj\")
+class_name Chicken
+extends Enemy
+"
+
+[sub_resource type="GDScript" id="GDScript_8tdvx"]
+script/source = "@icon(\"uid://coivio5vqtpwj\")
+class_name Chicken
+extends Enemy
+"
+
+[sub_resource type="GDScript" id="GDScript_rnj6o"]
+script/source = "@icon(\"uid://coivio5vqtpwj\")
+class_name Chicken
+extends Enemy
+"
 
 [node name="WaveSeqANewBeginning" type="Node"]
 script = ExtResource("1_urfbg")
@@ -19,9 +42,13 @@ title = "First Contact"
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave" instance=ExtResource("4_npbma")]
+[node name="RedChicken_6323" type="Area2D" parent="Wave" instance=ExtResource("5_o733k")]
 position = Vector2(960, 400)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
 [node name="Wave2" parent="." instance=ExtResource("2_68qxi")]
 title = "Invasion"
@@ -31,45 +58,85 @@ time_between_spawns = 0.25
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_2733" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(360, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget2" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_120" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(660, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget3" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_1750" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(960, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget4" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_9475" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget5" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_503" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget6" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_8866" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(360, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget7" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_5476" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(660, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget8" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_4270" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(960, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget9" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_4962" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget10" parent="Wave2" instance=ExtResource("4_npbma")]
+[node name="RedChicken_5944" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
 [node name="Wave3" parent="." instance=ExtResource("2_68qxi")]
 title = "Another One"
@@ -79,45 +146,85 @@ time_between_spawns = 0.2
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_1601" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(360, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget2" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_5916" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(660, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget3" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_6979" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(960, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget4" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_8823" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget5" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_1798" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget6" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_968" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(360, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget7" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_4076" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(660, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget8" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_2972" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(960, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget9" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_3407" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget10" parent="Wave3" instance=ExtResource("4_npbma")]
+[node name="RedChicken_8438" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 500)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
 [node name="Wave4" parent="." instance=ExtResource("2_68qxi")]
 title = "Stronger Chickens"
@@ -127,17 +234,29 @@ time_between_spawns = 0.5
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave4" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_5711" type="Area2D" parent="Wave4" instance=ExtResource("6_4fxgm")]
 position = Vector2(710, 300)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget2" parent="Wave4" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_8051" type="Area2D" parent="Wave4" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 400)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget3" parent="Wave4" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_80" type="Area2D" parent="Wave4" instance=ExtResource("6_4fxgm")]
 position = Vector2(1210, 300)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
 [node name="Wave5" parent="." instance=ExtResource("2_68qxi")]
 title = "Mixed Invasion"
@@ -147,65 +266,125 @@ time_between_spawns = 0.25
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_2123" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(360, 200)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget2" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="RedChicken_9217" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(660, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget3" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_8923" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 200)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget4" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="RedChicken_5021" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget5" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_4089" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(1560, 200)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget6" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="RedChicken_4969" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(360, 400)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget7" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_283" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(660, 400)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget8" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="RedChicken_4295" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(960, 400)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget9" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_4744" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(1260, 400)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget10" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="RedChicken_5035" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 400)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget11" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_6637" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(360, 600)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget12" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="RedChicken_1524" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(660, 600)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget13" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_2616" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 600)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget14" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="RedChicken_1969" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 600)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget15" parent="Wave5" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_9365" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(1560, 600)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
 [node name="Wave6" parent="." instance=ExtResource("2_68qxi")]
 title = "Another One"
@@ -215,65 +394,125 @@ time_between_spawns = 0.2
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="RedChicken_3318" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(360, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget2" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_9405" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(660, 200)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget3" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="RedChicken_6438" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(960, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget4" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_3723" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(1260, 200)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget5" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="RedChicken_408" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 200)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget6" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_5884" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(360, 400)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget7" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="RedChicken_5981" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(660, 400)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget8" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_2846" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 400)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget9" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="RedChicken_5648" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 400)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget10" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_6857" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(1560, 400)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget11" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="RedChicken_3548" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(360, 600)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget12" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_3388" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(660, 600)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget13" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="RedChicken_9026" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(960, 600)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget14" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_763" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(1260, 600)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget15" parent="Wave6" instance=ExtResource("4_npbma")]
+[node name="RedChicken_4646" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 600)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
 [node name="Wave7" parent="." instance=ExtResource("2_68qxi")]
 title = "A new Color"
@@ -283,21 +522,37 @@ time_between_spawns = 0.5
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave7" instance=ExtResource("4_npbma")]
+[node name="YellowChicken_1801" type="Area2D" parent="Wave7" instance=ExtResource("7_tb4mw")]
 position = Vector2(660, 250)
-enemy = ExtResource("7_tb4mw")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_8tdvx")
+score = 1300.0
+max_hp = 300.0
 
-[node name="EnemySpawnTarget2" parent="Wave7" instance=ExtResource("4_npbma")]
+[node name="YellowChicken_8284" type="Area2D" parent="Wave7" instance=ExtResource("7_tb4mw")]
 position = Vector2(1260, 250)
-enemy = ExtResource("7_tb4mw")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_8tdvx")
+score = 1300.0
+max_hp = 300.0
 
-[node name="EnemySpawnTarget3" parent="Wave7" instance=ExtResource("4_npbma")]
+[node name="YellowChicken_827" type="Area2D" parent="Wave7" instance=ExtResource("7_tb4mw")]
 position = Vector2(660, 500)
-enemy = ExtResource("7_tb4mw")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_8tdvx")
+score = 1300.0
+max_hp = 300.0
 
-[node name="EnemySpawnTarget4" parent="Wave7" instance=ExtResource("4_npbma")]
+[node name="YellowChicken_4071" type="Area2D" parent="Wave7" instance=ExtResource("7_tb4mw")]
 position = Vector2(1260, 500)
-enemy = ExtResource("7_tb4mw")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_8tdvx")
+score = 1300.0
+max_hp = 300.0
 
 [node name="Wave8" parent="." instance=ExtResource("2_68qxi")]
 title = "Thanks for Playing! Enjoy!"
@@ -306,61 +561,117 @@ title = "Thanks for Playing! Enjoy!"
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="RedChicken_3039" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(960, 300)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget2" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_2737" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(816, 194)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget3" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="YellowChicken_318" type="Area2D" parent="Wave8" instance=ExtResource("7_tb4mw")]
 position = Vector2(670, 156)
-enemy = ExtResource("7_tb4mw")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_8tdvx")
+score = 1300.0
+max_hp = 300.0
 
-[node name="EnemySpawnTarget4" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="RedChicken_8989" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(531, 227)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget5" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_6402" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(521, 383)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget6" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="YellowChicken_9333" type="Area2D" parent="Wave8" instance=ExtResource("7_tb4mw")]
 position = Vector2(627, 577)
-enemy = ExtResource("7_tb4mw")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_8tdvx")
+score = 1300.0
+max_hp = 300.0
 
-[node name="EnemySpawnTarget7" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="RedChicken_4281" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(781, 703)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget8" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_380" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 816)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget9" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="YellowChicken_9867" type="Area2D" parent="Wave8" instance=ExtResource("7_tb4mw")]
 position = Vector2(1134, 700)
-enemy = ExtResource("7_tb4mw")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_8tdvx")
+score = 1300.0
+max_hp = 300.0
 
-[node name="EnemySpawnTarget10" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="RedChicken_657" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(1252, 566)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget11" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_1015" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(1363, 443)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
-[node name="EnemySpawnTarget12" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="YellowChicken_8108" type="Area2D" parent="Wave8" instance=ExtResource("7_tb4mw")]
 position = Vector2(1378, 274)
-enemy = ExtResource("7_tb4mw")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_8tdvx")
+score = 1300.0
+max_hp = 300.0
 
-[node name="EnemySpawnTarget13" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="RedChicken_7645" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 153)
-enemy = ExtResource("5_o733k")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 1000.0
+max_hp = 100.0
 
-[node name="EnemySpawnTarget14" parent="Wave8" instance=ExtResource("4_npbma")]
+[node name="CyanChicken_2636" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(1086, 226)
-enemy = ExtResource("6_4fxgm")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_fpraa")
+score = 1100.0
+max_hp = 200.0
 
 [node name="Wave9" parent="." instance=ExtResource("2_68qxi")]
 title = "Calm Before the Storm"
@@ -369,9 +680,13 @@ title = "Calm Before the Storm"
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave9" instance=ExtResource("4_npbma")]
+[node name="YellowChicken_700" type="Area2D" parent="Wave9" instance=ExtResource("7_tb4mw")]
 position = Vector2(960, 400)
-enemy = ExtResource("7_tb4mw")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_8tdvx")
+score = 1300.0
+max_hp = 300.0
 
 [node name="Wave10" parent="." instance=ExtResource("2_68qxi")]
 title = "Show 'em who's Boss!"
@@ -380,6 +695,10 @@ title = "Show 'em who's Boss!"
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="EnemySpawnTarget" parent="Wave10" instance=ExtResource("4_npbma")]
+[node name="CyanChickenBoss_5526" type="Area2D" parent="Wave10" instance=ExtResource("8_1tfb7")]
 position = Vector2(960, 400)
-enemy = ExtResource("8_1tfb7")
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_rnj6o")
+score = 75000.0
+max_hp = 10000.0
