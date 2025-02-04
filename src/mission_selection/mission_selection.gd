@@ -40,6 +40,10 @@ func select_mission(definition: MissionDefinition) -> void:
 	var level: Node2D = LevelScene.instantiate() as Node2D
 	var sequence: WaveSequence = definition.get_wave_sequence()
 	
+	var scrolling_background: TextureRect = level.get_node(^"ScrollingBackground") as TextureRect
+	if scrolling_background:
+		scrolling_background.texture = definition.background
+	
 	queue_free()
 	level.add_child(sequence)
 	get_tree().root.add_child(level)
