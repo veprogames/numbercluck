@@ -3,10 +3,14 @@
 [ext_resource type="Script" path="res://src/wave/wave.gd" id="1_8b76i"]
 [ext_resource type="PackedScene" uid="uid://cj05g7lk37njy" path="res://src/ui/title.tscn" id="2_rc0p3"]
 
-[node name="Wave" type="Node"]
+[node name="Wave" type="Node2D"]
 script = ExtResource("1_8b76i")
 
-[node name="Title" parent="." instance=ExtResource("2_rc0p3")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Title" parent="CanvasLayer" instance=ExtResource("2_rc0p3")]
+offset_top = -69.0
+offset_bottom = 69.0
 
 [node name="Enemies" type="Node" parent="."]
 

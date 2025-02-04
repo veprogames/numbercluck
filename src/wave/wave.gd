@@ -1,5 +1,5 @@
 class_name Wave
-extends Node
+extends Node2D
 
 signal finished
 
@@ -8,7 +8,7 @@ signal finished
 
 @onready var enemies: Node = $Enemies
 @onready var spawn_timer: Timer = $SpawnTimer
-@onready var title_label: Title = $Title
+@onready var title_label: Title = $CanvasLayer/Title
 
 var spawn_points: Array[EnemySpawnPoint]
 var spawn_enemies: Array[Enemy]
@@ -17,6 +17,8 @@ var finished_spawning: bool = false
 
 
 func _ready() -> void:
+	# show the node if it was hidden in the editor for editing purposes
+	visible = true
 	title_label.text = title
 	
 	for child: Node in get_children():
