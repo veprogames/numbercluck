@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cyi6dsbuhw218"]
+[gd_scene load_steps=18 format=3 uid="uid://cyi6dsbuhw218"]
 
 [ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_syysi"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_mc0sr"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://c6w8vfqscbcbt" path="res://src/enemy/enemies/chicken/silver_chicken.tscn" id="10_fddde"]
 [ext_resource type="PackedScene" uid="uid://da0g4mg8h0vkv" path="res://src/enemy/enemies/chicken/cyan_chicken_boss.tscn" id="11_1ige4"]
 [ext_resource type="AudioStream" uid="uid://cilw4ifmpr6kr" path="res://assets/music/vortex.ogg" id="11_855mx"]
+[ext_resource type="PackedScene" uid="uid://bh41ogc1wjdj5" path="res://src/enemy/behavior/enemy_move_swivel.tscn" id="13_6lhk0"]
+[ext_resource type="PackedScene" uid="uid://v6y7pt160a03" path="res://src/enemy/behavior/enemy_move_by_noise.tscn" id="14_rdvrv"]
 
 [sub_resource type="GDScript" id="GDScript_0ad73"]
 script/source = "@icon(\"uid://coivio5vqtpwj\")
@@ -25,10 +27,14 @@ class_name Chicken
 extends Enemy
 "
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_nby2e"]
+frequency = 0.5
+
 [node name="WaveSeqTheWingedThreat" type="Node"]
 script = ExtResource("1_syysi")
 
 [node name="Wave" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
 title = "Second Contact"
 music_stream = ExtResource("3_p5dwl")
 
@@ -45,6 +51,7 @@ position = Vector2(960, 400)
 position = Vector2(1260, 400)
 
 [node name="Wave2" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
 title = "Mixed Invasion"
 time_between_spawns = 0.25
 
@@ -98,6 +105,7 @@ position = Vector2(1260, 600)
 position = Vector2(1560, 600)
 
 [node name="Wave3" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
 title = "A new Color... Again?"
 
 [node name="EnemySpawnPoint" parent="Wave3" instance=ExtResource("3_ht2lm")]
@@ -116,6 +124,7 @@ position = Vector2(1260, 400)
 script = SubResource("GDScript_0ad73")
 
 [node name="Wave4" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
 title = "RGB"
 time_between_spawns = 0.1
 
@@ -223,6 +232,7 @@ position = Vector2(978, 711)
 script = SubResource("GDScript_0ad73")
 
 [node name="Wave5" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
 title = "Chromatic"
 time_between_spawns = 0.1
 
@@ -278,6 +288,7 @@ position = Vector2(1278, 723)
 position = Vector2(1386, 557)
 
 [node name="Wave6" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
 title = "Beware, from below!"
 time_between_spawns = 0.3
 
@@ -331,6 +342,7 @@ position = Vector2(1260, 709)
 position = Vector2(1560, 709)
 
 [node name="Wave7" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
 title = "Crowded"
 time_between_spawns = 0.05
 
@@ -506,6 +518,7 @@ position = Vector2(1585, 720)
 position = Vector2(1611, 467)
 
 [node name="Wave8" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
 title = "Show 'em who's Boss!"
 music_stream = ExtResource("11_855mx")
 
@@ -513,8 +526,727 @@ music_stream = ExtResource("11_855mx")
 position = Vector2(960, -300)
 script = ExtResource("8_fwes1")
 
-[node name="CyanChickenBoss_2972" parent="Wave8" instance=ExtResource("11_1ige4")]
-position = Vector2(480, 400)
-
 [node name="CyanChickenBoss_102" parent="Wave8" instance=ExtResource("11_1ige4")]
-position = Vector2(1440, 400)
+position = Vector2(960, 400)
+
+[node name="Wave9" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
+title = "Third Contact"
+music_stream = ExtResource("3_p5dwl")
+
+[node name="EnemySpawnPoint" parent="Wave9" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="RedChicken_333" parent="Wave9" instance=ExtResource("5_ifja7")]
+position = Vector2(360, 340)
+
+[node name="CyanChicken_287" parent="Wave9" instance=ExtResource("6_sriey")]
+position = Vector2(660, 440)
+
+[node name="YellowChicken_5665" parent="Wave9" instance=ExtResource("7_b3lyx")]
+position = Vector2(960, 540)
+
+[node name="GreenChicken" parent="Wave9" instance=ExtResource("9_pixp1")]
+position = Vector2(1260, 440)
+
+[node name="SilverChicken" parent="Wave9" instance=ExtResource("10_fddde")]
+position = Vector2(1560, 340)
+
+[node name="Wave10" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
+title = "Invasion"
+time_between_spawns = 0.1
+
+[node name="EnemySpawnPoint" parent="Wave10" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="RedChicken_333" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(240, 252)
+
+[node name="CyanChicken_287" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(384, 252)
+
+[node name="YellowChicken_5665" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(384, 396)
+
+[node name="GreenChicken" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(240, 396)
+
+[node name="RedChicken_334" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(528, 252)
+
+[node name="CyanChicken_288" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(672, 252)
+
+[node name="YellowChicken_5666" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(672, 396)
+
+[node name="GreenChicken2" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(528, 396)
+
+[node name="RedChicken_335" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(816, 252)
+
+[node name="CyanChicken_289" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(1104, 252)
+
+[node name="YellowChicken_5667" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(1104, 396)
+
+[node name="GreenChicken3" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(816, 396)
+
+[node name="RedChicken_336" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(1248, 252)
+
+[node name="CyanChicken_290" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(1392, 252)
+
+[node name="YellowChicken_5668" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(1392, 396)
+
+[node name="GreenChicken4" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(1248, 396)
+
+[node name="RedChicken_337" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(1536, 252)
+
+[node name="CyanChicken_291" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(1680, 252)
+
+[node name="YellowChicken_5669" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(1680, 396)
+
+[node name="GreenChicken5" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(1536, 396)
+
+[node name="RedChicken_338" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(240, 540)
+
+[node name="CyanChicken_292" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(384, 540)
+
+[node name="YellowChicken_5670" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(384, 684)
+
+[node name="GreenChicken6" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(240, 684)
+
+[node name="RedChicken_339" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(528, 540)
+
+[node name="CyanChicken_293" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(672, 540)
+
+[node name="YellowChicken_5671" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(672, 684)
+
+[node name="GreenChicken7" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(528, 684)
+
+[node name="RedChicken_340" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(816, 540)
+
+[node name="CyanChicken_294" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(1104, 540)
+
+[node name="YellowChicken_5672" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(1104, 684)
+
+[node name="GreenChicken8" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(816, 684)
+
+[node name="RedChicken_341" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(1248, 540)
+
+[node name="CyanChicken_295" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(1392, 540)
+
+[node name="YellowChicken_5673" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(1392, 684)
+
+[node name="GreenChicken9" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(1248, 684)
+
+[node name="RedChicken_342" parent="Wave10" instance=ExtResource("5_ifja7")]
+position = Vector2(1536, 540)
+
+[node name="CyanChicken_296" parent="Wave10" instance=ExtResource("6_sriey")]
+position = Vector2(1680, 540)
+
+[node name="YellowChicken_5674" parent="Wave10" instance=ExtResource("7_b3lyx")]
+position = Vector2(1680, 684)
+
+[node name="GreenChicken10" parent="Wave10" instance=ExtResource("9_pixp1")]
+position = Vector2(1536, 684)
+
+[node name="Wave11" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
+title = "Another One"
+time_between_spawns = 0.1
+
+[node name="EnemySpawnPoint" parent="Wave11" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="RedChicken" parent="Wave11" instance=ExtResource("5_ifja7")]
+position = Vector2(240, 108)
+
+[node name="RedChicken2" parent="Wave11" instance=ExtResource("5_ifja7")]
+position = Vector2(816, 684)
+
+[node name="CyanChicken" parent="Wave11" instance=ExtResource("6_sriey")]
+position = Vector2(384, 108)
+
+[node name="CyanChicken3" parent="Wave11" instance=ExtResource("6_sriey")]
+position = Vector2(816, 540)
+
+[node name="CyanChicken4" parent="Wave11" instance=ExtResource("6_sriey")]
+position = Vector2(672, 684)
+
+[node name="CyanChicken2" parent="Wave11" instance=ExtResource("6_sriey")]
+position = Vector2(240, 252)
+
+[node name="YellowChicken" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(528, 108)
+
+[node name="YellowChicken4" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(816, 396)
+
+[node name="YellowChicken5" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(672, 540)
+
+[node name="YellowChicken6" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(528, 684)
+
+[node name="YellowChicken2" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(384, 252)
+
+[node name="YellowChicken3" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(240, 396)
+
+[node name="GreenChicken" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(672, 108)
+
+[node name="GreenChicken5" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(816, 252)
+
+[node name="GreenChicken6" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(672, 396)
+
+[node name="GreenChicken7" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(528, 540)
+
+[node name="GreenChicken8" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(384, 684)
+
+[node name="GreenChicken2" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(528, 252)
+
+[node name="GreenChicken3" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(384, 396)
+
+[node name="GreenChicken4" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(240, 540)
+
+[node name="SilverChicken" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(816, 108)
+
+[node name="SilverChicken2" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(672, 252)
+
+[node name="SilverChicken3" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(528, 396)
+
+[node name="SilverChicken4" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(384, 540)
+
+[node name="SilverChicken5" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(240, 684)
+
+[node name="RedChicken3" parent="Wave11" instance=ExtResource("5_ifja7")]
+position = Vector2(1104, 108)
+
+[node name="RedChicken4" parent="Wave11" instance=ExtResource("5_ifja7")]
+position = Vector2(1680, 684)
+
+[node name="CyanChicken5" parent="Wave11" instance=ExtResource("6_sriey")]
+position = Vector2(1248, 108)
+
+[node name="CyanChicken6" parent="Wave11" instance=ExtResource("6_sriey")]
+position = Vector2(1680, 540)
+
+[node name="CyanChicken7" parent="Wave11" instance=ExtResource("6_sriey")]
+position = Vector2(1536, 684)
+
+[node name="CyanChicken8" parent="Wave11" instance=ExtResource("6_sriey")]
+position = Vector2(1104, 252)
+
+[node name="YellowChicken7" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(1392, 108)
+
+[node name="YellowChicken8" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(1680, 396)
+
+[node name="YellowChicken9" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(1536, 540)
+
+[node name="YellowChicken10" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(1392, 684)
+
+[node name="YellowChicken11" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(1248, 252)
+
+[node name="YellowChicken12" parent="Wave11" instance=ExtResource("7_b3lyx")]
+position = Vector2(1104, 396)
+
+[node name="GreenChicken9" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(1536, 108)
+
+[node name="GreenChicken10" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(1680, 252)
+
+[node name="GreenChicken11" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(1536, 396)
+
+[node name="GreenChicken12" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(1392, 540)
+
+[node name="GreenChicken13" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(1248, 684)
+
+[node name="GreenChicken14" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(1392, 252)
+
+[node name="GreenChicken15" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(1248, 396)
+
+[node name="GreenChicken16" parent="Wave11" instance=ExtResource("9_pixp1")]
+position = Vector2(1104, 540)
+
+[node name="SilverChicken6" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(1680, 108)
+
+[node name="SilverChicken7" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(1536, 252)
+
+[node name="SilverChicken8" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(1392, 396)
+
+[node name="SilverChicken9" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(1248, 540)
+
+[node name="SilverChicken10" parent="Wave11" instance=ExtResource("10_fddde")]
+position = Vector2(1104, 684)
+
+[node name="Wave12" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
+title = "Soft Shell, Hard Core"
+time_between_spawns = 0.1
+
+[node name="EnemySpawnPoint" parent="Wave12" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="SilverChicken" parent="Wave12" instance=ExtResource("10_fddde")]
+position = Vector2(960, 540)
+
+[node name="GreenChicken" parent="Wave12" instance=ExtResource("9_pixp1")]
+position = Vector2(960, 396)
+
+[node name="GreenChicken2" parent="Wave12" instance=ExtResource("9_pixp1")]
+position = Vector2(816, 540)
+
+[node name="GreenChicken3" parent="Wave12" instance=ExtResource("9_pixp1")]
+position = Vector2(960, 684)
+
+[node name="GreenChicken4" parent="Wave12" instance=ExtResource("9_pixp1")]
+position = Vector2(1104, 540)
+
+[node name="YellowChicken" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(960, 252)
+
+[node name="YellowChicken2" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(816, 324)
+
+[node name="YellowChicken3" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(1104, 324)
+
+[node name="YellowChicken4" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(1176, 396)
+
+[node name="YellowChicken5" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(1248, 540)
+
+[node name="YellowChicken6" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(1176, 684)
+
+[node name="YellowChicken7" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(1104, 756)
+
+[node name="YellowChicken8" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(960, 828)
+
+[node name="YellowChicken9" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(816, 756)
+
+[node name="YellowChicken10" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(672, 540)
+
+[node name="YellowChicken11" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(744, 396)
+
+[node name="YellowChicken12" parent="Wave12" instance=ExtResource("7_b3lyx")]
+position = Vector2(744, 684)
+
+[node name="CyanChicken" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(960, 108)
+
+[node name="CyanChicken2" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(816, 180)
+
+[node name="CyanChicken3" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(528, 540)
+
+[node name="CyanChicken4" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(600, 396)
+
+[node name="CyanChicken5" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(672, 252)
+
+[node name="CyanChicken6" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(600, 684)
+
+[node name="CyanChicken8" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(816, 900)
+
+[node name="CyanChicken9" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(672, 828)
+
+[node name="CyanChicken10" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(1104, 900)
+
+[node name="CyanChicken11" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(1248, 828)
+
+[node name="CyanChicken12" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(1320, 684)
+
+[node name="CyanChicken13" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(1392, 540)
+
+[node name="CyanChicken14" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(1320, 396)
+
+[node name="CyanChicken15" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(1248, 252)
+
+[node name="CyanChicken16" parent="Wave12" instance=ExtResource("6_sriey")]
+position = Vector2(1104, 180)
+
+[node name="Wave13" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
+title = "Hard Shell, Soft Core"
+time_between_spawns = 0.1
+
+[node name="EnemySpawnPoint" parent="Wave13" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="RedChicken" parent="Wave13" instance=ExtResource("5_ifja7")]
+position = Vector2(960, 540)
+
+[node name="CyanChicken" parent="Wave13" instance=ExtResource("6_sriey")]
+position = Vector2(960, 396)
+
+[node name="CyanChicken2" parent="Wave13" instance=ExtResource("6_sriey")]
+position = Vector2(816, 540)
+
+[node name="CyanChicken3" parent="Wave13" instance=ExtResource("6_sriey")]
+position = Vector2(960, 684)
+
+[node name="CyanChicken4" parent="Wave13" instance=ExtResource("6_sriey")]
+position = Vector2(1104, 540)
+
+[node name="YellowChicken" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(960, 252)
+
+[node name="YellowChicken2" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(816, 324)
+
+[node name="YellowChicken3" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(744, 396)
+
+[node name="YellowChicken4" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(672, 540)
+
+[node name="YellowChicken5" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(744, 684)
+
+[node name="YellowChicken6" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(816, 756)
+
+[node name="YellowChicken7" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(960, 828)
+
+[node name="YellowChicken8" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(1104, 756)
+
+[node name="YellowChicken9" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(1176, 684)
+
+[node name="YellowChicken10" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(1248, 540)
+
+[node name="YellowChicken11" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(1176, 396)
+
+[node name="YellowChicken12" parent="Wave13" instance=ExtResource("7_b3lyx")]
+position = Vector2(1104, 324)
+
+[node name="GreenChicken" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(960, 108)
+
+[node name="GreenChicken2" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(816, 180)
+
+[node name="GreenChicken3" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(672, 252)
+
+[node name="GreenChicken4" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(600, 396)
+
+[node name="GreenChicken5" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(528, 540)
+
+[node name="GreenChicken6" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(600, 684)
+
+[node name="GreenChicken7" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(672, 828)
+
+[node name="GreenChicken8" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(816, 900)
+
+[node name="GreenChicken9" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(1104, 900)
+
+[node name="GreenChicken10" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(1248, 828)
+
+[node name="GreenChicken11" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(1320, 684)
+
+[node name="GreenChicken12" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(1392, 540)
+
+[node name="GreenChicken13" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(1320, 396)
+
+[node name="GreenChicken14" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(1248, 252)
+
+[node name="GreenChicken15" parent="Wave13" instance=ExtResource("9_pixp1")]
+position = Vector2(1104, 180)
+
+[node name="Wave14" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
+title = "Catch me if you can!"
+time_between_spawns = 0.5
+
+[node name="EnemySpawnPoint" parent="Wave14" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="SilverChicken" parent="Wave14" instance=ExtResource("10_fddde")]
+position = Vector2(960, 180)
+
+[node name="EnemyMoveSwivel2" parent="Wave14/SilverChicken" node_paths=PackedStringArray("target") instance=ExtResource("13_6lhk0")]
+target = NodePath("..")
+amplitude = Vector2(4000, 0)
+period = Vector2(0.6, 0)
+
+[node name="SilverChicken2" parent="Wave14" instance=ExtResource("10_fddde")]
+position = Vector2(960, 324)
+
+[node name="EnemyMoveSwivel2" parent="Wave14/SilverChicken2" node_paths=PackedStringArray("target") instance=ExtResource("13_6lhk0")]
+target = NodePath("..")
+amplitude = Vector2(4000, 0)
+period = Vector2(0.6, 0)
+
+[node name="SilverChicken3" parent="Wave14" instance=ExtResource("10_fddde")]
+position = Vector2(960, 468)
+
+[node name="EnemyMoveSwivel2" parent="Wave14/SilverChicken3" node_paths=PackedStringArray("target") instance=ExtResource("13_6lhk0")]
+target = NodePath("..")
+amplitude = Vector2(4000, 0)
+period = Vector2(0.6, 0)
+
+[node name="SilverChicken4" parent="Wave14" instance=ExtResource("10_fddde")]
+position = Vector2(960, 612)
+
+[node name="EnemyMoveSwivel2" parent="Wave14/SilverChicken4" node_paths=PackedStringArray("target") instance=ExtResource("13_6lhk0")]
+target = NodePath("..")
+amplitude = Vector2(4000, 0)
+period = Vector2(0.6, 0)
+
+[node name="Wave15" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
+title = "Berzerker"
+
+[node name="EnemySpawnPoint" parent="Wave15" instance=ExtResource("3_ht2lm")]
+position = Vector2(960, -500)
+
+[node name="RedChicken" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(384, 180)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken2" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(600, 180)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken2" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken3" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(816, 180)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken3" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken4" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(1104, 180)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken4" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken5" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(1320, 180)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken5" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken6" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(1536, 180)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken6" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken7" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(384, 396)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken7" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken8" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(600, 396)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken8" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken9" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(816, 396)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken9" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken10" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(1104, 396)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken10" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken11" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(1320, 396)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken11" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken12" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(1536, 396)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken12" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken13" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(384, 612)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken13" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken14" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(600, 612)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken14" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken15" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(816, 612)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken15" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken16" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(1104, 612)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken16" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken17" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(1320, 612)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken17" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="RedChicken18" parent="Wave15" instance=ExtResource("5_ifja7")]
+position = Vector2(1536, 612)
+
+[node name="EnemyMoveByNoise" parent="Wave15/RedChicken18" node_paths=PackedStringArray("target") instance=ExtResource("14_rdvrv")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_nby2e")
+amplitude = Vector2(700, 700)
+
+[node name="Wave16" parent="." instance=ExtResource("2_mc0sr")]
+title = "Show 'em who's Boss!"
+music_stream = ExtResource("11_855mx")
+
+[node name="EnemySpawnPoint" type="Node2D" parent="Wave16"]
+position = Vector2(960, -300)
+script = ExtResource("8_fwes1")
+
+[node name="CyanChickenBoss_102" parent="Wave16" instance=ExtResource("11_1ige4")]
+position = Vector2(384, 396)
+
+[node name="CyanChickenBoss_103" parent="Wave16" instance=ExtResource("11_1ige4")]
+position = Vector2(1536, 396)
