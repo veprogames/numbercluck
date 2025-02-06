@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://da0g4mg8h0vkv"]
+[gd_scene load_steps=29 format=3 uid="uid://da0g4mg8h0vkv"]
 
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_0vr3l"]
 [ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="3_bxtc3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="5_40pfm"]
 [ext_resource type="AudioStream" uid="uid://dmo0jn74bh1qm" path="res://assets/chicken/death1.ogg" id="6_1344q"]
 [ext_resource type="AudioStream" uid="uid://0o77mu32cv22" path="res://assets/chicken/death2.ogg" id="7_wlhyj"]
+[ext_resource type="AudioStream" uid="uid://ccy41p24uq1bf" path="res://assets/explosion.ogg" id="8_0yvsa"]
 [ext_resource type="AudioStream" uid="uid://w0pwmn27ovj5" path="res://assets/chicken/death3.ogg" id="8_66qsl"]
 [ext_resource type="PackedScene" uid="uid://cjm1ebgv6lilf" path="res://src/common/audio/audio_on_enemy_damaged.tscn" id="9_hpquf"]
 [ext_resource type="AudioStream" uid="uid://b45nhm48v654h" path="res://assets/chicken/hit.ogg" id="10_7cnq7"]
@@ -109,6 +110,10 @@ random_interval = 1.0
 [node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_40pfm")]
 stream = SubResource("AudioStreamRandomizer_707ws")
 pitch_scale = 0.3
+target = NodePath("..")
+
+[node name="AudioOnVanish2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_40pfm")]
+stream = ExtResource("8_0yvsa")
 target = NodePath("..")
 
 [node name="AudioOnEnemyDamaged" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_hpquf")]

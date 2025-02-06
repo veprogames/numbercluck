@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="5_t5dkk"]
 [ext_resource type="Texture2D" uid="uid://daaaja22f51wf" path="res://assets/particles/spark.png" id="6_8cxs4"]
 [ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="6_33my5"]
-[ext_resource type="AudioStream" uid="uid://dpulhle4ui1pv" path="res://assets/bullets/ion.ogg" id="7_i1w6s"]
+[ext_resource type="AudioStream" uid="uid://ccy41p24uq1bf" path="res://assets/explosion.ogg" id="7_liu6f"]
 
 [sub_resource type="Gradient" id="Gradient_vrpgn"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 1, 0)
@@ -157,8 +157,7 @@ trail_lifetime = 0.5
 target = NodePath("..")
 
 [node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("6_33my5")]
-stream = ExtResource("7_i1w6s")
-pitch_scale = 0.4
+stream = ExtResource("7_liu6f")
 target = NodePath("..")
 
 [connection signal="area_entered" from="CollectionArea" to="." method="_on_collection_area_area_entered"]

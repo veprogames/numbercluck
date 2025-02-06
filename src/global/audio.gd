@@ -9,6 +9,7 @@ func play_music(stream: AudioStream) -> void:
 	var new_music: AudioStreamPlayer = AudioStreamPlayer.new()
 	new_music.stream = stream
 	new_music.volume_db = -60
+	new_music.bus = &"Music"
 	
 	add_child(new_music)
 	new_music.play()

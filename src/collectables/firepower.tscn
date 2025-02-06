@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0jdag12cyvpy"]
+[gd_scene load_steps=6 format=3 uid="uid://d0jdag12cyvpy"]
 
 [ext_resource type="Script" path="res://src/collectables/firepower.gd" id="1_xr2sq"]
+[ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="3_erm12"]
+[ext_resource type="AudioStream" uid="uid://clwyuqmeeulsl" path="res://assets/firepower/firepower.ogg" id="4_0qqen"]
 [ext_resource type="PackedScene" uid="uid://b1wbaspy50ihp" path="res://src/collectables/firepower_trail.tscn" id="9_4mhto"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fqppk"]
@@ -33,6 +35,10 @@ modulate = Color(0, 1, 0.0156863, 1)
 rotation = 1.5708
 points = PackedVector2Array(-9.00183, 11.5154, -9.30845, 11.4811, -9.61414, 11.4456, -9.91887, 11.409, -10.2226, 11.3712, -10.5253, 11.3323, -10.827, 11.2923, -11.1276, 11.2511, -11.427, 11.2088, -11.7254, 11.1654, -12.0225, 11.1209, -12.3185, 11.0752, -12.6132, 11.0285, -12.9066, 10.9806, -13.1988, 10.9317, -13.4897, 10.8817, -13.7792, 10.8305, -14.0673, 10.7783, -14.354, 10.725, -14.6393, 10.6707, -14.9231, 10.6152, -15.2054, 10.5587, -15.4862, 10.5012, -15.7655, 10.4426, -16.0431, 10.3829, -16.3192, 10.3223, -16.5936, 10.2606, -16.8664, 10.1978, -17.1375, 10.1341, -17.4069, 10.0693)
 color = Color(0, 1, 0.0156863, 1)
+
+[node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_erm12")]
+stream = ExtResource("4_0qqen")
+target = NodePath("..")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
