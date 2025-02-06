@@ -17,7 +17,7 @@ func _ready() -> void:
 func get_added_amount() -> float:
 	return minf(
 		1.0,
-		randf_range(0.005, 0.015) * 2 * chance_multi * Game.upgrades.firepower_chance.get_effect()
+		randf_range(0.005, 0.015) * 1.5 * chance_multi * Game.upgrades.firepower_chance.get_effect()
 	)
 
 

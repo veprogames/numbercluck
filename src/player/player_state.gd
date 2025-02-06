@@ -38,7 +38,7 @@ var firepower: int = 0 :
 	set(fp):
 		firepower = fp
 		if is_instance_valid(player):
-			player.player_firepower.current_power = fp
+			player.player_firepower.current_power = mini(fp, max_firepower)
 		firepower_changed.emit(fp)
 
 var boosters: int = int(Game.upgrades.booster_count.get_effect()) :
@@ -148,8 +148,7 @@ func set_state(new_state: PlayerStates) -> void:
 
 
 func _on_player_firepower_collected() -> void:
-	if firepower < max_firepower:
-		firepower += 1
+	firepower += 1
 
 
 func _on_player_player_damaged() -> void:
@@ -175,7 +174,7 @@ func _on_player_spawned() -> void:
 func _on_player_damaged() -> void:
 	lives -= 1
 	
-	var target_fp: int = min_firepower + int(get_normalized_firepower() / 1.5)
+	var target_fp: int = min_firepower + int(get_normalized_firepower() / 1.5) - 1
 	firepower = maxi(target_fp, min_firepower)
 	
 	player.damaged.disconnect(_on_player_player_damaged)
