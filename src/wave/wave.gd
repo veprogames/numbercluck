@@ -5,6 +5,7 @@ signal finished
 
 @export var title: String
 @export var time_between_spawns: float
+@export var music_stream: AudioStream
 
 @onready var enemies: Node = $Enemies
 @onready var spawn_timer: Timer = $SpawnTimer
@@ -33,6 +34,9 @@ func _ready() -> void:
 
 
 func start() -> void:
+	if music_stream != null:
+		Audio.play_music(music_stream)
+	
 	title_label.start()
 	
 	await title_label.finished

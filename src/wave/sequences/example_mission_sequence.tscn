@@ -20,13 +20,9 @@ title = "wave.first_contact"
 [node name="EnemySpawnPoint" parent="Wave" instance=ExtResource("2_xmn0u")]
 position = Vector2(976, -221)
 
-[node name="RedChicken_6041" type="Area2D" parent="Wave" instance=ExtResource("4_g3wuq")]
+[node name="RedChicken_6041" parent="Wave" instance=ExtResource("4_g3wuq")]
 position = Vector2(977, 265)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
 [node name="Wave2" parent="." instance=ExtResource("1_oich7")]
 title = "Second Contact"
@@ -34,26 +30,14 @@ title = "Second Contact"
 [node name="EnemySpawnPoint" parent="Wave2" instance=ExtResource("2_xmn0u")]
 position = Vector2(976, -221)
 
-[node name="RedChicken_4250" type="Area2D" parent="Wave2" instance=ExtResource("4_g3wuq")]
+[node name="RedChicken_4250" parent="Wave2" instance=ExtResource("4_g3wuq")]
 position = Vector2(977, 265)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_8642" type="Area2D" parent="Wave2" instance=ExtResource("4_g3wuq")]
+[node name="RedChicken_8642" parent="Wave2" instance=ExtResource("4_g3wuq")]
 position = Vector2(810, 180)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_9810" type="Area2D" parent="Wave2" instance=ExtResource("4_g3wuq")]
+[node name="RedChicken_9810" parent="Wave2" instance=ExtResource("4_g3wuq")]
 position = Vector2(1138, 191)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0

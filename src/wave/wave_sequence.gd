@@ -5,6 +5,8 @@ signal finished
 
 var waves: Array[Wave]
 
+const MainMusic: AudioStreamOggVorbis = preload("res://assets/music/fanfare_for_space.ogg")
+
 
 func _ready() -> void:
 	for child: Node in get_children():
@@ -34,4 +36,5 @@ func _on_finished() -> void:
 	add_child(title)
 	title.start()
 	await title.finished
+	Audio.play_music(MainMusic)
 	get_tree().change_scene_to_file("res://src/mission_selection/mission_selection.tscn")

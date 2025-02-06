@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://cyi6dsbuhw218"]
+[gd_scene load_steps=15 format=3 uid="uid://cyi6dsbuhw218"]
 
 [ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_syysi"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_mc0sr"]
 [ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="3_ht2lm"]
+[ext_resource type="AudioStream" uid="uid://8mle6i1i8gtu" path="res://assets/music/jellyfish_in_space.ogg" id="3_p5dwl"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/enemies/chicken/red_chicken.tscn" id="5_ifja7"]
 [ext_resource type="PackedScene" uid="uid://txv8v6x063px" path="res://src/enemy/enemies/chicken/cyan_chicken.tscn" id="6_sriey"]
 [ext_resource type="PackedScene" uid="uid://bvtw1m8um6svb" path="res://src/enemy/enemies/chicken/yellow_chicken.tscn" id="7_b3lyx"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cbdiw5nxlkfp6" path="res://src/enemy/enemies/chicken/green_chicken.tscn" id="9_pixp1"]
 [ext_resource type="PackedScene" uid="uid://c6w8vfqscbcbt" path="res://src/enemy/enemies/chicken/silver_chicken.tscn" id="10_fddde"]
 [ext_resource type="PackedScene" uid="uid://da0g4mg8h0vkv" path="res://src/enemy/enemies/chicken/cyan_chicken_boss.tscn" id="11_1ige4"]
+[ext_resource type="AudioStream" uid="uid://cilw4ifmpr6kr" path="res://assets/music/vortex.ogg" id="11_855mx"]
 
 [sub_resource type="GDScript" id="GDScript_0ad73"]
 script/source = "@icon(\"uid://coivio5vqtpwj\")
@@ -28,6 +30,7 @@ script = ExtResource("1_syysi")
 
 [node name="Wave" parent="." instance=ExtResource("2_mc0sr")]
 title = "Second Contact"
+music_stream = ExtResource("3_p5dwl")
 
 [node name="EnemySpawnPoint" parent="Wave" instance=ExtResource("3_ht2lm")]
 position = Vector2(960, -500)
@@ -504,6 +507,7 @@ position = Vector2(1611, 467)
 
 [node name="Wave8" parent="." instance=ExtResource("2_mc0sr")]
 title = "Show 'em who's Boss!"
+music_stream = ExtResource("11_855mx")
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave8"]
 position = Vector2(960, -300)

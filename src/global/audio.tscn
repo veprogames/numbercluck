@@ -6,7 +6,7 @@
 [node name="Audio" type="Node"]
 script = ExtResource("1_ar7ry")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ik41i")
 autoplay = true
 bus = &"Music"

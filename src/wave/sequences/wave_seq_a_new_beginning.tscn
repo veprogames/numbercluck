@@ -1,12 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://daqmur6h7gqf2"]
+[gd_scene load_steps=14 format=3 uid="uid://daqmur6h7gqf2"]
 
 [ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_urfbg"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_68qxi"]
 [ext_resource type="Script" path="res://src/wave/enemy_spawn_point.gd" id="3_i1pmi"]
+[ext_resource type="AudioStream" uid="uid://8mle6i1i8gtu" path="res://assets/music/jellyfish_in_space.ogg" id="5_65lbh"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/enemies/chicken/red_chicken.tscn" id="5_o733k"]
 [ext_resource type="PackedScene" uid="uid://txv8v6x063px" path="res://src/enemy/enemies/chicken/cyan_chicken.tscn" id="6_4fxgm"]
 [ext_resource type="PackedScene" uid="uid://bvtw1m8um6svb" path="res://src/enemy/enemies/chicken/yellow_chicken.tscn" id="7_tb4mw"]
 [ext_resource type="PackedScene" uid="uid://da0g4mg8h0vkv" path="res://src/enemy/enemies/chicken/cyan_chicken_boss.tscn" id="8_1tfb7"]
+[ext_resource type="AudioStream" uid="uid://cilw4ifmpr6kr" path="res://assets/music/vortex.ogg" id="8_gn6ng"]
 
 [sub_resource type="GDScript" id="GDScript_ptf1q"]
 script/source = "@icon(\"uid://coivio5vqtpwj\")
@@ -37,18 +39,15 @@ script = ExtResource("1_urfbg")
 
 [node name="Wave" parent="." instance=ExtResource("2_68qxi")]
 title = "First Contact"
+music_stream = ExtResource("5_65lbh")
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave"]
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="RedChicken_6323" type="Area2D" parent="Wave" instance=ExtResource("5_o733k")]
+[node name="RedChicken_6323" parent="Wave" instance=ExtResource("5_o733k")]
 position = Vector2(960, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
 [node name="Wave2" parent="." instance=ExtResource("2_68qxi")]
 title = "Invasion"
@@ -58,85 +57,45 @@ time_between_spawns = 0.25
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="RedChicken_2733" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_2733" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(360, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_120" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_120" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(660, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_1750" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_1750" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(960, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_9475" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_9475" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_503" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_503" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_8866" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_8866" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(360, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_5476" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_5476" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(660, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_4270" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_4270" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(960, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_4962" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_4962" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_5944" type="Area2D" parent="Wave2" instance=ExtResource("5_o733k")]
+[node name="RedChicken_5944" parent="Wave2" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
 [node name="Wave3" parent="." instance=ExtResource("2_68qxi")]
 title = "Another One"
@@ -146,85 +105,45 @@ time_between_spawns = 0.2
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="RedChicken_1601" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_1601" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(360, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_5916" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_5916" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(660, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_6979" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_6979" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(960, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_8823" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_8823" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_1798" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_1798" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_968" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_968" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(360, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_4076" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_4076" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(660, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_2972" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_2972" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(960, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_3407" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_3407" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="RedChicken_8438" type="Area2D" parent="Wave3" instance=ExtResource("5_o733k")]
+[node name="RedChicken_8438" parent="Wave3" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
 [node name="Wave4" parent="." instance=ExtResource("2_68qxi")]
 title = "Stronger Chickens"
@@ -234,29 +153,17 @@ time_between_spawns = 0.5
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="CyanChicken_5711" type="Area2D" parent="Wave4" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_5711" parent="Wave4" instance=ExtResource("6_4fxgm")]
 position = Vector2(710, 300)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="CyanChicken_8051" type="Area2D" parent="Wave4" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_8051" parent="Wave4" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="CyanChicken_80" type="Area2D" parent="Wave4" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_80" parent="Wave4" instance=ExtResource("6_4fxgm")]
 position = Vector2(1210, 300)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
 [node name="Wave5" parent="." instance=ExtResource("2_68qxi")]
 title = "Mixed Invasion"
@@ -266,125 +173,65 @@ time_between_spawns = 0.25
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="CyanChicken_2123" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_2123" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(360, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_9217" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
+[node name="RedChicken_9217" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(660, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_8923" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_8923" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_5021" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
+[node name="RedChicken_5021" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_4089" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_4089" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(1560, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_4969" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
+[node name="RedChicken_4969" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(360, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_283" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_283" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(660, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_4295" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
+[node name="RedChicken_4295" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(960, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_4744" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_4744" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(1260, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_5035" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
+[node name="RedChicken_5035" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_6637" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_6637" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(360, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_1524" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
+[node name="RedChicken_1524" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(660, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_2616" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_2616" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_1969" type="Area2D" parent="Wave5" instance=ExtResource("5_o733k")]
+[node name="RedChicken_1969" parent="Wave5" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_9365" type="Area2D" parent="Wave5" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_9365" parent="Wave5" instance=ExtResource("6_4fxgm")]
 position = Vector2(1560, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
 [node name="Wave6" parent="." instance=ExtResource("2_68qxi")]
 title = "Another One"
@@ -394,125 +241,65 @@ time_between_spawns = 0.2
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="RedChicken_3318" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
+[node name="RedChicken_3318" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(360, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_9405" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_9405" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(660, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_6438" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
+[node name="RedChicken_6438" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(960, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_3723" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_3723" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(1260, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_408" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
+[node name="RedChicken_408" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 200)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_5884" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_5884" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(360, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_5981" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
+[node name="RedChicken_5981" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(660, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_2846" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_2846" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_5648" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
+[node name="RedChicken_5648" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_6857" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_6857" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(1560, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_3548" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
+[node name="RedChicken_3548" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(360, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_3388" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_3388" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(660, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_9026" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
+[node name="RedChicken_9026" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(960, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_763" type="Area2D" parent="Wave6" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_763" parent="Wave6" instance=ExtResource("6_4fxgm")]
 position = Vector2(1260, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="RedChicken_4646" type="Area2D" parent="Wave6" instance=ExtResource("5_o733k")]
+[node name="RedChicken_4646" parent="Wave6" instance=ExtResource("5_o733k")]
 position = Vector2(1560, 600)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
 [node name="Wave7" parent="." instance=ExtResource("2_68qxi")]
 title = "A new Color"
@@ -522,37 +309,21 @@ time_between_spawns = 0.5
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="YellowChicken_1801" type="Area2D" parent="Wave7" instance=ExtResource("7_tb4mw")]
+[node name="YellowChicken_1801" parent="Wave7" instance=ExtResource("7_tb4mw")]
 position = Vector2(660, 250)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_8tdvx")
-score = 1300.0
-max_hp = 300.0
 
-[node name="YellowChicken_8284" type="Area2D" parent="Wave7" instance=ExtResource("7_tb4mw")]
+[node name="YellowChicken_8284" parent="Wave7" instance=ExtResource("7_tb4mw")]
 position = Vector2(1260, 250)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_8tdvx")
-score = 1300.0
-max_hp = 300.0
 
-[node name="YellowChicken_827" type="Area2D" parent="Wave7" instance=ExtResource("7_tb4mw")]
+[node name="YellowChicken_827" parent="Wave7" instance=ExtResource("7_tb4mw")]
 position = Vector2(660, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_8tdvx")
-score = 1300.0
-max_hp = 300.0
 
-[node name="YellowChicken_4071" type="Area2D" parent="Wave7" instance=ExtResource("7_tb4mw")]
+[node name="YellowChicken_4071" parent="Wave7" instance=ExtResource("7_tb4mw")]
 position = Vector2(1260, 500)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_8tdvx")
-score = 1300.0
-max_hp = 300.0
 
 [node name="Wave8" parent="." instance=ExtResource("2_68qxi")]
 title = "Thanks for Playing! Enjoy!"
@@ -561,117 +332,61 @@ title = "Thanks for Playing! Enjoy!"
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="RedChicken_3039" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
+[node name="RedChicken_3039" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(960, 300)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_2737" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_2737" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(816, 194)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="YellowChicken_318" type="Area2D" parent="Wave8" instance=ExtResource("7_tb4mw")]
+[node name="YellowChicken_318" parent="Wave8" instance=ExtResource("7_tb4mw")]
 position = Vector2(670, 156)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_8tdvx")
-score = 1300.0
-max_hp = 300.0
 
-[node name="RedChicken_8989" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
+[node name="RedChicken_8989" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(531, 227)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_6402" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_6402" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(521, 383)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="YellowChicken_9333" type="Area2D" parent="Wave8" instance=ExtResource("7_tb4mw")]
+[node name="YellowChicken_9333" parent="Wave8" instance=ExtResource("7_tb4mw")]
 position = Vector2(627, 577)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_8tdvx")
-score = 1300.0
-max_hp = 300.0
 
-[node name="RedChicken_4281" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
+[node name="RedChicken_4281" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(781, 703)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_380" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_380" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(960, 816)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="YellowChicken_9867" type="Area2D" parent="Wave8" instance=ExtResource("7_tb4mw")]
+[node name="YellowChicken_9867" parent="Wave8" instance=ExtResource("7_tb4mw")]
 position = Vector2(1134, 700)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_8tdvx")
-score = 1300.0
-max_hp = 300.0
 
-[node name="RedChicken_657" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
+[node name="RedChicken_657" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(1252, 566)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_1015" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_1015" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(1363, 443)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
-[node name="YellowChicken_8108" type="Area2D" parent="Wave8" instance=ExtResource("7_tb4mw")]
+[node name="YellowChicken_8108" parent="Wave8" instance=ExtResource("7_tb4mw")]
 position = Vector2(1378, 274)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_8tdvx")
-score = 1300.0
-max_hp = 300.0
 
-[node name="RedChicken_7645" type="Area2D" parent="Wave8" instance=ExtResource("5_o733k")]
+[node name="RedChicken_7645" parent="Wave8" instance=ExtResource("5_o733k")]
 position = Vector2(1260, 153)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 1000.0
-max_hp = 100.0
 
-[node name="CyanChicken_2636" type="Area2D" parent="Wave8" instance=ExtResource("6_4fxgm")]
+[node name="CyanChicken_2636" parent="Wave8" instance=ExtResource("6_4fxgm")]
 position = Vector2(1086, 226)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_fpraa")
-score = 1100.0
-max_hp = 200.0
 
 [node name="Wave9" parent="." instance=ExtResource("2_68qxi")]
 title = "Calm Before the Storm"
@@ -680,25 +395,18 @@ title = "Calm Before the Storm"
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="YellowChicken_700" type="Area2D" parent="Wave9" instance=ExtResource("7_tb4mw")]
+[node name="YellowChicken_700" parent="Wave9" instance=ExtResource("7_tb4mw")]
 position = Vector2(960, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_8tdvx")
-score = 1300.0
-max_hp = 300.0
 
 [node name="Wave10" parent="." instance=ExtResource("2_68qxi")]
 title = "Show 'em who's Boss!"
+music_stream = ExtResource("8_gn6ng")
 
 [node name="EnemySpawnPoint" type="Node2D" parent="Wave10"]
 position = Vector2(960, -300)
 script = ExtResource("3_i1pmi")
 
-[node name="CyanChickenBoss_5526" type="Area2D" parent="Wave10" instance=ExtResource("8_1tfb7")]
+[node name="CyanChickenBoss_5526" parent="Wave10" instance=ExtResource("8_1tfb7")]
 position = Vector2(960, 400)
-collision_layer = 2
-collision_mask = 4
 script = SubResource("GDScript_rnj6o")
-score = 75000.0
-max_hp = 10000.0
