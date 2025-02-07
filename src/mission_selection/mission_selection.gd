@@ -17,6 +17,8 @@ const missions: Array[MissionDefinition] = [
 func _ready() -> void:
 	if !OS.is_debug_build():
 		mission_button_test.queue_free()
+	else:
+		mission_button_test.show()
 	
 	for definition: MissionDefinition in missions:
 		var btn: MissionButton = MissionButtonScene.instantiate() as MissionButton
