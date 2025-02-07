@@ -50,6 +50,10 @@ func select_mission(definition: MissionDefinition) -> void:
 	if scrolling_background:
 		scrolling_background.texture = definition.background
 	
+	var mission_info: MissionInfo = level.get_node(^"MissionInfo")
+	if mission_info:
+		mission_info.mission_definition = definition
+	
 	queue_free()
 	level.add_child(sequence)
 	get_tree().root.add_child(level)

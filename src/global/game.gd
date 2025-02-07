@@ -17,6 +17,7 @@ static var SAVE_PATH: String = "user://game.save"
 static func save_game() -> void:
 	var data: Dictionary = {
 		"saved_score": saved_score,
+		"chapters_unlocked": chapters_unlocked,
 		"upgrades": {
 			"min_firepower": upgrades.min_firepower.level,
 			"max_firepower": upgrades.max_firepower.level,
@@ -53,6 +54,8 @@ static func load_game() -> void:
 	file.close()
 	
 	Game.saved_score = data.saved_score
+	if "chapters_unlocked" in data:
+		Game.chapters_unlocked = data.chapters_unlocked
 	if "min_firepower" in data.upgrades:
 		Game.upgrades.min_firepower.level = data.upgrades.min_firepower
 	if "max_firepower" in data.upgrades:

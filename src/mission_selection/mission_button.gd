@@ -7,8 +7,14 @@ signal mission_selected(definition: MissionDefinition)
 
 
 func _ready() -> void:
-	text = definition.title
+	text = definition.title if is_unlocked() else "???"
+	disabled = !is_unlocked()
+
+
+func is_unlocked() -> bool:
+	return definition.chapter <= Game.chapters_unlocked
 
 
 func _on_pressed() -> void:
-	mission_selected.emit(definition)
+	if is_unlocked():
+		mission_selected.emit(definition)
