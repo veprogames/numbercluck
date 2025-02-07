@@ -22,6 +22,7 @@ static func save_game() -> void:
 			"max_firepower": upgrades.max_firepower.level,
 			"firepower_chance": upgrades.firepower_chance.level,
 			"booster_count": upgrades.booster_count.level,
+			"max_lives": upgrades.max_lives.level,
 		},
 		"settings": {
 			"locale": settings.locale
@@ -60,4 +61,6 @@ static func load_game() -> void:
 		Game.upgrades.firepower_chance.level = data.upgrades.firepower_chance
 	if "booster_count" in data.upgrades:
 		Game.upgrades.booster_count.level = data.upgrades.booster_count
+	if "max_lives" in data.upgrades:
+		Game.upgrades.max_lives.level = data.upgrades.max_lives
 	Game.settings.locale = data.settings.locale

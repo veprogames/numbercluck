@@ -16,6 +16,7 @@
 # res://assets/upgrades/upgrade_firepower_chance.tres
 # res://assets/upgrades/upgrade_booster_count.tres
 # res://src/ui/upgrade_card.gd
+# res://assets/upgrades/upgrade_max_lives.tres
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -242,4 +243,12 @@ msgstr ""
 
 #: src/ui/upgrade_card.gd
 msgid "Maxed"
+msgstr ""
+
+#: assets/upgrades/upgrade_max_lives.tres
+msgid "Max Lives"
+msgstr ""
+
+#: assets/upgrades/upgrade_max_lives.tres
+msgid "You start a Mission with $$effect$$ Lives."
 msgstr ""

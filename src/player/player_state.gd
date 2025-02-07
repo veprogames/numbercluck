@@ -29,7 +29,7 @@ var player: Player
 
 var state: PlayerStates = PlayerStates.DEAD
 
-var lives: int = 3 :
+var lives: int = int(Game.upgrades.max_lives.get_effect()) :
 	set(l):
 		lives = l
 		lives_changed.emit(l)

@@ -254,3 +254,11 @@ msgstr ""
 #: src/ui/upgrade_card.gd
 msgid "Maxed"
 msgstr "Max. Level"
+
+#: assets/upgrades/upgrade_max_lives.tres
+msgid "Max Lives"
+msgstr "Max. Leben"
+
+#: assets/upgrades/upgrade_max_lives.tres
+msgid "You start a Mission with $$effect$$ Lives."
+msgstr "Du Start eine Mission mit $$effect$$ Leben."

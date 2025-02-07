@@ -6,6 +6,8 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_pnl8r"]
 font_size = 72
+shadow_color = Color(0, 0, 0, 0.313726)
+shadow_offset = Vector2(2, 2)
 
 [node name="ShopMenu" type="Node2D"]
 script = ExtResource("1_c8stv")
@@ -30,10 +32,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_constants/margin_left = 128
+theme_override_constants/margin_left = 64
 theme_override_constants/margin_top = 128
-theme_override_constants/margin_right = 128
-theme_override_constants/margin_bottom = 128
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer2"]
 layout_mode = 2
@@ -52,7 +54,7 @@ text = "Successfully finish Missions to get save more score. Spend them here for
 layout_mode = 2
 theme_override_constants/h_separation = 64
 theme_override_constants/v_separation = 64
-columns = 2
+columns = 3
 
 [node name="UpgradeCardMinFirepower" parent="CanvasLayer/MarginContainer2/VBoxContainer/GridContainer" instance=ExtResource("2_wdcmq")]
 unique_name_in_owner = true
@@ -70,6 +72,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="UpgradeCardBoosterCount" parent="CanvasLayer/MarginContainer2/VBoxContainer/GridContainer" instance=ExtResource("2_wdcmq")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="UpgradeCardMaxLives" parent="CanvasLayer/MarginContainer2/VBoxContainer/GridContainer" instance=ExtResource("2_wdcmq")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
