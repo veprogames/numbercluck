@@ -18,7 +18,15 @@ func update_ui() -> void:
 	label_title.text = "%s Level %d" % [tr(upgrade.definition.title), upgrade.level + 1]
 	label_description.text = tr(upgrade.definition.description) \
 		.replace("$$effect$$", "[color=lime]%s[/color]" % upgrade.format_effect())
-	button_buy.text = F.n(upgrade.get_price())
+	if upgrade.is_maxed():
+		button_buy.text = tr("Maxed")
+		button_buy.disabled = true
+	else:
+		button_buy.text = F.n(upgrade.get_price())
+		button_buy.disabled = !upgrade.can_afford()
+	
+	var cursor: CursorShape = Control.CURSOR_ARROW if button_buy.disabled else Control.CURSOR_POINTING_HAND
+	button_buy.mouse_default_cursor_shape = cursor
 
 
 func _on_button_buy_pressed() -> void:

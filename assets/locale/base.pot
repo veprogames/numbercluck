@@ -15,6 +15,7 @@
 # res://src/global/f.gd
 # res://assets/upgrades/upgrade_firepower_chance.tres
 # res://assets/upgrades/upgrade_booster_count.tres
+# res://src/ui/upgrade_card.gd
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -237,4 +238,8 @@ msgstr ""
 
 #: assets/upgrades/upgrade_booster_count.tres
 msgid "You start a Mission with $$effect$$ Boosters. Boosters greatly increase your firerate for a short amount of time."
+msgstr ""
+
+#: src/ui/upgrade_card.gd
+msgid "Maxed"
 msgstr ""

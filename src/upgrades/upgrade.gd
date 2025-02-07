@@ -23,13 +23,21 @@ func get_effect() -> float:
 	return definition.effect_formula.get_value(level)
 
 
+func is_maxed() -> bool:
+	return level >= definition.max_level and definition.max_level != -1
+
+
+func can_afford() -> bool:
+	return Game.saved_score >= get_price()
+
+
 func buy() -> bool:
 	var price: float = get_price()
 	
-	if definition.max_level != -1 and level >= definition.max_level:
+	if is_maxed():
 		return false
 	
-	if Game.saved_score < price:
+	if !can_afford():
 		return false
 	
 	Game.saved_score -= price

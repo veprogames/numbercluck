@@ -250,3 +250,7 @@ msgid ""
 msgstr ""
 "Du erhält $$effect$$ Booster, wenn du eine Mission startest. Ein Booster "
 "erhöht für eine kurze Zeit deutlich deine Feuerrate."
+
+#: src/ui/upgrade_card.gd
+msgid "Maxed"
+msgstr "Max. Level"
