@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/mission_selection/mission_selection.gd" id="1_oeulx"]
 [ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="2_xwkgo"]
 [ext_resource type="PackedScene" uid="uid://4tr0q6ojfdge" path="res://src/mission_selection/mission_button.tscn" id="3_ufegd"]
-[ext_resource type="Resource" uid="uid://bbquhfvixusbv" path="res://src/mission/missions/example_mission.tres" id="4_l7pll"]
+[ext_resource type="Resource" uid="uid://bbquhfvixusbv" path="res://assets/missions/example_mission.tres" id="4_l7pll"]
 
 [node name="MissionSelection" type="Node2D"]
 script = ExtResource("1_oeulx")
