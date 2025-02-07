@@ -12,11 +12,11 @@ suffix = ""
 
 [sub_resource type="Resource" id="Resource_ldkpc"]
 script = ExtResource("2_tyxal")
-formula = "1 + 0.025 * x"
+formula = "1 + 0.02 * x"
 
 [sub_resource type="Resource" id="Resource_pjerm"]
 script = ExtResource("2_tyxal")
-formula = "rm(250000 * 2 ** x)"
+formula = "rm(250000 * 1.6 ** x)"
 
 [resource]
 script = ExtResource("3_b4f6l")

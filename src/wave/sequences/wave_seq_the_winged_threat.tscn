@@ -164,36 +164,6 @@ position = Vector2(222, 543)
 [node name="RedChicken_6328" parent="Wave4" instance=ExtResource("5_ifja7")]
 position = Vector2(396, 724)
 
-[node name="CyanChicken_1654" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1342, 192)
-
-[node name="CyanChicken_2740" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1481, 298)
-
-[node name="CyanChicken_7033" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1378, 474)
-
-[node name="CyanChicken_9448" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1529, 713)
-
-[node name="CyanChicken_9390" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1524, 484)
-
-[node name="CyanChicken_3130" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1393, 645)
-
-[node name="CyanChicken_6913" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1476, 511)
-
-[node name="CyanChicken_9784" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1395, 352)
-
-[node name="CyanChicken_7357" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1576, 213)
-
-[node name="CyanChicken_5870" parent="Wave4" instance=ExtResource("6_sriey")]
-position = Vector2(1553, 596)
-
 [node name="GreenChicken_7357" parent="Wave4" instance=ExtResource("9_pixp1")]
 position = Vector2(856, 662)
 script = SubResource("GDScript_0ad73")
@@ -233,6 +203,36 @@ script = SubResource("GDScript_0ad73")
 [node name="GreenChicken_110" parent="Wave4" instance=ExtResource("9_pixp1")]
 position = Vector2(978, 711)
 script = SubResource("GDScript_0ad73")
+
+[node name="CyanChicken_1654" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1342, 192)
+
+[node name="CyanChicken_2740" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1481, 298)
+
+[node name="CyanChicken_7033" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1378, 474)
+
+[node name="CyanChicken_9448" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1529, 713)
+
+[node name="CyanChicken_9390" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1524, 484)
+
+[node name="CyanChicken_3130" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1393, 645)
+
+[node name="CyanChicken_6913" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1476, 511)
+
+[node name="CyanChicken_9784" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1395, 352)
+
+[node name="CyanChicken_7357" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1576, 213)
+
+[node name="CyanChicken_5870" parent="Wave4" instance=ExtResource("6_sriey")]
+position = Vector2(1553, 596)
 
 [node name="Wave5" parent="." instance=ExtResource("2_mc0sr")]
 visible = false
@@ -918,14 +918,8 @@ position = Vector2(672, 252)
 [node name="CyanChicken6" parent="Wave12" instance=ExtResource("6_sriey")]
 position = Vector2(600, 684)
 
-[node name="CyanChicken8" parent="Wave12" instance=ExtResource("6_sriey")]
-position = Vector2(816, 900)
-
 [node name="CyanChicken9" parent="Wave12" instance=ExtResource("6_sriey")]
 position = Vector2(672, 828)
-
-[node name="CyanChicken10" parent="Wave12" instance=ExtResource("6_sriey")]
-position = Vector2(1104, 900)
 
 [node name="CyanChicken11" parent="Wave12" instance=ExtResource("6_sriey")]
 position = Vector2(1248, 828)
@@ -946,7 +940,6 @@ position = Vector2(1248, 252)
 position = Vector2(1104, 180)
 
 [node name="Wave13" parent="." instance=ExtResource("2_mc0sr")]
-visible = false
 title = "Hard Shell, Soft Core"
 time_between_spawns = 0.1
 
@@ -1024,12 +1017,6 @@ position = Vector2(600, 684)
 
 [node name="GreenChicken7" parent="Wave13" instance=ExtResource("9_pixp1")]
 position = Vector2(672, 828)
-
-[node name="GreenChicken8" parent="Wave13" instance=ExtResource("9_pixp1")]
-position = Vector2(816, 900)
-
-[node name="GreenChicken9" parent="Wave13" instance=ExtResource("9_pixp1")]
-position = Vector2(1104, 900)
 
 [node name="GreenChicken10" parent="Wave13" instance=ExtResource("9_pixp1")]
 position = Vector2(1248, 828)
@@ -2009,6 +1996,7 @@ position = Vector2(1566, 773)
 position = Vector2(1549, 603)
 
 [node name="Wave24" parent="." instance=ExtResource("2_mc0sr")]
+visible = false
 title = "Warning! Boss Chicken Encounter!"
 music_stream = ExtResource("11_855mx")
 

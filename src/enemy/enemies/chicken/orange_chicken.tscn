@@ -91,4 +91,4 @@ target = NodePath("..")
 [node name="EnemyMoveSwivel" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_s6sax")]
 target = NodePath("..")
 amplitude = Vector2(0, 30)
-period = Vector2(0, 0.2)
+period = Vector2(0, 5)
