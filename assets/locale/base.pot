@@ -76,10 +76,12 @@ msgid "First Contact"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Invasion"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Another One"
 msgstr ""
 
@@ -167,6 +169,42 @@ msgstr ""
 
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Crowded"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Third Contact"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Soft Shell, Hard Core"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Hard Shell, Soft Core"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Catch me if you can!"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Berzerker"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Greeting"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Colorful"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Chicken Rainbow"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Warning! Boss Chicken Encounter!"
 msgstr ""
 
 #: assets/missions/mission_the_winged_threat.tres

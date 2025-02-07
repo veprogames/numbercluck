@@ -79,10 +79,12 @@ msgid "First Contact"
 msgstr "Erster Kontakt"
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Invasion"
 msgstr "Invasion"
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Another One"
 msgstr "Nochmal"
 
@@ -176,6 +178,42 @@ msgstr "Achtung, von unten!"
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
 msgid "Crowded"
 msgstr "Überfüllt"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Third Contact"
+msgstr "Dritter Kontakt"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Soft Shell, Hard Core"
+msgstr "Weiche Schale, Harter Kern"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Hard Shell, Soft Core"
+msgstr "Harte Schale, Weicher Kern"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Catch me if you can!"
+msgstr "Fang' mich doch!"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Berzerker"
+msgstr "Berzerker"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Greeting"
+msgstr "Begrüßung"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Colorful"
+msgstr "Farbenfroh"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Chicken Rainbow"
+msgstr "Hühner-Regenbogen"
+
+#: src/wave/sequences/wave_seq_the_winged_threat.tscn
+msgid "Warning! Boss Chicken Encounter!"
+msgstr "Achtung! Boss-Huhn gesichtet!"
 
 #: assets/missions/mission_the_winged_threat.tres
 msgid "The Winged Threat"
