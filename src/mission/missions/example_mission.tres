@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="MissionDefinition" load_steps=3 format=3 uid="uid://bbquhfvixusbv"]
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=4 format=3 uid="uid://bbquhfvixusbv"]
 
+[ext_resource type="Texture2D" uid="uid://bmun2fmcflmmk" path="res://assets/backgrounds/blue_nebula.png" id="1_au1ay"]
 [ext_resource type="Script" path="res://src/mission/mission_definition.gd" id="1_rfkd4"]
 [ext_resource type="PackedScene" uid="uid://c5p8rgkvethjf" path="res://src/wave/sequences/example_mission_sequence.tscn" id="2_7vp7o"]
 
 [resource]
 script = ExtResource("1_rfkd4")
-title = "missions.0"
+title = "test"
 wave_sequence = ExtResource("2_7vp7o")
+chapter = 0
+background = ExtResource("1_au1ay")

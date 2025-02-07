@@ -11,9 +11,13 @@ const missions: Array[MissionDefinition] = [
 ]
 
 @onready var v_box_container_missions: VBoxContainer = %VBoxContainerMissions
+@onready var mission_button_test: MissionButton = $CanvasLayer/MissionButtonTest
 
 
 func _ready() -> void:
+	if !OS.is_debug_build():
+		mission_button_test.queue_free()
+	
 	for definition: MissionDefinition in missions:
 		var btn: MissionButton = MissionButtonScene.instantiate() as MissionButton
 		btn.definition = definition
@@ -50,5 +54,5 @@ func select_mission(definition: MissionDefinition) -> void:
 	get_tree().current_scene = level
 
 
-func _on_mission_button_mission_selected(definition: MissionDefinition) -> void:
+func _on_mission_button_test_mission_selected(definition: MissionDefinition) -> void:
 	select_mission(definition)

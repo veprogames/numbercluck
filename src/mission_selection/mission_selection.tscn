@@ -35,12 +35,14 @@ offset_right = 141.0
 offset_bottom = 87.0
 text = "Main Menu"
 
-[node name="MissionButton" parent="CanvasLayer" instance=ExtResource("3_ufegd")]
-offset_left = 925.0
-offset_top = 57.0
-offset_right = 941.0
-offset_bottom = 73.0
+[node name="MissionButtonTest" parent="CanvasLayer" instance=ExtResource("3_ufegd")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -8.0
+offset_right = 8.0
+grow_horizontal = 2
 definition = ExtResource("4_l7pll")
 
 [connection signal="pressed" from="CanvasLayer/ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]
-[connection signal="mission_selected" from="CanvasLayer/MissionButton" to="." method="_on_mission_button_mission_selected"]
+[connection signal="mission_selected" from="CanvasLayer/MissionButtonTest" to="." method="_on_mission_button_test_mission_selected"]

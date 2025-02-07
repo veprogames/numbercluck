@@ -5,6 +5,7 @@
 [node name="MissionButton" type="Button"]
 offset_right = 16.0
 offset_bottom = 16.0
+theme_type_variation = &"ButtonLarge"
 script = ExtResource("1_krqfx")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
