@@ -8,6 +8,7 @@ const MissionButtonScene: PackedScene = preload("res://src/mission_selection/mis
 const missions: Array[MissionDefinition] = [
 	preload("res://assets/missions/mission_a_new_beginning.tres"),
 	preload("res://assets/missions/mission_the_winged_threat.tres"),
+	preload("res://assets/missions/mission_chickens_everywhere.tres"),
 ]
 
 @onready var v_box_container_missions: VBoxContainer = %VBoxContainerMissions

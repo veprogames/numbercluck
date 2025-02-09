@@ -80,11 +80,13 @@ msgstr "Erster Kontakt"
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
 msgid "Invasion"
 msgstr "Invasion"
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
 msgid "Another One"
 msgstr "Nochmal"
 
@@ -192,6 +194,7 @@ msgid "Hard Shell, Soft Core"
 msgstr "Harte Schale, Weicher Kern"
 
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
 msgid "Catch me if you can!"
 msgstr "Fang' mich doch!"
 
@@ -200,6 +203,7 @@ msgid "Berzerker"
 msgstr "Berzerker"
 
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
 msgid "Greeting"
 msgstr "Begrüßung"
 
@@ -262,3 +266,79 @@ msgstr "Max. Leben"
 #: assets/upgrades/upgrade_max_lives.tres
 msgid "You start a Mission with $$effect$$ Lives."
 msgstr "Du Start eine Mission mit $$effect$$ Leben."
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Flying around aimlessly"
+msgstr "Ziellos umherfliegen"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "All Colors"
+msgstr "Alle Farben"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Confusion"
+msgstr "Verwirrung"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Too quiet..."
+msgstr "Zu ruhig..."
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Attack of the Clones"
+msgstr "Der Angriff der Klonhühner"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Armored"
+msgstr "Gepanzert"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "After Colors come Patterns"
+msgstr "Nach Farben kommen Muster"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Checkered Invasion"
+msgstr "Gekachelte Invasion"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Small Checkerboard"
+msgstr "Kleines Schachbrett"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Geometric Patterns"
+msgstr "Geometrische Formen"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Show off!"
+msgstr "Zeig's Ihnen!"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Hello!"
+msgstr "Hallo!"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Missing Texture"
+msgstr "Fehlende Textur"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Large Checkerboard"
+msgstr "Großes Schachbrett"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Rogue"
+msgstr "Rogue"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Guarded"
+msgstr "Beschützt"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Show 'em who's boss?"
+msgstr "Zeig ihm wer der Boss ist?"
+
+#: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+msgid "Now it's getting serious!"
+msgstr "Jetzt wird's ernst!"
+
+#: assets/missions/mission_chickens_everywhere.tres
+msgid "Chickens Everywhere"
+msgstr "Hühner überall"

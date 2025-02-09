@@ -21,10 +21,10 @@ func _physics_process(delta: float) -> void:
 	
 	var tp: Vector2 = target.target_position
 	var shrunk_rect: Rect2 = viewport_rect.grow(-1)
-	if tp.x < viewport_rect.position.x or tp.x > viewport_rect.end.x:
+	if !target.moving_to_target and tp.x < viewport_rect.position.x or tp.x > viewport_rect.end.x:
 		amplitude.x *= -1
 		target.target_position = tp.clamp(shrunk_rect.position, shrunk_rect.end)
-	if tp.y < viewport_rect.position.y or tp.y > viewport_rect.end.y:
+	if !target.moving_to_target and tp.y < viewport_rect.position.y or tp.y > viewport_rect.end.y:
 		amplitude.y *= -1
 		target.target_position = tp.clamp(shrunk_rect.position, shrunk_rect.end)
 	

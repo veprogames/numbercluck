@@ -15,6 +15,7 @@ var target_offset: Vector2 = Vector2.ZERO
 
 var moving_to_target: bool = false
 var moving_to_target_pos: Vector2 = Vector2.ZERO
+@export var moving_to_target_speed: float = 3.0
 
 
 func _ready() -> void:
@@ -23,8 +24,15 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if moving_to_target:
-		target_position = target_position.lerp(moving_to_target_pos, 4 * delta)
-		if (moving_to_target_pos - target_position).length_squared() < 10:
+		target_position = target_position.lerp(
+			moving_to_target_pos,
+			moving_to_target_speed * delta
+		)
+		target_position = target_position.move_toward(
+			moving_to_target_pos,
+			moving_to_target_speed * 16 * delta
+		)
+		if (moving_to_target_pos - target_position).length_squared() < 1:
 			moving_to_target = false
 	else:
 		target_position += velocity * delta
