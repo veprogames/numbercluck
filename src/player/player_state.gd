@@ -65,7 +65,7 @@ func _ready() -> void:
 
 func _unhandled_input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed(&"ui_cancel"):
-		get_tree().change_scene_to_file("res://src/main_menu/main_menu.tscn")
+		owner.add_child(PauseMenu.create())
 	if Input.is_action_just_released(&"player_boost"):
 		if boosters > 0 and state != PlayerStates.BOOSTED:
 			boosters -= 1

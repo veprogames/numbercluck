@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://cf5llvestjwfp" path="res://assets/music/fanfare_for_space.ogg" id="2_ik41i"]
 
 [node name="Audio" type="Node"]
+process_mode = 3
 script = ExtResource("1_ar7ry")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
