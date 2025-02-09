@@ -25,4 +25,4 @@ description = "Your Firepower is capped at $$effect$$. You can collect more, but
 price_formula = SubResource("Resource_pjerm")
 effect_formula = SubResource("Resource_ldkpc")
 effect_display_options = SubResource("Resource_pm4fg")
-max_level = 5
+max_level = 15

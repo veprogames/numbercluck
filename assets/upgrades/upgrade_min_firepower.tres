@@ -25,4 +25,4 @@ description = "Your Firepower starts at and can't fall below $$effect$$."
 price_formula = SubResource("Resource_pakew")
 effect_formula = SubResource("Resource_1bji5")
 effect_display_options = SubResource("Resource_usohy")
-max_level = 10
+max_level = 18

@@ -10,6 +10,7 @@ height = 101.33
 [node name="IonBullet" type="Area2D"]
 collision_layer = 4
 collision_mask = 2
+collision_priority = 2.0
 script = ExtResource("1_c6y1l")
 texture = ExtResource("2_ixdqe")
 sound = ExtResource("3_pdh5m")
