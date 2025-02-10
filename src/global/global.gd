@@ -3,6 +3,7 @@ extends Node
 
 func _ready() -> void:
 	Game.load_game()
+	Game.settings.load_settings()
 
 
 func _unhandled_input(_event: InputEvent) -> void:

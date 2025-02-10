@@ -8,7 +8,7 @@ var current: String :
 			await ready
 		TranslationServer.set_locale(locale)
 		Game.settings.locale = locale
-		Game.save_game()
+		Game.settings.save_settings()
 		match locale:
 			"en_US":
 				text = "%s: English" % tr("Language")

@@ -23,5 +23,9 @@ func _on_button_surrender_pressed() -> void:
 	tree.change_scene_to_file("res://src/mission_selection/mission_selection.tscn")
 
 
+func _on_tree_exited() -> void:
+	Game.settings.save_settings()
+
+
 static func create() -> PauseMenu:
 	return Scene.instantiate() as PauseMenu

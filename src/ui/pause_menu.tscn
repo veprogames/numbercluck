@@ -82,5 +82,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ButtonContinue" to="." method="_on_button_continue_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ButtonSurrender" to="." method="_on_button_surrender_pressed"]
