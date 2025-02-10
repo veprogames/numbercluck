@@ -43,6 +43,10 @@ msgid "Upgrades"
 msgstr "Upgrades"
 
 #: src/main_menu/main_menu.tscn
+msgid "Credits"
+msgstr "Credits"
+
+#: src/main_menu/main_menu.tscn
 msgid "Quit"
 msgstr "Beenden"
 

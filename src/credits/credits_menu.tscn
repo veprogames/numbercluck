@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmrteu2ct2h4v"]
+
+[ext_resource type="Script" path="res://src/credits/credits_menu.gd" id="1_jerfw"]
+[ext_resource type="PackedScene" uid="uid://t0qjigps7h5c" path="res://src/ui/scrolling_background.tscn" id="1_ow2wl"]
+
+[node name="CreditsMenu" type="Node2D"]
+script = ExtResource("1_jerfw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="ScrollingBackground" parent="CanvasLayer" instance=ExtResource("1_ow2wl")]
+offset_left = -1472.0
+offset_top = -1052.0
+offset_right = -1472.0
+offset_bottom = -1052.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="ButtonMainMenu" type="Button" parent="CanvasLayer2"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 83.0
+offset_bottom = 79.0
+text = "Main Menu"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 128
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer2/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+text = "Fanfare for Space Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+\"Space 1990\" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+\"Jellyfish in Space\" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+\"Vortex\" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+http://creativecommons.org/licenses/by/4.0/
+
+All Screaming Brain Studios assets have been released under the CC0/Public Domain License.
+You are free to use these assets in any and all projects, commercial or non-commercial,
+with no restrictions, and can be released with or without credit.
+
+Sound Effect by <a href=\"https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=5930\">freesound_community</a> from <a href=\"https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=5930\">Pixabay</a>
+Sound Effect by <a href=\"https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=104295\">freesound_community</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=104295\">Pixabay</a>
+Sound Effect by <a href=\"https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=74574\">freesound_community</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=74574\">Pixabay</a> (edited)
+"
+
+[connection signal="pressed" from="CanvasLayer2/ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]

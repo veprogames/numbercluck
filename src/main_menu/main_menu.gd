@@ -25,3 +25,7 @@ func _on_button_ia_pressed() -> void:
 
 func _on_button_ia_steam_pressed() -> void:
 	OS.shell_open("https://store.steampowered.com/search/?developer=InterAction%20studios")
+
+
+func _on_button_credits_pressed() -> void:
+	get_tree().change_scene_to_file("res://src/credits/credits_menu.tscn")

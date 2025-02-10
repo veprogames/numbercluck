@@ -67,6 +67,11 @@ layout_mode = 2
 theme_type_variation = &"ButtonLarge"
 text = "Upgrades"
 
+[node name="ButtonCredits" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ButtonLarge"
+text = "Credits"
+
 [node name="ButtonQuit" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"ButtonLarge"
@@ -113,6 +118,7 @@ grow_vertical = 0
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonMissions" to="." method="_on_button_missions_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonShop" to="." method="_on_button_shop_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonCredits" to="." method="_on_button_credits_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/ButtonQuit" to="." method="_on_button_quit_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer2/HBoxContainer/ButtonIA" to="." method="_on_button_ia_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer2/HBoxContainer/ButtonIASteam" to="." method="_on_button_ia_steam_pressed"]
