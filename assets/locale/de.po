@@ -342,3 +342,23 @@ msgstr "Jetzt wird's ernst!"
 #: assets/missions/mission_chickens_everywhere.tres
 msgid "Chickens Everywhere"
 msgstr "Hühner überall"
+
+#: src/ui/pause_menu.tscn
+msgid "Paused"
+msgstr "Pausiert"
+
+#: src/ui/pause_menu.tscn
+msgid "Continue"
+msgstr "Fortsetzen"
+
+#: src/ui/pause_menu.tscn
+msgid "Surrender"
+msgstr "Aufgeben"
+
+#: src/ui/pause_menu.tscn
+msgid "Music"
+msgstr "Musik"
+
+#: src/ui/pause_menu.tscn
+msgid "Sounds"
+msgstr "Sounds"

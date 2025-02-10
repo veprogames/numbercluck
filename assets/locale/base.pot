@@ -19,6 +19,7 @@
 # res://assets/upgrades/upgrade_max_lives.tres
 # res://src/wave/sequences/wave_seq_chickens_everywhere.tscn
 # res://assets/missions/mission_chickens_everywhere.tres
+# res://src/ui/pause_menu.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -333,4 +334,24 @@ msgstr ""
 
 #: assets/missions/mission_chickens_everywhere.tres
 msgid "Chickens Everywhere"
+msgstr ""
+
+#: src/ui/pause_menu.tscn
+msgid "Paused"
+msgstr ""
+
+#: src/ui/pause_menu.tscn
+msgid "Continue"
+msgstr ""
+
+#: src/ui/pause_menu.tscn
+msgid "Surrender"
+msgstr ""
+
+#: src/ui/pause_menu.tscn
+msgid "Music"
+msgstr ""
+
+#: src/ui/pause_menu.tscn
+msgid "Sounds"
 msgstr ""
