@@ -39,7 +39,7 @@ offset_top = 150.0
 offset_right = 106.0
 offset_bottom = 254.0
 grow_horizontal = 2
-text = "Fanmade"
+text = "Numbercluck"
 label_settings = SubResource("LabelSettings_ledtl")
 horizontal_alignment = 1
 
