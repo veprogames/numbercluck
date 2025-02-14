@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_yjp2s"]
 [ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="2_6lbpd"]
 [ext_resource type="Texture2D" uid="uid://bsysfq831qi08" path="res://assets/chicken/suit_checkered.png" id="2_aga1k"]
-[ext_resource type="PackedScene" uid="uid://4vcu6y6bedtt" path="res://src/bullet/egg_bullet.tscn" id="3_hcv2t"]
+[ext_resource type="PackedScene" uid="uid://dsllu2oim8kn2" path="res://src/bullet/purple_bolt_bullet.tscn" id="4_8nywq"]
 [ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="4_tdrhs"]
 [ext_resource type="AudioStream" uid="uid://dmo0jn74bh1qm" path="res://assets/chicken/death1.ogg" id="5_q60ti"]
 [ext_resource type="AudioStream" uid="uid://0o77mu32cv22" path="res://assets/chicken/death2.ogg" id="6_jrfdw"]
@@ -105,20 +105,20 @@ shape = SubResource("CircleShape2D_whb61")
 [node name="BulletPodEnemy" parent="." instance=ExtResource("2_6lbpd")]
 position = Vector2(-36, 80)
 rotation = 2.09439
-bullet = ExtResource("3_hcv2t")
-random_interval = 1.5
+bullet = ExtResource("4_8nywq")
+interval = 2.0
 
 [node name="BulletPodEnemy2" parent="." instance=ExtResource("2_6lbpd")]
 position = Vector2(1, 100)
 rotation = 1.57079
-bullet = ExtResource("3_hcv2t")
-random_interval = 1.5
+bullet = ExtResource("4_8nywq")
+interval = 2.0
 
 [node name="BulletPodEnemy3" parent="." instance=ExtResource("2_6lbpd")]
 position = Vector2(38, 81)
 rotation = 1.0472
-bullet = ExtResource("3_hcv2t")
-random_interval = 1.5
+bullet = ExtResource("4_8nywq")
+interval = 2.0
 
 [node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_tdrhs")]
 stream = SubResource("AudioStreamRandomizer_707ws")
@@ -161,7 +161,7 @@ chance_multi = 1000.0
 [node name="EnemyMoveByNoise" parent="." node_paths=PackedStringArray("target") instance=ExtResource("15_tdxho")]
 target = NodePath("..")
 noise = SubResource("FastNoiseLite_wl8ni")
-amplitude = Vector2(1600, 1600)
+amplitude = Vector2(1200, 1200)
 
 [node name="AddToBossBar" parent="." node_paths=PackedStringArray("target") instance=ExtResource("16_qhyfl")]
 target = NodePath("..")

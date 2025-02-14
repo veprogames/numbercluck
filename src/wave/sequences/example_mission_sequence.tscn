@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5p8rgkvethjf"]
+[gd_scene load_steps=9 format=3 uid="uid://c5p8rgkvethjf"]
 
 [ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_fo7ve"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="1_oich7"]
 [ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="2_xmn0u"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/enemies/chicken/red_chicken.tscn" id="4_g3wuq"]
 [ext_resource type="PackedScene" uid="uid://cudvsxgk8egsy" path="res://src/enemy/behavior/enemy_move_by_path.tscn" id="5_m70tu"]
+[ext_resource type="PackedScene" uid="uid://cw4o7gu4cqywo" path="res://src/enemy/enemies/chicken/patterns/checkered_white_chicken_boss.tscn" id="6_wyoky"]
 
 [sub_resource type="GDScript" id="GDScript_ptf1q"]
 script/source = "@icon(\"uid://coivio5vqtpwj\")
@@ -35,6 +36,9 @@ script = SubResource("GDScript_ptf1q")
 target = NodePath("..")
 curve = SubResource("Curve2D_ibj0l")
 speed = 300.0
+
+[node name="CheckeredWhiteChickenBoss" parent="Wave" instance=ExtResource("6_wyoky")]
+position = Vector2(560, 345)
 
 [node name="Wave2" parent="." instance=ExtResource("1_oich7")]
 visible = false
