@@ -34,6 +34,7 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	var mouse_event: InputEventMouseMotion = event as InputEventMouseMotion
+	
 	if mouse_event:
 		position += mouse_event.relative
 		position = position.clamp(

@@ -63,13 +63,21 @@ func _ready() -> void:
 	)
 
 
-func _unhandled_input(_event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
+	var drag_event: InputEventScreenDrag = event as InputEventScreenDrag
+	var boosted: bool = drag_event and drag_event.index == 2
+	
 	if Input.is_action_just_pressed(&"ui_cancel"):
 		owner.add_child(PauseMenu.create())
-	if Input.is_action_just_released(&"player_boost"):
+	if Input.is_action_just_released(&"player_boost") or boosted:
 		if boosters > 0 and state != PlayerStates.BOOSTED:
 			boosters -= 1
 			set_state(PlayerStates.BOOSTED)
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_GO_BACK_REQUEST:
+		owner.add_child(PauseMenu.create())
 
 
 func get_player() -> Player:

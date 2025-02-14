@@ -13,6 +13,9 @@ var length: float
 
 
 func _ready() -> void:
+	if !curve:
+		return
+	
 	length = curve.get_baked_length()
 	curve.changed.connect(queue_redraw)
 	queue_redraw()
