@@ -10,7 +10,10 @@ signal died(enemy: Enemy)
 
 var velocity: Vector2 = Vector2.ZERO
 @onready var target_position: Vector2 = position
-var position_offset: Vector2 = Vector2.ZERO
+
+var additional_offsets: Dictionary = {}
+
+var current_offset: Vector2 = Vector2.ZERO
 var target_offset: Vector2 = Vector2.ZERO
 
 var moving_to_target: bool = false
@@ -38,9 +41,13 @@ func _physics_process(delta: float) -> void:
 		target_position += velocity * delta
 	
 	target_offset = target_offset.lerp(Vector2.ZERO, 5 * delta)
-	position_offset = position_offset.lerp(target_offset, 10 * delta)
+	current_offset = current_offset.lerp(target_offset, 10 * delta)
 	
-	position = target_position + position_offset
+	position = target_position + current_offset
+	
+	for value: Variant in additional_offsets.values():
+		if value is Vector2:
+			position += value
 	
 	velocity = Vector2.ZERO
 
