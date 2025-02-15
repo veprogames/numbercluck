@@ -14,10 +14,20 @@ var upgrade: Upgrade :
 		)
 
 
+func _ready() -> void:
+	Events.saved_score_changed.connect(func(_score: float) -> void:
+		update_buy_button()
+	)
+
+
 func update_ui() -> void:
 	label_title.text = "%s Level %d" % [tr(upgrade.definition.title), upgrade.level + 1]
 	label_description.text = tr(upgrade.definition.description) \
 		.replace("$$effect$$", "[color=lime]%s[/color]" % upgrade.format_effect())
+	update_buy_button()
+
+
+func update_buy_button() -> void:
 	if upgrade.is_maxed():
 		button_buy.text = tr("Maxed")
 		button_buy.disabled = true
