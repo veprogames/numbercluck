@@ -4,3 +4,9 @@
 
 [node name="Global" type="Node"]
 script = ExtResource("1_rbqxj")
+
+[node name="SaveTimer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[connection signal="timeout" from="SaveTimer" to="." method="_on_save_timer_timeout"]

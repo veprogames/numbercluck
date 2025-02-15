@@ -59,6 +59,7 @@ func _ready() -> void:
 	set_state(PlayerStates.NORMAL)
 	firepower = min_firepower
 	Events.mission_completed.connect(func() -> void:
+		Game.save_game()
 		set_state(PlayerStates.INVINCIBLE)
 	)
 

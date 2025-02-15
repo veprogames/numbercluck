@@ -12,6 +12,7 @@ func _on_button_missions_pressed() -> void:
 
 
 func _on_button_quit_pressed() -> void:
+	Game.save_game()
 	get_tree().quit()
 
 

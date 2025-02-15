@@ -15,3 +15,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			_:
 				pass
+
+
+func _on_save_timer_timeout() -> void:
+	Game.save_game()
