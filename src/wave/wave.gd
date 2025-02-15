@@ -14,6 +14,7 @@ signal finished
 var spawn_points: Array[EnemySpawnPoint]
 var spawn_enemies: Array[Enemy]
 
+var started: bool = false
 var finished_spawning: bool = false
 
 
@@ -33,7 +34,16 @@ func _ready() -> void:
 		spawn_timer.wait_time = time_between_spawns
 
 
+func _unhandled_input(_event: InputEvent) -> void:
+	if OS.is_debug_build():
+		if started and Input.is_action_just_pressed(&"cheat_wave_skip"):
+			finished.emit()
+			queue_free()
+
+
 func start() -> void:
+	started = true
+	
 	if music_stream != null:
 		Audio.play_music(music_stream)
 	

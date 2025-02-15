@@ -2,12 +2,12 @@ extends Node
 
 
 func _ready() -> void:
-	Game.load_game()
 	Game.settings.load_settings()
 	
 	if OS.is_debug_build():
 		Game.chapters_unlocked = 999
-		Game.saved_score = 1e30
+	else:
+		Game.load_game()
 
 
 func _unhandled_input(_event: InputEvent) -> void:
@@ -19,6 +19,10 @@ func _unhandled_input(_event: InputEvent) -> void:
 				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			_:
 				pass
+	
+	if OS.is_debug_build():
+		if Input.is_action_just_pressed(&"cheat_score"):
+			Game.saved_score = Game.saved_score * 2 + 100000
 
 
 func _on_save_timer_timeout() -> void:

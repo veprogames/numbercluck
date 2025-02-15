@@ -74,6 +74,14 @@ func _unhandled_input(event: InputEvent) -> void:
 		if boosters > 0 and state != PlayerStates.BOOSTED:
 			boosters -= 1
 			set_state(PlayerStates.BOOSTED)
+	
+	if OS.is_debug_build():
+		if Input.is_action_just_pressed(&"cheat_lives"):
+			lives += 1
+		if Input.is_action_just_pressed(&"cheat_firepower"):
+			spawn_firepower(Vector2(randf() * viewport_rect.size.x, -100))
+		if Input.is_action_just_pressed(&"cheat_boosters"):
+			boosters += 1
 
 
 func _notification(what: int) -> void:
@@ -126,7 +134,7 @@ func can_spawn_firepower() -> bool:
 
 
 func spawn_firepower(position: Vector2) -> void:
-	firepower_progress -= 1.0
+	firepower_progress = maxf(0.0, firepower_progress - 1.0)
 	var fp: Firepower = FirepowerScene.instantiate()
 	fp.global_position = position
 	level.add_child.call_deferred(fp)
