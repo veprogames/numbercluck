@@ -22,8 +22,10 @@ signal boosters_changed(boosts: int)
 
 @onready var boost_timer: Timer = $BoostTimer
 @onready var respawn_timer: Timer = $RespawnTimer
+@onready var game_over_timer: Timer = $GameOverTimer
 @onready var viewport_rect: Rect2 = get_viewport().get_visible_rect()
 @onready var level: Node2D = get_tree().get_first_node_in_group(&"level")
+@onready var audio_stream_player_game_over: AudioStreamPlayer = $AudioStreamPlayerGameOver
 
 var player: Player
 
@@ -53,6 +55,7 @@ var firepower_progress: float = randf()
 
 const PlayerScene: PackedScene = preload("res://src/player/player.tscn")
 const FirepowerScene: PackedScene = preload("res://src/collectables/firepower.tscn")
+const MainMenuMusic: AudioStreamOggVorbis = preload("res://assets/music/fanfare_for_space.ogg")
 
 
 func _ready() -> void:
@@ -173,10 +176,21 @@ func _on_player_player_damaged() -> void:
 
 
 func _on_game_over() -> void:
+	Audio.fade_out_music()
+	game_over_timer.start()
+	await game_over_timer.timeout
+	
+	audio_stream_player_game_over.play()
+	
 	var title: Title = Title.create("Game Over!")
 	add_child(title)
 	title.start()
 	await title.finished
+	
+	game_over_timer.start()
+	await game_over_timer.timeout
+	Audio.play_music(MainMenuMusic)
+	
 	get_tree().change_scene_to_file("res://src/mission_selection/mission_selection.tscn")
 
 

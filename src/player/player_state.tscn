@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://brc3mmjs7pgw8"]
+[gd_scene load_steps=3 format=3 uid="uid://brc3mmjs7pgw8"]
 
 [ext_resource type="Script" path="res://src/player/player_state.gd" id="1_7e6c7"]
+[ext_resource type="AudioStream" uid="uid://c47vkdy01l0u4" path="res://assets/player/game_over.ogg" id="2_ncm55"]
 
 [node name="PlayerState" type="Node" groups=["player_state"]]
 script = ExtResource("1_7e6c7")
@@ -12,6 +13,12 @@ wait_time = 2.0
 [node name="BoostTimer" type="Timer" parent="."]
 process_callback = 0
 wait_time = 5.0
+
+[node name="GameOverTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="AudioStreamPlayerGameOver" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ncm55")
 
 [connection signal="boost_started" from="." to="." method="_on_boost_started"]
 [connection signal="game_over" from="." to="." method="_on_game_over"]
