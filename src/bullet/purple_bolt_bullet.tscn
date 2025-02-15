@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/bullet/bullet.gd" id="1_y5fkv"]
 [ext_resource type="Texture2D" uid="uid://b2tlsvgoqwuxo" path="res://assets/bullets/purple_bolt.png" id="2_rgoth"]
-[ext_resource type="AudioStream" uid="uid://c0a5lc06ibqqh" path="res://assets/chicken/lay_egg.ogg" id="3_ma7ux"]
+[ext_resource type="AudioStream" uid="uid://d02dj86qfhp2m" path="res://assets/bullets/laser.ogg" id="3_hl2ak"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qesng"]
 radius = 6.0
@@ -13,7 +13,7 @@ collision_layer = 8
 collision_priority = 2.0
 script = ExtResource("1_y5fkv")
 texture = ExtResource("2_rgoth")
-sound = ExtResource("3_ma7ux")
+sound = ExtResource("3_hl2ak")
 speed = Vector2(500, 0)
 damage = 1.0
 

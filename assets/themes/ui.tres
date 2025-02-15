@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=18 format=3 uid="uid://7h4y27wblsv2"]
+[gd_resource type="Theme" load_steps=22 format=3 uid="uid://7h4y27wblsv2"]
 
 [ext_resource type="FontFile" uid="uid://l1te5ju02vef" path="res://assets/fonts/teko/Teko-Regular.ttf" id="1_4cacl"]
 
@@ -253,6 +253,52 @@ corner_radius_bottom_left = 32
 shadow_color = Color(0.11, 0.718167, 1, 0.627451)
 shadow_size = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhf5u"]
+content_margin_left = 16.0
+bg_color = Color(0.11, 0.718167, 1, 0)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.11, 0.718167, 1, 0.627451)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3tvuv"]
+content_margin_left = 16.0
+bg_color = Color(0.109804, 0.717647, 1, 0)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.399597, 0.778662, 1, 0.627451)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4r75"]
+content_margin_left = 16.0
+bg_color = Color(0.109804, 0.717647, 1, 0)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.677666, 0.874032, 1, 0.627451)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4niu6"]
+content_margin_left = 32.0
+bg_color = Color(0.0313726, 0.133333, 0.372549, 0.752941)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.109804, 0.713726, 1, 1)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0.00392157, 0.0705882, 0.34902, 0.313726)
+shadow_size = 8
+
 [resource]
 default_font = ExtResource("1_4cacl")
 default_font_size = 32
@@ -294,3 +340,7 @@ RichTextLabel/constants/line_separation = -12
 RichTextLabel/constants/shadow_offset_x = 2
 RichTextLabel/constants/shadow_offset_y = 2
 VBoxContainer/constants/separation = 16
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_mhf5u")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_3tvuv")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_w4r75")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_4niu6")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cjakrgrttxxy2"]
+[gd_scene load_steps=22 format=3 uid="uid://cjakrgrttxxy2"]
 
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_jpg64"]
 [ext_resource type="Texture2D" uid="uid://bsysfq831qi08" path="res://assets/chicken/suit_checkered.png" id="2_i5jbs"]
@@ -29,6 +29,12 @@ streams_count = 3
 stream_0/stream = ExtResource("6_yrwkb")
 stream_1/stream = ExtResource("7_2po8i")
 stream_2/stream = ExtResource("8_vlqr3")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w4csf"]
+playback_mode = 1
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("10_d4u45")
 
 [sub_resource type="Gradient" id="Gradient_rignk"]
 offsets = PackedFloat32Array(0, 0.0753769, 0.984925)
@@ -81,7 +87,7 @@ pitch_scale = 0.9
 target = NodePath("..")
 
 [node name="AudioOnEnemyDamaged" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_uokml")]
-stream = ExtResource("10_d4u45")
+stream = SubResource("AudioStreamRandomizer_w4csf")
 pitch_scale = 0.8
 target = NodePath("..")
 

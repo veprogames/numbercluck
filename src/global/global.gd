@@ -4,6 +4,10 @@ extends Node
 func _ready() -> void:
 	Game.load_game()
 	Game.settings.load_settings()
+	
+	if OS.is_debug_build():
+		Game.chapters_unlocked = 999
+		Game.saved_score = 1e30
 
 
 func _unhandled_input(_event: InputEvent) -> void:

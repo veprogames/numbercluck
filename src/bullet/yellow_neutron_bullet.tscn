@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/bullet/bullet.gd" id="1_buqr2"]
 [ext_resource type="Texture2D" uid="uid://6o0ets2p600g" path="res://assets/bullets/yellow_neutron.png" id="2_r8bx6"]
-[ext_resource type="AudioStream" uid="uid://dpulhle4ui1pv" path="res://assets/bullets/ion.ogg" id="3_0qwaq"]
+[ext_resource type="AudioStream" uid="uid://u6qrq1j2i3uc" path="res://assets/bullets/neutron.ogg" id="3_ijxbe"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_moasi"]
 radius = 16.0
@@ -14,7 +14,7 @@ collision_mask = 2
 collision_priority = 2.0
 script = ExtResource("1_buqr2")
 texture = ExtResource("2_r8bx6")
-sound = ExtResource("3_0qwaq")
+sound = ExtResource("3_ijxbe")
 speed = Vector2(750, 0)
 damage = 1000.0
 

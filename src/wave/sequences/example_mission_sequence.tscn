@@ -38,7 +38,7 @@ curve = SubResource("Curve2D_ibj0l")
 speed = 300.0
 
 [node name="CheckeredWhiteChickenBoss" parent="Wave" instance=ExtResource("6_wyoky")]
-position = Vector2(560, 345)
+position = Vector2(1417, 371)
 
 [node name="Wave2" parent="." instance=ExtResource("1_oich7")]
 visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://re807bgsjw2w"]
+[gd_scene load_steps=21 format=3 uid="uid://re807bgsjw2w"]
 
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_7pofm"]
 [ext_resource type="PackedScene" uid="uid://bh41ogc1wjdj5" path="res://src/enemy/behavior/enemy_move_swivel.tscn" id="2_s6sax"]
@@ -28,6 +28,12 @@ streams_count = 3
 stream_0/stream = ExtResource("6_4poel")
 stream_1/stream = ExtResource("7_k7c50")
 stream_2/stream = ExtResource("8_kw0po")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_to1nq"]
+playback_mode = 1
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("10_k3sas")
 
 [sub_resource type="Gradient" id="Gradient_rignk"]
 offsets = PackedFloat32Array(0, 0.0753769, 0.984925)
@@ -72,7 +78,7 @@ stream = SubResource("AudioStreamRandomizer_707ws")
 target = NodePath("..")
 
 [node name="AudioOnEnemyDamaged" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_tkgka")]
-stream = ExtResource("10_k3sas")
+stream = SubResource("AudioStreamRandomizer_to1nq")
 target = NodePath("..")
 
 [node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_m4dga")]

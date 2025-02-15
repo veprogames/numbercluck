@@ -1,13 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://da0g4mg8h0vkv"]
+[gd_scene load_steps=27 format=3 uid="uid://da0g4mg8h0vkv"]
 
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_0vr3l"]
 [ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="3_bxtc3"]
 [ext_resource type="PackedScene" uid="uid://4vcu6y6bedtt" path="res://src/bullet/egg_bullet.tscn" id="4_tk46n"]
 [ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="5_40pfm"]
-[ext_resource type="AudioStream" uid="uid://dmo0jn74bh1qm" path="res://assets/chicken/death1.ogg" id="6_1344q"]
-[ext_resource type="AudioStream" uid="uid://0o77mu32cv22" path="res://assets/chicken/death2.ogg" id="7_wlhyj"]
+[ext_resource type="AudioStream" uid="uid://kvck3dkat7er" path="res://assets/chicken/death_large.ogg" id="5_80u00"]
 [ext_resource type="AudioStream" uid="uid://ccy41p24uq1bf" path="res://assets/explosion.ogg" id="8_0yvsa"]
-[ext_resource type="AudioStream" uid="uid://w0pwmn27ovj5" path="res://assets/chicken/death3.ogg" id="8_66qsl"]
 [ext_resource type="PackedScene" uid="uid://cjm1ebgv6lilf" path="res://src/common/audio/audio_on_enemy_damaged.tscn" id="9_hpquf"]
 [ext_resource type="AudioStream" uid="uid://b45nhm48v654h" path="res://assets/chicken/hit.ogg" id="10_7cnq7"]
 [ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="11_1johc"]
@@ -26,11 +24,11 @@ extends Enemy
 [sub_resource type="CircleShape2D" id="CircleShape2D_whb61"]
 radius = 180.0
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_707ws"]
-streams_count = 3
-stream_0/stream = ExtResource("6_1344q")
-stream_1/stream = ExtResource("7_wlhyj")
-stream_2/stream = ExtResource("8_66qsl")
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ru3ao"]
+playback_mode = 1
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("10_7cnq7")
 
 [sub_resource type="Gradient" id="Gradient_gn53v"]
 offsets = PackedFloat32Array(0, 0.0753769, 0.984925)
@@ -108,8 +106,8 @@ bullet = ExtResource("4_tk46n")
 random_interval = 1.0
 
 [node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_40pfm")]
-stream = SubResource("AudioStreamRandomizer_707ws")
-pitch_scale = 0.3
+stream = ExtResource("5_80u00")
+pitch_scale = 0.9
 target = NodePath("..")
 
 [node name="AudioOnVanish2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_40pfm")]
@@ -117,7 +115,8 @@ stream = ExtResource("8_0yvsa")
 target = NodePath("..")
 
 [node name="AudioOnEnemyDamaged" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_hpquf")]
-stream = ExtResource("10_7cnq7")
+stream = SubResource("AudioStreamRandomizer_ru3ao")
+pitch_scale = 0.9
 target = NodePath("..")
 
 [node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_1johc")]
