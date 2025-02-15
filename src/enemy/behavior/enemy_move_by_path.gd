@@ -48,4 +48,4 @@ func _draw() -> void:
 		var a: Vector2 = points[i]
 		var b: Vector2 = points[i + 1]
 		if i % 2 == 0:
-			draw_line(a, b, Color.ORANGE * 0.6, 2)
+			draw_line(a, b, Color.ORANGE * 0.75, 5)

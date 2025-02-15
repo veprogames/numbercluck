@@ -1,0 +1,104 @@
+[gd_scene load_steps=21 format=3 uid="uid://et1eenrbk8ii"]
+
+[ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_j6t5o"]
+[ext_resource type="Texture2D" uid="uid://bsysfq831qi08" path="res://assets/chicken/suit_checkered.png" id="2_13ikv"]
+[ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="3_cm4ww"]
+[ext_resource type="PackedScene" uid="uid://4vcu6y6bedtt" path="res://src/bullet/egg_bullet.tscn" id="4_jvi7x"]
+[ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="5_lgiv4"]
+[ext_resource type="AudioStream" uid="uid://dmo0jn74bh1qm" path="res://assets/chicken/death1.ogg" id="6_nctfj"]
+[ext_resource type="AudioStream" uid="uid://0o77mu32cv22" path="res://assets/chicken/death2.ogg" id="7_lgmkl"]
+[ext_resource type="AudioStream" uid="uid://w0pwmn27ovj5" path="res://assets/chicken/death3.ogg" id="8_nltpr"]
+[ext_resource type="PackedScene" uid="uid://cjm1ebgv6lilf" path="res://src/common/audio/audio_on_enemy_damaged.tscn" id="9_cd2jl"]
+[ext_resource type="AudioStream" uid="uid://b45nhm48v654h" path="res://assets/chicken/hit.ogg" id="10_5jrre"]
+[ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="11_ymknq"]
+[ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="12_sen2i"]
+[ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/add_firepower_progress_on_death.tscn" id="13_pvm8u"]
+
+[sub_resource type="GDScript" id="GDScript_ptf1q"]
+script/source = "@icon(\"uid://coivio5vqtpwj\")
+class_name Chicken
+extends Enemy
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gbmmg"]
+radius = 45.26
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_707ws"]
+streams_count = 3
+stream_0/stream = ExtResource("6_nctfj")
+stream_1/stream = ExtResource("7_lgmkl")
+stream_2/stream = ExtResource("8_nltpr")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w4csf"]
+playback_mode = 1
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("10_5jrre")
+
+[sub_resource type="Gradient" id="Gradient_rignk"]
+offsets = PackedFloat32Array(0, 0.0753769, 0.984925)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_imf6t"]
+gradient = SubResource("Gradient_rignk")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7t325"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 64.0
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, 0, 0)
+color = Color(1, 1, 1, 0.501961)
+color_ramp = SubResource("GradientTexture1D_imf6t")
+
+[node name="CheckeredGreenChicken" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 15000.0
+max_hp = 4000.0
+
+[node name="ChickenBody" parent="." instance=ExtResource("1_j6t5o")]
+scale = Vector2(0.25, 0.25)
+suit = ExtResource("2_13ikv")
+suit_modulate = Color(0, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gbmmg")
+
+[node name="BulletPodEnemy" parent="." instance=ExtResource("3_cm4ww")]
+position = Vector2(-9, 22)
+rotation = 1.83259
+bullet = ExtResource("4_jvi7x")
+random_interval = 12.0
+
+[node name="BulletPodEnemy2" parent="." instance=ExtResource("3_cm4ww")]
+position = Vector2(8, 22)
+rotation = 1.309
+bullet = ExtResource("4_jvi7x")
+random_interval = 12.0
+
+[node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_lgiv4")]
+stream = SubResource("AudioStreamRandomizer_707ws")
+pitch_scale = 0.9
+target = NodePath("..")
+
+[node name="AudioOnEnemyDamaged" parent="." node_paths=PackedStringArray("target") instance=ExtResource("9_cd2jl")]
+stream = SubResource("AudioStreamRandomizer_w4csf")
+pitch_scale = 0.8
+target = NodePath("..")
+
+[node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_ymknq")]
+amount = 24
+process_material = SubResource("ParticleProcessMaterial_7t325")
+texture = ExtResource("12_sen2i")
+lifetime = 0.8
+explosiveness = 0.77
+visibility_rect = Rect2(-115.616, -116.059, 242.424, 223.17)
+local_coords = true
+target = NodePath("..")
+
+[node name="AddFirepowerProgressOnDeath" parent="." node_paths=PackedStringArray("target") instance=ExtResource("13_pvm8u")]
+target = NodePath("..")
