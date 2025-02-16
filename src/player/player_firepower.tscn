@@ -1130,6 +1130,7 @@ bullet = ExtResource("3_arnuf")
 interval = 0.3
 
 [node name="20" type="Node2D" parent="Levels"]
+visible = false
 script = ExtResource("2_guvqg")
 
 [node name="BulletPodPlayer" parent="Levels/20" instance=ExtResource("2_7i3ou")]
@@ -1215,6 +1216,646 @@ rotation = -0.785397
 volume_linear = 0.15
 bullet = ExtResource("3_arnuf")
 interval = 0.3
+
+[node name="21" type="Node2D" parent="Levels"]
+visible = false
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.5
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer10" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.5
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer11" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(18, -29)
+rotation = -1.309
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer15" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(34, -21)
+rotation = -1.309
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer12" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(-16, -30)
+rotation = -1.83259
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer16" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(-33, -21)
+rotation = -1.83259
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer13" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(-29, 17)
+rotation = -2.09439
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer17" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(-44, 24)
+rotation = -2.09439
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer19" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(-44, 24)
+rotation = -2.35619
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer14" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(27, 16)
+rotation = -1.0472
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer18" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(45, 25)
+rotation = -1.0472
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer20" parent="Levels/21" instance=ExtResource("2_7i3ou")]
+position = Vector2(45, 25)
+rotation = -0.785397
+volume_linear = 0.15
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="22" type="Node2D" parent="Levels"]
+visible = false
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer2" parent="Levels/22" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer" parent="Levels/22" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer10" parent="Levels/22" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer11" parent="Levels/22" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="23" type="Node2D" parent="Levels"]
+visible = false
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer2" parent="Levels/23" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer" parent="Levels/23" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer10" parent="Levels/23" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer11" parent="Levels/23" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer12" parent="Levels/23" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.309
+volume_linear = 0.25
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer14" parent="Levels/23" instance=ExtResource("2_7i3ou")]
+position = Vector2(37, 21)
+rotation = -1.309
+volume_linear = 0.25
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer13" parent="Levels/23" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.83259
+volume_linear = 0.25
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer15" parent="Levels/23" instance=ExtResource("2_7i3ou")]
+position = Vector2(-37, 20)
+rotation = -1.83259
+volume_linear = 0.25
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="24" type="Node2D" parent="Levels"]
+visible = false
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer2" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer10" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer11" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer12" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(17, -28)
+rotation = -1.309
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer18" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(34, -21)
+rotation = -1.309
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer14" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(28, 17)
+rotation = -1.309
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer19" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(46, 25)
+rotation = -1.309
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer13" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(-17, -27)
+rotation = -1.83259
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer17" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(-33, -21)
+rotation = -1.83259
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer15" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(-44, 24)
+rotation = -1.83259
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="BulletPodPlayer16" parent="Levels/24" instance=ExtResource("2_7i3ou")]
+position = Vector2(-28, 18)
+rotation = -1.83259
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.3
+
+[node name="25" type="Node2D" parent="Levels"]
+visible = false
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer2" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer10" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer11" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer12" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(17, -28)
+rotation = -1.309
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer18" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(34, -21)
+rotation = -1.309
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer14" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(28, 17)
+rotation = -1.309
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer19" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(46, 25)
+rotation = -1.309
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer13" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(-17, -27)
+rotation = -1.83259
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer17" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(-33, -21)
+rotation = -1.83259
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer15" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(-44, 24)
+rotation = -1.83259
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="BulletPodPlayer16" parent="Levels/25" instance=ExtResource("2_7i3ou")]
+position = Vector2(-28, 18)
+rotation = -1.83259
+volume_linear = 0.1
+bullet = ExtResource("3_arnuf")
+interval = 0.2
+
+[node name="26" type="Node2D" parent="Levels"]
+visible = false
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer3" parent="Levels/26" instance=ExtResource("2_7i3ou")]
+position = Vector2(-37, 20)
+rotation = -1.83259
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer2" parent="Levels/26" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer" parent="Levels/26" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer10" parent="Levels/26" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer11" parent="Levels/26" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer12" parent="Levels/26" instance=ExtResource("2_7i3ou")]
+position = Vector2(36, 21)
+rotation = -1.309
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="27" type="Node2D" parent="Levels"]
+visible = false
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer3" parent="Levels/27" instance=ExtResource("2_7i3ou")]
+position = Vector2(-37, 20)
+rotation = -1.83259
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer2" parent="Levels/27" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer" parent="Levels/27" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer10" parent="Levels/27" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer11" parent="Levels/27" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer12" parent="Levels/27" instance=ExtResource("2_7i3ou")]
+position = Vector2(36, 21)
+rotation = -1.309
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="28" type="Node2D" parent="Levels"]
+visible = false
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer4" parent="Levels/28" instance=ExtResource("2_7i3ou")]
+position = Vector2(-37, 20)
+rotation = -2.09439
+volume_linear = 0.33
+bullet = ExtResource("3_arnuf")
+interval = 0.1
+
+[node name="BulletPodPlayer3" parent="Levels/28" instance=ExtResource("2_7i3ou")]
+position = Vector2(-37, 20)
+rotation = -1.83259
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer2" parent="Levels/28" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer" parent="Levels/28" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer10" parent="Levels/28" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer11" parent="Levels/28" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer12" parent="Levels/28" instance=ExtResource("2_7i3ou")]
+position = Vector2(36, 21)
+rotation = -1.309
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.3
+
+[node name="BulletPodPlayer5" parent="Levels/28" instance=ExtResource("2_7i3ou")]
+position = Vector2(36, 21)
+rotation = -1.0472
+volume_linear = 0.33
+bullet = ExtResource("3_arnuf")
+interval = 0.1
+
+[node name="29" type="Node2D" parent="Levels"]
+visible = false
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer4" parent="Levels/29" instance=ExtResource("2_7i3ou")]
+position = Vector2(-37, 20)
+rotation = -2.09439
+volume_linear = 0.33
+bullet = ExtResource("3_arnuf")
+interval = 0.1
+
+[node name="BulletPodPlayer3" parent="Levels/29" instance=ExtResource("2_7i3ou")]
+position = Vector2(-37, 20)
+rotation = -1.83259
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer2" parent="Levels/29" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer" parent="Levels/29" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer10" parent="Levels/29" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer11" parent="Levels/29" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer12" parent="Levels/29" instance=ExtResource("2_7i3ou")]
+position = Vector2(36, 21)
+rotation = -1.309
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer5" parent="Levels/29" instance=ExtResource("2_7i3ou")]
+position = Vector2(36, 21)
+rotation = -1.0472
+volume_linear = 0.33
+bullet = ExtResource("3_arnuf")
+interval = 0.1
+
+[node name="30" type="Node2D" parent="Levels"]
+script = ExtResource("2_guvqg")
+
+[node name="BulletPodPlayer4" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(-45, 25)
+rotation = -3.14159
+volume_linear = 0.33
+bullet = ExtResource("3_arnuf")
+interval = 0.1
+
+[node name="BulletPodPlayer6" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(-29, 18)
+rotation = -2.09439
+volume_linear = 0.33
+bullet = ExtResource("3_arnuf")
+interval = 0.1
+
+[node name="BulletPodPlayer3" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(-37, 20)
+rotation = -1.83259
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer2" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(-25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(-6, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer10" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(7, -42)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer11" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(25, -24)
+rotation = -1.5708
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer12" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(36, 21)
+rotation = -1.309
+volume_linear = 0.33
+bullet = ExtResource("5_88oec")
+interval = 0.2
+
+[node name="BulletPodPlayer5" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(29, 17)
+rotation = -1.0472
+volume_linear = 0.33
+bullet = ExtResource("3_arnuf")
+interval = 0.1
+
+[node name="BulletPodPlayer7" parent="Levels/30" instance=ExtResource("2_7i3ou")]
+position = Vector2(44, 24)
+volume_linear = 0.33
+bullet = ExtResource("3_arnuf")
+interval = 0.1
 
 [node name="HelperSprite" type="Sprite2D" parent="."]
 texture = ExtResource("4_icjx3")
