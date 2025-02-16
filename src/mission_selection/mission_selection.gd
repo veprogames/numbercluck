@@ -10,6 +10,7 @@ const missions: Array[MissionDefinition] = [
 	preload("res://assets/missions/mission_the_winged_threat.tres"),
 	preload("res://assets/missions/mission_chickens_everywhere.tres"),
 	preload("res://assets/missions/mission_nameless.tres"),
+	preload("res://assets/missions/mission_boss_rush.tres"),
 ]
 
 @onready var v_box_container_missions: VBoxContainer = %VBoxContainerMissions

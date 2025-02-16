@@ -1,0 +1,172 @@
+[gd_scene load_steps=13 format=3 uid="uid://yhqpsfdoecwl"]
+
+[ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_t46vs"]
+[ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_mij1x"]
+[ext_resource type="AudioStream" uid="uid://cilw4ifmpr6kr" path="res://assets/music/vortex.ogg" id="3_dge23"]
+[ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="4_o71dd"]
+[ext_resource type="PackedScene" uid="uid://da0g4mg8h0vkv" path="res://src/enemy/enemies/chicken/cyan_chicken_boss.tscn" id="5_oulya"]
+[ext_resource type="PackedScene" uid="uid://kak7se34ibjq" path="res://src/enemy/enemies/chicken/purple_chicken_boss.tscn" id="6_tjjhu"]
+[ext_resource type="PackedScene" uid="uid://cw4o7gu4cqywo" path="res://src/enemy/enemies/chicken/patterns/checkered_white_chicken_boss.tscn" id="7_cxu03"]
+[ext_resource type="PackedScene" uid="uid://duw84y5xnlbqc" path="res://src/enemy/enemies/chicken/patterns/checkered_green_chicken_boss.tscn" id="8_grp66"]
+[ext_resource type="PackedScene" uid="uid://cpxswmovccfas" path="res://src/enemy/enemies/egg/evil_egg_boss.tscn" id="9_s1jib"]
+[ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/enemies/chicken/red_chicken.tscn" id="9_xtoj6"]
+[ext_resource type="PackedScene" uid="uid://cv22g7s1dlt8m" path="res://src/enemy/behavior/add_to_boss_bar.tscn" id="10_2rvs7"]
+[ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/add_firepower_progress_on_death.tscn" id="11_db4bi"]
+
+[node name="WaveSeqBossRush" type="Node"]
+script = ExtResource("1_t46vs")
+
+[node name="Wave" parent="." instance=ExtResource("2_mij1x")]
+visible = false
+title = "First Encounter"
+music_stream = ExtResource("3_dge23")
+
+[node name="EnemySpawnPoint" parent="Wave" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="CyanChickenBoss" parent="Wave" instance=ExtResource("5_oulya")]
+position = Vector2(960, 324)
+moving_to_target_speed = 1.0
+
+[node name="Wave2" parent="." instance=ExtResource("2_mij1x")]
+visible = false
+title = "Now, two of them"
+
+[node name="EnemySpawnPoint" parent="Wave2" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="CyanChickenBoss" parent="Wave2" instance=ExtResource("5_oulya")]
+position = Vector2(600, 324)
+moving_to_target_speed = 1.0
+
+[node name="CyanChickenBoss2" parent="Wave2" instance=ExtResource("5_oulya")]
+position = Vector2(1320, 324)
+moving_to_target_speed = 1.0
+
+[node name="Wave3" parent="." instance=ExtResource("2_mij1x")]
+visible = false
+title = "Now it gets harder"
+
+[node name="EnemySpawnPoint" parent="Wave3" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="PurpleChickenBoss" parent="Wave3" instance=ExtResource("6_tjjhu")]
+position = Vector2(960, 324)
+moving_to_target_speed = 1.0
+
+[node name="Wave4" parent="." instance=ExtResource("2_mij1x")]
+visible = false
+title = "Too many"
+time_between_spawns = 0.5
+
+[node name="EnemySpawnPoint" parent="Wave4" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="CyanChickenBoss" parent="Wave4" instance=ExtResource("5_oulya")]
+position = Vector2(240, 324)
+moving_to_target_speed = 1.0
+
+[node name="CyanChickenBoss2" parent="Wave4" instance=ExtResource("5_oulya")]
+position = Vector2(600, 324)
+moving_to_target_speed = 1.0
+
+[node name="CyanChickenBoss3" parent="Wave4" instance=ExtResource("5_oulya")]
+position = Vector2(960, 324)
+moving_to_target_speed = 1.0
+
+[node name="CyanChickenBoss4" parent="Wave4" instance=ExtResource("5_oulya")]
+position = Vector2(1320, 324)
+moving_to_target_speed = 1.0
+
+[node name="CyanChickenBoss5" parent="Wave4" instance=ExtResource("5_oulya")]
+position = Vector2(1680, 324)
+moving_to_target_speed = 1.0
+
+[node name="Wave5" parent="." instance=ExtResource("2_mij1x")]
+visible = false
+title = "Checkered Boss is back!"
+
+[node name="EnemySpawnPoint" parent="Wave5" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="CheckeredWhiteChickenBoss" parent="Wave5" instance=ExtResource("7_cxu03")]
+position = Vector2(960, 324)
+moving_to_target_speed = 1.0
+
+[node name="Wave6" parent="." instance=ExtResource("2_mij1x")]
+visible = false
+title = "Showdown II"
+
+[node name="EnemySpawnPoint" parent="Wave6" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="CheckeredGreenChickenBoss" parent="Wave6" instance=ExtResource("8_grp66")]
+position = Vector2(960, 324)
+moving_to_target_speed = 1.0
+
+[node name="Wave7" parent="." instance=ExtResource("2_mij1x")]
+visible = false
+title = "Show off!"
+
+[node name="EnemySpawnPoint" parent="Wave7" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="PurpleChickenBoss" parent="Wave7" instance=ExtResource("6_tjjhu")]
+position = Vector2(456, 324)
+moving_to_target_speed = 1.0
+
+[node name="PurpleChickenBoss2" parent="Wave7" instance=ExtResource("6_tjjhu")]
+position = Vector2(960, 468)
+moving_to_target_speed = 1.0
+
+[node name="PurpleChickenBoss3" parent="Wave7" instance=ExtResource("6_tjjhu")]
+position = Vector2(1464, 324)
+moving_to_target_speed = 1.0
+
+[node name="Wave8" parent="." instance=ExtResource("2_mij1x")]
+visible = false
+title = "Boss Party"
+
+[node name="EnemySpawnPoint" parent="Wave8" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="CheckeredGreenChickenBoss" parent="Wave8" instance=ExtResource("8_grp66")]
+position = Vector2(1608, 324)
+moving_to_target_speed = 1.0
+
+[node name="CheckeredWhiteChickenBoss" parent="Wave8" instance=ExtResource("7_cxu03")]
+position = Vector2(1176, 324)
+
+[node name="PurpleChickenBoss" parent="Wave8" instance=ExtResource("6_tjjhu")]
+position = Vector2(744, 324)
+
+[node name="CyanChickenBoss" parent="Wave8" instance=ExtResource("5_oulya")]
+position = Vector2(312, 324)
+
+[node name="Wave9" parent="." instance=ExtResource("2_mij1x")]
+title = "Final Boss"
+
+[node name="EnemySpawnPoint" parent="Wave9" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="RedChicken" parent="Wave9" instance=ExtResource("9_xtoj6")]
+position = Vector2(960, 396)
+moving_to_target_speed = 1.0
+
+[node name="AddToBossBar" parent="Wave9/RedChicken" node_paths=PackedStringArray("target") instance=ExtResource("10_2rvs7")]
+target = NodePath("..")
+
+[node name="AddFirepowerProgressOnDeath2" parent="Wave9/RedChicken" node_paths=PackedStringArray("target") instance=ExtResource("11_db4bi")]
+target = NodePath("..")
+chance_multi = 1000.0
+
+[node name="Wave10" parent="." instance=ExtResource("2_mij1x")]
+visible = false
+title = "The Egg"
+
+[node name="EnemySpawnPoint" parent="Wave10" instance=ExtResource("4_o71dd")]
+position = Vector2(960, -324)
+
+[node name="EvilEggBoss" parent="Wave10" instance=ExtResource("9_s1jib")]
+position = Vector2(960, 324)
+moving_to_target_speed = 0.5

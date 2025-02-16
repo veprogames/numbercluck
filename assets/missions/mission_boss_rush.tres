@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MissionDefinition" load_steps=4 format=3 uid="uid://dwv0nild6hwom"]
+
+[ext_resource type="Texture2D" uid="uid://b7ufk6xjktb68" path="res://assets/backgrounds/starfield_black.png" id="1_73ape"]
+[ext_resource type="Script" path="res://src/mission/mission_definition.gd" id="2_hpnqt"]
+[ext_resource type="PackedScene" uid="uid://yhqpsfdoecwl" path="res://src/wave/sequences/wave_seq_boss_rush.tscn" id="3_127hr"]
+
+[resource]
+script = ExtResource("2_hpnqt")
+title = "Boss Rush"
+wave_sequence = ExtResource("3_127hr")
+chapter = 5
+background = ExtResource("1_73ape")
