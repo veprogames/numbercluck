@@ -1,4 +1,4 @@
-# LANGUAGE translation for Chicken 2 for the following files:
+# LANGUAGE translation for Chicken Invaders: Numbercluck for the following files:
 # res://src/main_menu/main_menu.tscn
 # res://src/mission_selection/mission_selection.tscn
 # res://src/shop_menu/shop_menu.tscn
@@ -20,13 +20,17 @@
 # res://src/wave/sequences/wave_seq_chickens_everywhere.tscn
 # res://assets/missions/mission_chickens_everywhere.tres
 # res://src/ui/pause_menu.tscn
+# res://src/wave/sequences/wave_seq_nameless.tscn
+# res://src/wave/sequences/wave_seq_boss_rush.tscn
+# res://assets/missions/mission_nameless.tres
+# res://assets/missions/mission_boss_rush.tres
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Chicken 2\n"
+"Project-Id-Version: Chicken Invaders: Numbercluck\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
@@ -36,7 +40,7 @@ msgid "Chicken Invaders"
 msgstr ""
 
 #: src/main_menu/main_menu.tscn
-msgid "Fanmade"
+msgid "Numbercluck"
 msgstr ""
 
 #: src/main_menu/main_menu.tscn
@@ -87,12 +91,14 @@ msgstr ""
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
 #: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+#: src/wave/sequences/wave_seq_nameless.tscn
 msgid "Invasion"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
 #: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+#: src/wave/sequences/wave_seq_nameless.tscn
 msgid "Another One"
 msgstr ""
 
@@ -102,6 +108,7 @@ msgstr ""
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
+#: src/wave/sequences/wave_seq_nameless.tscn
 msgid "Mixed Invasion"
 msgstr ""
 
@@ -119,6 +126,7 @@ msgstr ""
 
 #: src/wave/sequences/wave_seq_a_new_beginning.tscn
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
+#: src/wave/sequences/wave_seq_nameless.tscn
 msgid "Show 'em who's Boss!"
 msgstr ""
 
@@ -179,6 +187,7 @@ msgid "Beware, from below!"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_the_winged_threat.tscn
+#: src/wave/sequences/wave_seq_nameless.tscn
 msgid "Crowded"
 msgstr ""
 
@@ -293,6 +302,7 @@ msgid "After Colors come Patterns"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+#: src/wave/sequences/wave_seq_nameless.tscn
 msgid "Checkered Invasion"
 msgstr ""
 
@@ -305,10 +315,12 @@ msgid "Geometric Patterns"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+#: src/wave/sequences/wave_seq_boss_rush.tscn
 msgid "Show off!"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+#: src/wave/sequences/wave_seq_nameless.tscn
 msgid "Hello!"
 msgstr ""
 
@@ -325,6 +337,7 @@ msgid "Rogue"
 msgstr ""
 
 #: src/wave/sequences/wave_seq_chickens_everywhere.tscn
+#: src/wave/sequences/wave_seq_nameless.tscn
 msgid "Guarded"
 msgstr ""
 
@@ -358,4 +371,100 @@ msgstr ""
 
 #: src/ui/pause_menu.tscn
 msgid "Sounds"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Another Contact"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Back to Patterns"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Already a Bossfight?"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Chicken Acrobatics"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Checkerboard"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "New Checkers"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "New Patterns"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Opposites"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Small but Tough"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Prism"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Chicken Elite"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "No Orientation"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_nameless.tscn
+msgid "Showdown!"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_boss_rush.tscn
+msgid "First Encounter"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_boss_rush.tscn
+msgid "Now, two of them"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_boss_rush.tscn
+msgid "Now it gets harder"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_boss_rush.tscn
+msgid "Too many"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_boss_rush.tscn
+msgid "Checkered Boss is back!"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_boss_rush.tscn
+msgid "Showdown II"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_boss_rush.tscn
+msgid "Boss Party"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_boss_rush.tscn
+msgid "Final Boss"
+msgstr ""
+
+#: src/wave/sequences/wave_seq_boss_rush.tscn
+msgid "The Egg"
+msgstr ""
+
+#: assets/missions/mission_nameless.tres
+msgid "The Nameless Mission"
+msgstr ""
+
+#: assets/missions/mission_boss_rush.tres
+msgid "Boss Rush"
 msgstr ""
