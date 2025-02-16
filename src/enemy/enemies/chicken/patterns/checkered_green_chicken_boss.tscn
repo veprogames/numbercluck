@@ -1,0 +1,179 @@
+[gd_scene load_steps=28 format=3 uid="uid://duw84y5xnlbqc"]
+
+[ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_o2y1f"]
+[ext_resource type="Texture2D" uid="uid://bsysfq831qi08" path="res://assets/chicken/suit_checkered.png" id="2_pt0gl"]
+[ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="3_yxpep"]
+[ext_resource type="PackedScene" uid="uid://dsllu2oim8kn2" path="res://src/bullet/purple_bolt_bullet.tscn" id="4_pxbke"]
+[ext_resource type="PackedScene" uid="uid://c8cjo87g2slkp" path="res://src/common/audio/audio_on_vanish.tscn" id="5_yp2yh"]
+[ext_resource type="AudioStream" uid="uid://kvck3dkat7er" path="res://assets/chicken/death_large.ogg" id="6_evay6"]
+[ext_resource type="AudioStream" uid="uid://ccy41p24uq1bf" path="res://assets/explosion.ogg" id="7_irix0"]
+[ext_resource type="PackedScene" uid="uid://cjm1ebgv6lilf" path="res://src/common/audio/audio_on_enemy_damaged.tscn" id="8_dwojb"]
+[ext_resource type="AudioStream" uid="uid://b45nhm48v654h" path="res://assets/chicken/hit.ogg" id="9_8txx6"]
+[ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="10_npixo"]
+[ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="11_p4y6y"]
+[ext_resource type="Texture2D" uid="uid://daaaja22f51wf" path="res://assets/particles/spark.png" id="12_txng8"]
+[ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/add_firepower_progress_on_death.tscn" id="13_np0pn"]
+[ext_resource type="PackedScene" uid="uid://v6y7pt160a03" path="res://src/enemy/behavior/enemy_move_by_noise.tscn" id="14_4bhac"]
+[ext_resource type="PackedScene" uid="uid://cv22g7s1dlt8m" path="res://src/enemy/behavior/add_to_boss_bar.tscn" id="15_fh363"]
+
+[sub_resource type="GDScript" id="GDScript_ptf1q"]
+script/source = "@icon(\"uid://coivio5vqtpwj\")
+class_name Chicken
+extends Enemy
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_whb61"]
+radius = 180.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_51adi"]
+playback_mode = 1
+random_pitch = 1.1
+streams_count = 1
+stream_0/stream = ExtResource("9_8txx6")
+
+[sub_resource type="Gradient" id="Gradient_gn53v"]
+offsets = PackedFloat32Array(0, 0.0753769, 0.984925)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uyhia"]
+gradient = SubResource("Gradient_gn53v")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5ijsy"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 256.0
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 20.0
+gravity = Vector3(0, 0, 0)
+scale_min = 4.0
+scale_max = 4.0
+color = Color(1, 1, 1, 0.501961)
+color_ramp = SubResource("GradientTexture1D_uyhia")
+
+[sub_resource type="Gradient" id="Gradient_m0axa"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4bk7o"]
+gradient = SubResource("Gradient_m0axa")
+
+[sub_resource type="Curve" id="Curve_s2351"]
+_data = [Vector2(0, 1), 0.0, -2.86134, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_bbkyi"]
+curve = SubResource("Curve_s2351")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_umrhd"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 32.0
+angle_min = 1.07288e-05
+angle_max = 720.0
+spread = 180.0
+initial_velocity_min = 600.0
+initial_velocity_max = 800.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -200.0
+linear_accel_max = -200.0
+scale_min = 0.5
+scale_max = 0.6
+scale_curve = SubResource("CurveTexture_bbkyi")
+color = Color(0.91, 0.2639, 0.2639, 1)
+color_ramp = SubResource("GradientTexture1D_4bk7o")
+hue_variation_min = -2.23517e-08
+hue_variation_max = 0.13
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_wl8ni"]
+frequency = 0.6
+
+[node name="CheckeredGreenChickenBoss" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = SubResource("GDScript_ptf1q")
+score = 5e+06
+max_hp = 400000.0
+
+[node name="ChickenBody" parent="." instance=ExtResource("1_o2y1f")]
+suit = ExtResource("2_pt0gl")
+suit_modulate = Color(0, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_whb61")
+
+[node name="BulletPodEnemy" parent="." instance=ExtResource("3_yxpep")]
+position = Vector2(-36, 80)
+rotation = 2.09439
+bullet = ExtResource("4_pxbke")
+interval = 1.8
+
+[node name="BulletPodEnemy5" parent="." instance=ExtResource("3_yxpep")]
+position = Vector2(-67, 67)
+rotation = 2.35619
+bullet = ExtResource("4_pxbke")
+interval = 1.8
+
+[node name="BulletPodEnemy2" parent="." instance=ExtResource("3_yxpep")]
+position = Vector2(1, 100)
+rotation = 1.57079
+bullet = ExtResource("4_pxbke")
+interval = 1.8
+
+[node name="BulletPodEnemy3" parent="." instance=ExtResource("3_yxpep")]
+position = Vector2(38, 81)
+rotation = 1.0472
+bullet = ExtResource("4_pxbke")
+interval = 1.8
+
+[node name="BulletPodEnemy4" parent="." instance=ExtResource("3_yxpep")]
+position = Vector2(67, 68)
+rotation = 0.785397
+bullet = ExtResource("4_pxbke")
+interval = 1.8
+
+[node name="AudioOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_yp2yh")]
+stream = ExtResource("6_evay6")
+pitch_scale = 0.85
+target = NodePath("..")
+
+[node name="AudioOnVanish2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("5_yp2yh")]
+stream = ExtResource("7_irix0")
+target = NodePath("..")
+
+[node name="AudioOnEnemyDamaged" parent="." node_paths=PackedStringArray("target") instance=ExtResource("8_dwojb")]
+stream = SubResource("AudioStreamRandomizer_51adi")
+pitch_scale = 0.75
+target = NodePath("..")
+
+[node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("10_npixo")]
+amount = 64
+process_material = SubResource("ParticleProcessMaterial_5ijsy")
+texture = ExtResource("11_p4y6y")
+lifetime = 3.0
+explosiveness = 0.9
+visibility_rect = Rect2(-115.616, -116.059, 242.424, 223.17)
+local_coords = true
+target = NodePath("..")
+
+[node name="ParticlesOnVanish2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("10_npixo")]
+z_index = 2
+amount = 96
+process_material = SubResource("ParticleProcessMaterial_umrhd")
+texture = ExtResource("12_txng8")
+lifetime = 2.0
+explosiveness = 0.95
+trail_enabled = true
+trail_lifetime = 0.5
+target = NodePath("..")
+
+[node name="AddFirepowerProgressOnDeath" parent="." node_paths=PackedStringArray("target") instance=ExtResource("13_np0pn")]
+target = NodePath("..")
+chance_multi = 1000.0
+
+[node name="EnemyMoveByNoise" parent="." node_paths=PackedStringArray("target") instance=ExtResource("14_4bhac")]
+target = NodePath("..")
+noise = SubResource("FastNoiseLite_wl8ni")
+amplitude = Vector2(1200, 1200)
+
+[node name="AddToBossBar" parent="." node_paths=PackedStringArray("target") instance=ExtResource("15_fh363")]
+target = NodePath("..")
