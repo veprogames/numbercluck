@@ -16,7 +16,7 @@ formula = "x"
 
 [sub_resource type="Resource" id="Resource_pakew"]
 script = ExtResource("1_pyr13")
-formula = "rm(2500000 * (1 + 0.2 * x) * 1.28 ** x)"
+formula = "rm(1800000 + 700000 * (1 + 0.2 * x) * 1.28 ** x)"
 
 [resource]
 script = ExtResource("1_xt0km")
