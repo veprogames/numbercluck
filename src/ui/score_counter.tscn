@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://src/ui/score_counter.gd" id="2_eg0ep"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ff1r"]
-bg_color = Color(0.0313726, 0.133333, 0.372549, 0.752941)
+bg_color = Color(0.0313726, 0.133333, 0.372549, 0.501961)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
@@ -12,7 +12,7 @@ border_color = Color(0.109804, 0.713726, 1, 1)
 border_blend = true
 corner_radius_top_left = 8
 corner_radius_top_right = 8
-corner_radius_bottom_right = 24
+corner_radius_bottom_right = 36
 corner_radius_bottom_left = 8
 expand_margin_left = 16.0
 expand_margin_top = 16.0
@@ -37,6 +37,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_right = 24
 
 [node name="Label" type="Label" parent="MarginContainer"]
 layout_mode = 2

@@ -1,6 +1,8 @@
-[gd_resource type="Theme" load_steps=22 format=3 uid="uid://7h4y27wblsv2"]
+[gd_resource type="Theme" load_steps=24 format=3 uid="uid://7h4y27wblsv2"]
 
 [ext_resource type="FontFile" uid="uid://l1te5ju02vef" path="res://assets/fonts/teko/Teko-Regular.ttf" id="1_4cacl"]
+[ext_resource type="Texture2D" uid="uid://calkw176ab4kj" path="res://assets/ui/grabber.png" id="1_eat5c"]
+[ext_resource type="Texture2D" uid="uid://o1mj728d4rvm" path="res://assets/ui/grabber_highlight.png" id="2_txekj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_448hl"]
 bg_color = Color(0.0253528, 0.11734, 0.33625, 0.752941)
@@ -196,32 +198,32 @@ shadow_color = Color(0.00392157, 0.0705882, 0.34902, 0.313726)
 shadow_size = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rtbu"]
-bg_color = Color(0.0313726, 0.133333, 0.372549, 0.752941)
+bg_color = Color(0.0313726, 0.133333, 0.372549, 0.501961)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
 border_color = Color(0.109804, 0.713726, 1, 1)
 border_blend = true
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 shadow_color = Color(0.00392157, 0.0705882, 0.34902, 0.313726)
 shadow_size = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hkeo"]
-bg_color = Color(0.0313726, 0.133333, 0.372549, 0.752941)
+bg_color = Color(0.0313726, 0.133333, 0.372549, 0.501961)
 border_width_left = 8
 border_width_top = 8
 border_width_right = 8
 border_width_bottom = 8
 border_color = Color(0.109804, 0.713726, 1, 1)
 border_blend = true
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 expand_margin_left = 8.0
 expand_margin_top = 8.0
 expand_margin_right = 8.0
@@ -316,6 +318,8 @@ ButtonLarge/styles/pressed = SubResource("StyleBoxFlat_61wk4")
 GridContainer/constants/h_separation = 16
 GridContainer/constants/v_separation = 16
 HBoxContainer/constants/separation = 32
+HSlider/icons/grabber = ExtResource("1_eat5c")
+HSlider/icons/grabber_highlight = ExtResource("2_txekj")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_q1jm6")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_qgwc0")
 HSlider/styles/slider = SubResource("StyleBoxFlat_sibbw")
