@@ -99,49 +99,49 @@ texture = ExtResource("1_co0ue")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_vj1nk")
 
-[node name="BulletPodEnemy" parent="." instance=ExtResource("3_yqvdn")]
-position = Vector2(0, 64)
-bullet = ExtResource("4_nutbb")
-interval = 1.25
-
 [node name="BulletPodEnemy2" parent="." instance=ExtResource("3_yqvdn")]
 position = Vector2(0, -64)
-rotation = 3.14159
-bullet = ExtResource("4_nutbb")
-interval = 1.25
-
-[node name="BulletPodEnemy3" parent="." instance=ExtResource("3_yqvdn")]
-position = Vector2(64, 0)
-rotation = 1.57079
-bullet = ExtResource("4_nutbb")
-interval = 1.25
-
-[node name="BulletPodEnemy4" parent="." instance=ExtResource("3_yqvdn")]
-position = Vector2(-64, 0)
-rotation = -1.5708
-bullet = ExtResource("4_nutbb")
-interval = 1.25
-
-[node name="BulletPodEnemy5" parent="." instance=ExtResource("3_yqvdn")]
-position = Vector2(-45, -45)
-rotation = -0.785397
+rotation = 4.71239
 bullet = ExtResource("4_nutbb")
 interval = 1.25
 
 [node name="BulletPodEnemy6" parent="." instance=ExtResource("3_yqvdn")]
 position = Vector2(45, -45)
-rotation = 0.785397
+rotation = 5.49779
+bullet = ExtResource("4_nutbb")
+interval = 1.25
+
+[node name="BulletPodEnemy3" parent="." instance=ExtResource("3_yqvdn")]
+position = Vector2(64, 0)
 bullet = ExtResource("4_nutbb")
 interval = 1.25
 
 [node name="BulletPodEnemy7" parent="." instance=ExtResource("3_yqvdn")]
-position = Vector2(45, 45)
-rotation = 2.35619
+position = Vector2(45, 46)
+rotation = 0.785398
+bullet = ExtResource("4_nutbb")
+interval = 1.25
+
+[node name="BulletPodEnemy" parent="." instance=ExtResource("3_yqvdn")]
+position = Vector2(0, 64)
+rotation = 1.5708
 bullet = ExtResource("4_nutbb")
 interval = 1.25
 
 [node name="BulletPodEnemy8" parent="." instance=ExtResource("3_yqvdn")]
 position = Vector2(-45, 45)
+rotation = 2.35619
+bullet = ExtResource("4_nutbb")
+interval = 1.25
+
+[node name="BulletPodEnemy4" parent="." instance=ExtResource("3_yqvdn")]
+position = Vector2(-64, 0)
+rotation = 3.14159
+bullet = ExtResource("4_nutbb")
+interval = 1.25
+
+[node name="BulletPodEnemy5" parent="." instance=ExtResource("3_yqvdn")]
+position = Vector2(-45, -45)
 rotation = 3.92699
 bullet = ExtResource("4_nutbb")
 interval = 1.25
