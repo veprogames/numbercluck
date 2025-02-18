@@ -57,7 +57,7 @@ color_ramp = SubResource("GradientTexture1D_imf6t")
 collision_layer = 2
 collision_mask = 4
 script = SubResource("GDScript_ptf1q")
-score = 15000.0
+score = 25000.0
 max_hp = 4000.0
 
 [node name="ChickenBody" parent="." instance=ExtResource("1_j6t5o")]

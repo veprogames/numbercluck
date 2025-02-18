@@ -16,7 +16,7 @@ formula = "x"
 
 [sub_resource type="Resource" id="Resource_0uifc"]
 script = ExtResource("2_su65x")
-formula = "1000000 * 10 ** x"
+formula = "1000000 * 5 ** x"
 
 [resource]
 script = ExtResource("1_l8da3")
