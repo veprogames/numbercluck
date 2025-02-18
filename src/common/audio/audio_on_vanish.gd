@@ -16,6 +16,7 @@ func _ready() -> void:
 func _on_target_exiting_tree() -> void:
 	if not is_inside_tree():
 		return
+	global_position = target.global_position
 	play()
 	await finished
 	queue_free()
