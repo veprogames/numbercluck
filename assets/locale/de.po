@@ -260,10 +260,11 @@ msgstr "Booster-Menge"
 #: assets/upgrades/upgrade_booster_count.tres
 msgid ""
 "You start a Mission with $$effect$$ Boosters. Boosters greatly increase your "
-"firerate for a short amount of time."
+"firerate for a short amount of time. Right Click to activate."
 msgstr ""
 "Du erhält $$effect$$ Booster, wenn du eine Mission startest. Ein Booster "
-"erhöht für eine kurze Zeit deutlich deine Feuerrate."
+"erhöht für eine kurze Zeit deutlich deine Feuerrate. Rechtsklick zum "
+"Aktivieren."
 
 #: src/ui/upgrade_card.gd
 msgid "Maxed"

@@ -260,7 +260,7 @@ msgid "Booster Count"
 msgstr ""
 
 #: assets/upgrades/upgrade_booster_count.tres
-msgid "You start a Mission with $$effect$$ Boosters. Boosters greatly increase your firerate for a short amount of time."
+msgid "You start a Mission with $$effect$$ Boosters. Boosters greatly increase your firerate for a short amount of time. Right Click to activate."
 msgstr ""
 
 #: src/ui/upgrade_card.gd

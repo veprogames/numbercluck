@@ -21,7 +21,7 @@ formula = "1000000 * 5 ** x"
 [resource]
 script = ExtResource("1_l8da3")
 title = "Booster Count"
-description = "You start a Mission with $$effect$$ Boosters. Boosters greatly increase your firerate for a short amount of time."
+description = "You start a Mission with $$effect$$ Boosters. Boosters greatly increase your firerate for a short amount of time. Right Click to activate."
 price_formula = SubResource("Resource_0uifc")
 effect_formula = SubResource("Resource_ll84h")
 effect_display_options = SubResource("Resource_ue58l")
