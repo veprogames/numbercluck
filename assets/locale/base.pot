@@ -24,6 +24,7 @@
 # res://src/wave/sequences/wave_seq_boss_rush.tscn
 # res://assets/missions/mission_nameless.tres
 # res://assets/missions/mission_boss_rush.tres
+# res://src/credits/credits_menu.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -73,6 +74,7 @@ msgstr ""
 
 #: src/mission_selection/mission_selection.tscn
 #: src/shop_menu/shop_menu.tscn
+#: src/credits/credits_menu.tscn
 msgid "Main Menu"
 msgstr ""
 
@@ -467,4 +469,14 @@ msgstr ""
 
 #: assets/missions/mission_boss_rush.tres
 msgid "Boss Rush"
+msgstr ""
+
+#: src/credits/credits_menu.tscn
+msgid ""
+"Game by [color=lime][url=\"https://github.com/veprogames\"]veprogames[/url][/color]\n"
+"Original by [color=lime][url=\"https://www.interactionstudios.com/\"]InterAction Studios[/url][/color]"
+msgstr ""
+
+#: src/credits/credits_menu.tscn
+msgid "Sounds from Original Game: Chicken Hit, Chicken Deaths, Ion Bullet"
 msgstr ""

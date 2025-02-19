@@ -63,6 +63,7 @@ msgid "iA on Steam"
 msgstr "iA bei Steam"
 
 #: src/mission_selection/mission_selection.tscn src/shop_menu/shop_menu.tscn
+#: src/credits/credits_menu.tscn
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
@@ -471,6 +472,22 @@ msgstr "Die Namenlose Mission"
 #: assets/missions/mission_boss_rush.tres
 msgid "Boss Rush"
 msgstr "Bossrausch"
+
+#: src/credits/credits_menu.tscn
+msgid ""
+"Game by [color=lime][url=\"https://github.com/veprogames\"]veprogames[/url][/"
+"color]\n"
+"Original by [color=lime][url=\"https://www.interactionstudios.com/"
+"\"]InterAction Studios[/url][/color]"
+msgstr ""
+"Spiel von [color=lime][url=\"https://github.com/veprogames\"]veprogames[/url]"
+"[/color]\n"
+"Originalspiel von [color=lime][url=\"https://www.interactionstudios.com/"
+"\"]InterAction Studios[/url][/color]"
+
+#: src/credits/credits_menu.tscn
+msgid "Sounds from Original Game: Chicken Hit, Chicken Deaths, Ion Bullet"
+msgstr "Originalsounds: Chicken Hit, Chicken Deaths, Ion Bullet"
 
 #~ msgid "Fanmade"
 #~ msgstr "Fanmade"
