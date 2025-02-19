@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://kak7se34ibjq"]
+[gd_scene load_steps=28 format=3 uid="uid://kak7se34ibjq"]
 
 [ext_resource type="PackedScene" uid="uid://di6b8rc2v6o8y" path="res://src/enemy/enemies/chicken/chicken_body.tscn" id="1_7l2wy"]
 [ext_resource type="PackedScene" uid="uid://bi55oo8q135t5" path="res://src/weapon/bullet_pod_enemy.tscn" id="2_8trtm"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="12_22vjp"]
 [ext_resource type="Texture2D" uid="uid://daaaja22f51wf" path="res://assets/particles/spark.png" id="13_0gdtc"]
 [ext_resource type="PackedScene" uid="uid://bn55ngnwmfex7" path="res://src/enemy/behavior/add_firepower_progress_on_death.tscn" id="14_lgbgj"]
+[ext_resource type="PackedScene" uid="uid://d2uujbouth7de" path="res://src/enemy/behavior/enemy_stay_upwards.tscn" id="15_eb6et"]
 [ext_resource type="PackedScene" uid="uid://v6y7pt160a03" path="res://src/enemy/behavior/enemy_move_by_noise.tscn" id="15_fx8jq"]
 [ext_resource type="PackedScene" uid="uid://cv22g7s1dlt8m" path="res://src/enemy/behavior/add_to_boss_bar.tscn" id="16_tmfud"]
 
@@ -157,3 +158,8 @@ amplitude = Vector2(1600, 1200)
 
 [node name="AddToBossBar" parent="." node_paths=PackedStringArray("target") instance=ExtResource("16_tmfud")]
 target = NodePath("..")
+
+[node name="EnemyStayUpwards" parent="." node_paths=PackedStringArray("target") instance=ExtResource("15_eb6et")]
+target = NodePath("..")
+y = 0.6
+speed = 2000.0

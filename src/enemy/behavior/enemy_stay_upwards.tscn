@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2uujbouth7de"]
+
+[ext_resource type="Script" path="res://src/enemy/behavior/enemy_stay_upwards.gd" id="1_8tqbv"]
+
+[node name="EnemyStayUpwards" type="Node"]
+script = ExtResource("1_8tqbv")
