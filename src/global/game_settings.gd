@@ -12,11 +12,13 @@ var music_volume: float = -12.0 :
 	set(vol):
 		music_volume = vol
 		AudioServer.set_bus_volume_db(bus_music, vol)
+		AudioServer.set_bus_mute(bus_music, vol <= -60)
 
 var sound_volume: float = -6.0 :
 	set(vol):
 		sound_volume = vol
 		AudioServer.set_bus_volume_db(bus_sounds, vol)
+		AudioServer.set_bus_mute(bus_sounds, vol <= -60)
 
 
 func save_settings() -> void:
