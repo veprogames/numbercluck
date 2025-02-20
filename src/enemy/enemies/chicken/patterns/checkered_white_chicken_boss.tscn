@@ -94,6 +94,7 @@ collision_mask = 4
 script = SubResource("GDScript_ptf1q")
 score = 700000.0
 max_hp = 125000.0
+moving_to_target_speed = 1.0
 
 [node name="ChickenBody" parent="." instance=ExtResource("1_yjp2s")]
 suit = ExtResource("2_aga1k")

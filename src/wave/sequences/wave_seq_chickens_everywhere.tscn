@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_jk1by"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_3dp51"]
-[ext_resource type="AudioStream" uid="uid://8mle6i1i8gtu" path="res://assets/music/jellyfish_in_space.ogg" id="3_sfhlb"]
+[ext_resource type="AudioStream" uid="uid://kxe48lwv1xyc" path="res://assets/music/space_1990.ogg" id="3_acsgs"]
 [ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="4_6a1v0"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/enemies/chicken/red_chicken.tscn" id="5_f0lop"]
 [ext_resource type="PackedScene" uid="uid://txv8v6x063px" path="res://src/enemy/enemies/chicken/cyan_chicken.tscn" id="6_v1qwr"]
@@ -36,7 +36,7 @@ script = ExtResource("1_jk1by")
 visible = false
 title = "Greeting"
 time_between_spawns = 0.2
-music_stream = ExtResource("3_sfhlb")
+music_stream = ExtResource("3_acsgs")
 
 [node name="EnemySpawnPoint" parent="Wave" instance=ExtResource("4_6a1v0")]
 position = Vector2(960, -324)
@@ -721,24 +721,20 @@ position = Vector2(960, -180)
 
 [node name="CyanChickenBoss" parent="Wave8" instance=ExtResource("15_ndh8i")]
 position = Vector2(312, 324)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss2" parent="Wave8" instance=ExtResource("15_ndh8i")]
 position = Vector2(744, 324)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss3" parent="Wave8" instance=ExtResource("15_ndh8i")]
 position = Vector2(1248, 324)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss4" parent="Wave8" instance=ExtResource("15_ndh8i")]
 position = Vector2(1680, 324)
-moving_to_target_speed = 1.0
 
 [node name="Wave9" parent="." instance=ExtResource("2_3dp51")]
 visible = false
 title = "Armored"
-music_stream = ExtResource("3_sfhlb")
+music_stream = ExtResource("3_acsgs")
 
 [node name="EnemySpawnPoint" parent="Wave9" instance=ExtResource("4_6a1v0")]
 position = Vector2(960, -180)
@@ -1492,16 +1488,14 @@ position = Vector2(960, -180)
 
 [node name="PurpleChickenBoss" parent="Wave16" instance=ExtResource("17_aidnd")]
 position = Vector2(456, 396)
-moving_to_target_speed = 1.0
 
 [node name="PurpleChickenBoss2" parent="Wave16" instance=ExtResource("17_aidnd")]
 position = Vector2(1392, 396)
-moving_to_target_speed = 1.0
 
 [node name="Wave17" parent="." instance=ExtResource("2_3dp51")]
 visible = false
 title = "Hello!"
-music_stream = ExtResource("3_sfhlb")
+music_stream = ExtResource("3_acsgs")
 
 [node name="EnemySpawnPoint" parent="Wave17" instance=ExtResource("4_6a1v0")]
 position = Vector2(960, -180)
@@ -1918,7 +1912,6 @@ position = Vector2(960, -180)
 
 [node name="CyanChickenBoss" parent="Wave23" instance=ExtResource("15_ndh8i")]
 position = Vector2(960, 396)
-moving_to_target_speed = 1.0
 
 [node name="Wave24" parent="." instance=ExtResource("2_3dp51")]
 title = "Now it's getting serious!"
