@@ -3,6 +3,7 @@
 /android/
 
 *.png~
+*.ico~
 *.kra~
 *autosave.kra
 
