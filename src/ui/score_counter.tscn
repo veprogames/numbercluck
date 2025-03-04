@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dr6h7nhhb3ynm"]
 
-[ext_resource type="Script" path="res://src/ui/score_counter.gd" id="2_eg0ep"]
+[ext_resource type="Script" uid="uid://bx38lqxpf5jtd" path="res://src/ui/score_counter.gd" id="2_eg0ep"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ff1r"]
 bg_color = Color(0.0313726, 0.133333, 0.372549, 0.501961)

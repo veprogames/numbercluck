@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://4tr0q6ojfdge"]
 
-[ext_resource type="Script" path="res://src/mission_selection/mission_button.gd" id="1_krqfx"]
+[ext_resource type="Script" uid="uid://btak0qogmdbt3" path="res://src/mission_selection/mission_button.gd" id="1_krqfx"]
 
 [node name="MissionButton" type="Button"]
 offset_right = 16.0

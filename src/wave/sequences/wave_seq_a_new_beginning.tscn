@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://daqmur6h7gqf2"]
 
-[ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_urfbg"]
+[ext_resource type="Script" uid="uid://cw7lgufic5ojt" path="res://src/wave/wave_sequence.gd" id="1_urfbg"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_68qxi"]
-[ext_resource type="Script" path="res://src/wave/enemy_spawn_point.gd" id="3_i1pmi"]
+[ext_resource type="Script" uid="uid://ybwlojtfat1h" path="res://src/wave/enemy_spawn_point.gd" id="3_i1pmi"]
 [ext_resource type="AudioStream" uid="uid://8mle6i1i8gtu" path="res://assets/music/jellyfish_in_space.ogg" id="5_65lbh"]
 [ext_resource type="PackedScene" uid="uid://dsaqy3ab6pk0k" path="res://src/enemy/enemies/chicken/red_chicken.tscn" id="5_o733k"]
 [ext_resource type="PackedScene" uid="uid://txv8v6x063px" path="res://src/enemy/enemies/chicken/cyan_chicken.tscn" id="6_4fxgm"]

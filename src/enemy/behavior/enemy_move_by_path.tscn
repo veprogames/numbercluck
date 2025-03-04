@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cudvsxgk8egsy"]
 
-[ext_resource type="Script" path="res://src/enemy/behavior/enemy_move_by_path.gd" id="1_louk8"]
+[ext_resource type="Script" uid="uid://cfy1pb21fioxd" path="res://src/enemy/behavior/enemy_move_by_path.gd" id="1_louk8"]
 
 [node name="EnemyMoveByPath" type="Node2D"]
 script = ExtResource("1_louk8")

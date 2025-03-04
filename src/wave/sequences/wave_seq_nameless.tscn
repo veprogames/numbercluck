@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://ba4p4accb7vwl"]
 
-[ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_dvkl2"]
+[ext_resource type="Script" uid="uid://cw7lgufic5ojt" path="res://src/wave/wave_sequence.gd" id="1_dvkl2"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="1_knbiu"]
 [ext_resource type="AudioStream" uid="uid://kxe48lwv1xyc" path="res://assets/music/space_1990.ogg" id="2_mqjd3"]
 [ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="3_o7lck"]
@@ -378,11 +378,9 @@ position = Vector2(960, -180)
 
 [node name="CyanChickenBoss" parent="Wave5" instance=ExtResource("14_iiv2m")]
 position = Vector2(456, 396)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss2" parent="Wave5" instance=ExtResource("14_iiv2m")]
 position = Vector2(1536, 396)
-moving_to_target_speed = 1.0
 
 [node name="Wave6" parent="." instance=ExtResource("1_knbiu")]
 visible = false
@@ -1503,15 +1501,12 @@ position = Vector2(960, -180)
 
 [node name="CheckeredWhiteChickenBoss" parent="Wave15" instance=ExtResource("19_wj8f7")]
 position = Vector2(960, 396)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss" parent="Wave15" instance=ExtResource("14_iiv2m")]
 position = Vector2(384, 396)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss2" parent="Wave15" instance=ExtResource("14_iiv2m")]
 position = Vector2(1536, 396)
-moving_to_target_speed = 1.0
 
 [node name="Wave16" parent="." instance=ExtResource("1_knbiu")]
 visible = false
@@ -2313,4 +2308,3 @@ position = Vector2(960, -252)
 
 [node name="CheckeredGreenChickenBoss" parent="Wave24" instance=ExtResource("23_1ifs8")]
 position = Vector2(960, 324)
-moving_to_target_speed = 1.0

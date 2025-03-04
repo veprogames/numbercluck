@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://t0qjigps7h5c"]
 
 [ext_resource type="Texture2D" uid="uid://bmun2fmcflmmk" path="res://assets/backgrounds/blue_nebula.png" id="1_vdqld"]
-[ext_resource type="Shader" path="res://src/ui/scrolling_background.gdshader" id="1_y6b2k"]
+[ext_resource type="Shader" uid="uid://bo1scc7nealei" path="res://src/ui/scrolling_background.gdshader" id="1_y6b2k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gjfyg"]
 shader = ExtResource("1_y6b2k")

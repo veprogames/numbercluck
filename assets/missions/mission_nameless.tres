@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MissionDefinition" load_steps=4 format=3 uid="uid://uhlka4nv1v5t"]
 
 [ext_resource type="Texture2D" uid="uid://b3lewk32vifws" path="res://assets/backgrounds/green_nebula.png" id="1_efcv6"]
-[ext_resource type="Script" path="res://src/mission/mission_definition.gd" id="2_fotl5"]
+[ext_resource type="Script" uid="uid://b1c00m6hhyh6n" path="res://src/mission/mission_definition.gd" id="2_fotl5"]
 [ext_resource type="PackedScene" uid="uid://ba4p4accb7vwl" path="res://src/wave/sequences/wave_seq_nameless.tscn" id="3_dxd12"]
 
 [resource]

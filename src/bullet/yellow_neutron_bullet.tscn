@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://gg3dd2v7m3ok"]
 
-[ext_resource type="Script" path="res://src/bullet/bullet.gd" id="1_buqr2"]
+[ext_resource type="Script" uid="uid://cips175kyfowb" path="res://src/bullet/bullet.gd" id="1_buqr2"]
 [ext_resource type="Texture2D" uid="uid://6o0ets2p600g" path="res://assets/bullets/yellow_neutron.png" id="2_r8bx6"]
 [ext_resource type="AudioStream" uid="uid://u6qrq1j2i3uc" path="res://assets/bullets/neutron.ogg" id="3_ijxbe"]
 

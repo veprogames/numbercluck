@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b1wbaspy50ihp"]
 
-[ext_resource type="Script" path="res://src/collectables/firepower_trail.gd" id="1_60dfg"]
+[ext_resource type="Script" uid="uid://32a451kokmwl" path="res://src/collectables/firepower_trail.gd" id="1_60dfg"]
 
 [sub_resource type="Curve" id="Curve_25xof"]
 _data = [Vector2(0.00749063, 1), 0.0, -2.31169, 0, 0, Vector2(0.149813, 0.909583), -0.623809, -0.623809, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]

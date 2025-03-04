@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="UpgradeDefinition" load_steps=7 format=3 uid="uid://dl0xo1psecy76"]
 
-[ext_resource type="Script" path="res://src/upgrades/effect_display_options.gd" id="1_4y0gv"]
-[ext_resource type="Script" path="res://src/upgrades/formula.gd" id="2_tyxal"]
-[ext_resource type="Script" path="res://src/upgrades/upgrade_definition.gd" id="3_b4f6l"]
+[ext_resource type="Script" uid="uid://be8jhidbjfl7m" path="res://src/upgrades/effect_display_options.gd" id="1_4y0gv"]
+[ext_resource type="Script" uid="uid://c8lie4ugtuclv" path="res://src/upgrades/formula.gd" id="2_tyxal"]
+[ext_resource type="Script" uid="uid://dv3gcrvb73ejy" path="res://src/upgrades/upgrade_definition.gd" id="3_b4f6l"]
 
 [sub_resource type="Resource" id="Resource_pm4fg"]
 script = ExtResource("1_4y0gv")

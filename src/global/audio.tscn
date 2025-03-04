@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://boytjooecyivy"]
 
-[ext_resource type="Script" path="res://src/global/audio.gd" id="1_ar7ry"]
+[ext_resource type="Script" uid="uid://exhj1ymyk7wh" path="res://src/global/audio.gd" id="1_ar7ry"]
 [ext_resource type="AudioStream" uid="uid://cf5llvestjwfp" path="res://assets/music/fanfare_for_space.ogg" id="2_ik41i"]
 
 [node name="Audio" type="Node"]

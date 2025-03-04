@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dsllu2oim8kn2"]
 
-[ext_resource type="Script" path="res://src/bullet/bullet.gd" id="1_y5fkv"]
+[ext_resource type="Script" uid="uid://cips175kyfowb" path="res://src/bullet/bullet.gd" id="1_y5fkv"]
 [ext_resource type="Texture2D" uid="uid://b2tlsvgoqwuxo" path="res://assets/bullets/purple_bolt.png" id="2_rgoth"]
 [ext_resource type="AudioStream" uid="uid://d02dj86qfhp2m" path="res://assets/bullets/laser.ogg" id="3_hl2ak"]
 

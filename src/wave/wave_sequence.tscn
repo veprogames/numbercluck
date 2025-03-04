@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bars4af1kns8g"]
 
-[ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_ay2xq"]
+[ext_resource type="Script" uid="uid://cw7lgufic5ojt" path="res://src/wave/wave_sequence.gd" id="1_ay2xq"]
 
 [node name="WaveSequence" type="Node"]
 script = ExtResource("1_ay2xq")

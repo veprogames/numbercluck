@@ -136,23 +136,23 @@ target = NodePath("..")
 
 [node name="ParticlesOnVanish" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_pkfwj")]
 amount = 64
-process_material = SubResource("ParticleProcessMaterial_5ijsy")
 texture = ExtResource("12_63yvb")
 lifetime = 3.0
 explosiveness = 0.9
 visibility_rect = Rect2(-115.616, -116.059, 242.424, 223.17)
 local_coords = true
+process_material = SubResource("ParticleProcessMaterial_5ijsy")
 target = NodePath("..")
 
 [node name="ParticlesOnVanish2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("11_pkfwj")]
 z_index = 2
 amount = 96
-process_material = SubResource("ParticleProcessMaterial_umrhd")
 texture = ExtResource("13_ugrb8")
 lifetime = 2.0
 explosiveness = 0.95
 trail_enabled = true
 trail_lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_umrhd")
 target = NodePath("..")
 
 [node name="AddFirepowerProgressOnDeath" parent="." node_paths=PackedStringArray("target") instance=ExtResource("14_xqks6")]

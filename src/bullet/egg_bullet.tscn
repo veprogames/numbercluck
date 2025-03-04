@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://4vcu6y6bedtt"]
 
-[ext_resource type="Script" path="res://src/bullet/bullet.gd" id="1_sfhc0"]
+[ext_resource type="Script" uid="uid://cips175kyfowb" path="res://src/bullet/bullet.gd" id="1_sfhc0"]
 [ext_resource type="Texture2D" uid="uid://b6h7q6bgvps0w" path="res://assets/bullets/egg.png" id="2_iybyn"]
 [ext_resource type="AudioStream" uid="uid://c0a5lc06ibqqh" path="res://assets/chicken/lay_egg.ogg" id="3_tnlvp"]
 

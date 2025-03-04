@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bef27mfam2pqi"]
 
-[ext_resource type="Script" path="res://src/level/mission_info.gd" id="1_mcul3"]
+[ext_resource type="Script" uid="uid://bwkiddcqtmewu" path="res://src/level/mission_info.gd" id="1_mcul3"]
 
 [node name="MissionInfo" type="Node"]
 script = ExtResource("1_mcul3")

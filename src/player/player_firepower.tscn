@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://ds4pn67w135sr"]
 
-[ext_resource type="Script" path="res://src/player/player_firepower.gd" id="1_dsrc6"]
+[ext_resource type="Script" uid="uid://dov80qx0e3udl" path="res://src/player/player_firepower.gd" id="1_dsrc6"]
 [ext_resource type="PackedScene" uid="uid://ba5kipctklev" path="res://src/weapon/bullet_pod_player.tscn" id="2_7i3ou"]
-[ext_resource type="Script" path="res://src/player/player_firepower_level_tool.gd" id="2_guvqg"]
+[ext_resource type="Script" uid="uid://bfnxc5x3rsxp3" path="res://src/player/player_firepower_level_tool.gd" id="2_guvqg"]
 [ext_resource type="PackedScene" uid="uid://d1x18syexiisp" path="res://src/bullet/ion_bullet.tscn" id="3_arnuf"]
 [ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="4_icjx3"]
 [ext_resource type="PackedScene" uid="uid://gg3dd2v7m3ok" path="res://src/bullet/yellow_neutron_bullet.tscn" id="5_88oec"]

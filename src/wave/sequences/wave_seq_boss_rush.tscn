@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://yhqpsfdoecwl"]
 
-[ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_t46vs"]
+[ext_resource type="Script" uid="uid://cw7lgufic5ojt" path="res://src/wave/wave_sequence.gd" id="1_t46vs"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_mij1x"]
 [ext_resource type="AudioStream" uid="uid://cilw4ifmpr6kr" path="res://assets/music/vortex.ogg" id="3_dge23"]
 [ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="4_o71dd"]
@@ -26,7 +26,6 @@ position = Vector2(960, -324)
 
 [node name="CyanChickenBoss" parent="Wave" instance=ExtResource("5_oulya")]
 position = Vector2(960, 324)
-moving_to_target_speed = 1.0
 
 [node name="Wave2" parent="." instance=ExtResource("2_mij1x")]
 visible = false
@@ -37,11 +36,9 @@ position = Vector2(960, -324)
 
 [node name="CyanChickenBoss" parent="Wave2" instance=ExtResource("5_oulya")]
 position = Vector2(600, 324)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss2" parent="Wave2" instance=ExtResource("5_oulya")]
 position = Vector2(1320, 324)
-moving_to_target_speed = 1.0
 
 [node name="Wave3" parent="." instance=ExtResource("2_mij1x")]
 visible = false
@@ -52,7 +49,6 @@ position = Vector2(960, -324)
 
 [node name="PurpleChickenBoss" parent="Wave3" instance=ExtResource("6_tjjhu")]
 position = Vector2(960, 324)
-moving_to_target_speed = 1.0
 
 [node name="Wave4" parent="." instance=ExtResource("2_mij1x")]
 visible = false
@@ -64,23 +60,18 @@ position = Vector2(960, -324)
 
 [node name="CyanChickenBoss" parent="Wave4" instance=ExtResource("5_oulya")]
 position = Vector2(240, 324)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss2" parent="Wave4" instance=ExtResource("5_oulya")]
 position = Vector2(600, 324)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss3" parent="Wave4" instance=ExtResource("5_oulya")]
 position = Vector2(960, 324)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss4" parent="Wave4" instance=ExtResource("5_oulya")]
 position = Vector2(1320, 324)
-moving_to_target_speed = 1.0
 
 [node name="CyanChickenBoss5" parent="Wave4" instance=ExtResource("5_oulya")]
 position = Vector2(1680, 324)
-moving_to_target_speed = 1.0
 
 [node name="Wave5" parent="." instance=ExtResource("2_mij1x")]
 visible = false
@@ -91,7 +82,6 @@ position = Vector2(960, -324)
 
 [node name="CheckeredWhiteChickenBoss" parent="Wave5" instance=ExtResource("7_cxu03")]
 position = Vector2(960, 324)
-moving_to_target_speed = 1.0
 
 [node name="Wave6" parent="." instance=ExtResource("2_mij1x")]
 visible = false
@@ -102,7 +92,6 @@ position = Vector2(960, -324)
 
 [node name="CheckeredGreenChickenBoss" parent="Wave6" instance=ExtResource("8_grp66")]
 position = Vector2(960, 324)
-moving_to_target_speed = 1.0
 
 [node name="Wave7" parent="." instance=ExtResource("2_mij1x")]
 visible = false
@@ -113,15 +102,12 @@ position = Vector2(960, -324)
 
 [node name="PurpleChickenBoss" parent="Wave7" instance=ExtResource("6_tjjhu")]
 position = Vector2(456, 324)
-moving_to_target_speed = 1.0
 
 [node name="PurpleChickenBoss2" parent="Wave7" instance=ExtResource("6_tjjhu")]
 position = Vector2(960, 468)
-moving_to_target_speed = 1.0
 
 [node name="PurpleChickenBoss3" parent="Wave7" instance=ExtResource("6_tjjhu")]
 position = Vector2(1464, 324)
-moving_to_target_speed = 1.0
 
 [node name="Wave8" parent="." instance=ExtResource("2_mij1x")]
 visible = false
@@ -132,7 +118,6 @@ position = Vector2(960, -324)
 
 [node name="CheckeredGreenChickenBoss" parent="Wave8" instance=ExtResource("8_grp66")]
 position = Vector2(1608, 324)
-moving_to_target_speed = 1.0
 
 [node name="CheckeredWhiteChickenBoss" parent="Wave8" instance=ExtResource("7_cxu03")]
 position = Vector2(1176, 324)

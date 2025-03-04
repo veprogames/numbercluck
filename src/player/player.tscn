@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://bw6jtohhj1h22"]
 
 [ext_resource type="Texture2D" uid="uid://du7f5tna07qmy" path="res://assets/player/spaceship.png" id="1_abc3k"]
-[ext_resource type="Script" path="res://src/player/player.gd" id="1_hvf25"]
+[ext_resource type="Script" uid="uid://dyufmyxswpeav" path="res://src/player/player.gd" id="1_hvf25"]
 [ext_resource type="Texture2D" uid="uid://cqorvhmuo2js0" path="res://assets/particles/smoke.png" id="2_w7lh4"]
 [ext_resource type="PackedScene" uid="uid://3g6eh0hpkafy" path="res://src/common/particles/particles_on_vanish.tscn" id="5_t5dkk"]
 [ext_resource type="Texture2D" uid="uid://daaaja22f51wf" path="res://assets/particles/spark.png" id="6_8cxs4"]

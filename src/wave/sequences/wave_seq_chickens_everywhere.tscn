@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://lpwho415pgan"]
 
-[ext_resource type="Script" path="res://src/wave/wave_sequence.gd" id="1_jk1by"]
+[ext_resource type="Script" uid="uid://cw7lgufic5ojt" path="res://src/wave/wave_sequence.gd" id="1_jk1by"]
 [ext_resource type="PackedScene" uid="uid://dyv4xjqwihaf4" path="res://src/wave/wave.tscn" id="2_3dp51"]
 [ext_resource type="AudioStream" uid="uid://kxe48lwv1xyc" path="res://assets/music/space_1990.ogg" id="3_acsgs"]
 [ext_resource type="PackedScene" uid="uid://do2jafh8cjh6j" path="res://src/wave/enemy_spawn_point.tscn" id="4_6a1v0"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d1hyply7t8dwp"]
 
 [ext_resource type="Texture2D" uid="uid://bw3n4pjp2lhil" path="res://assets/ui/heart.png" id="2_bltfa"]
-[ext_resource type="Script" path="res://src/ui/player_ui.gd" id="2_gc4e6"]
+[ext_resource type="Script" uid="uid://dyj7vabcrlpau" path="res://src/ui/player_ui.gd" id="2_gc4e6"]
 [ext_resource type="Texture2D" uid="uid://bfw8ukkkqrd2o" path="res://assets/ui/firepower.png" id="3_5vc7e"]
 [ext_resource type="Texture2D" uid="uid://bfsfn304cb6fq" path="res://assets/ui/booster.png" id="4_sewr3"]
 

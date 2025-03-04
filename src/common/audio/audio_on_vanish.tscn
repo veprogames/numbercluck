@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c8cjo87g2slkp"]
 
-[ext_resource type="Script" path="res://src/common/audio/audio_on_vanish.gd" id="1_nrdv4"]
+[ext_resource type="Script" uid="uid://dop7x3iqvfms8" path="res://src/common/audio/audio_on_vanish.gd" id="1_nrdv4"]
 
 [node name="AudioOnVanish" type="AudioStreamPlayer2D"]
 bus = &"Sounds"

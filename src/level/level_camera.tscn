@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dmadk3p2xaxw7"]
 
-[ext_resource type="Script" path="res://src/level/level_camera.gd" id="1_ev1pg"]
+[ext_resource type="Script" uid="uid://c70yl32lccehb" path="res://src/level/level_camera.gd" id="1_ev1pg"]
 
 [node name="LevelCamera" type="Camera2D"]
 anchor_mode = 0

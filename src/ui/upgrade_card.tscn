@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://8v1xjxdn6brq"]
 
-[ext_resource type="Script" path="res://src/ui/upgrade_card.gd" id="1_c81pv"]
+[ext_resource type="Script" uid="uid://y8glgpmvx58j" path="res://src/ui/upgrade_card.gd" id="1_c81pv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0yjmb"]
 font_size = 48

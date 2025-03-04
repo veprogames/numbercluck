@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://brc3mmjs7pgw8"]
 
-[ext_resource type="Script" path="res://src/player/player_state.gd" id="1_7e6c7"]
+[ext_resource type="Script" uid="uid://cq1hrsunhp10o" path="res://src/player/player_state.gd" id="1_7e6c7"]
 [ext_resource type="AudioStream" uid="uid://c47vkdy01l0u4" path="res://assets/player/game_over.ogg" id="2_ncm55"]
 
 [node name="PlayerState" type="Node" groups=["player_state"]]

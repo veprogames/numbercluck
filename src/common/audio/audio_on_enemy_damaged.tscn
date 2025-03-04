@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cjm1ebgv6lilf"]
 
-[ext_resource type="Script" path="res://src/common/audio/audio_on_enemy_damaged.gd" id="1_ik63o"]
+[ext_resource type="Script" uid="uid://dhqssype4psq8" path="res://src/common/audio/audio_on_enemy_damaged.gd" id="1_ik63o"]
 
 [node name="AudioOnEnemyDamaged" type="AudioStreamPlayer2D"]
 max_polyphony = 4

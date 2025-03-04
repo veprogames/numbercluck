@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://3g6eh0hpkafy"]
 
-[ext_resource type="Script" path="res://src/common/particles/particles_on_vanish.gd" id="1_7oihr"]
+[ext_resource type="Script" uid="uid://ut7rs7m52l1q" path="res://src/common/particles/particles_on_vanish.gd" id="1_7oihr"]
 
 [node name="ParticlesOnVanish" type="GPUParticles2D"]
 emitting = false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ddnal1daj2roi"]
 
-[ext_resource type="Script" path="res://src/ui/boss_bar.gd" id="1_2mcla"]
+[ext_resource type="Script" uid="uid://cpyhnb7ippbjt" path="res://src/ui/boss_bar.gd" id="1_2mcla"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ijleg"]
 font_size = 48

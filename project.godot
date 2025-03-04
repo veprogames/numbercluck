@@ -17,7 +17,7 @@ run/main_scene="res://src/main_menu/main_menu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="io.veprogames.numbercluck"
 config/quit_on_go_back=false
-config/features=PackedStringArray("4.3", "Mobile")
+config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
 

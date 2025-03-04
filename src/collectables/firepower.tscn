@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d0jdag12cyvpy"]
 
-[ext_resource type="Script" path="res://src/collectables/firepower.gd" id="1_xr2sq"]
+[ext_resource type="Script" uid="uid://bo4xboaect6da" path="res://src/collectables/firepower.gd" id="1_xr2sq"]
 [ext_resource type="AudioStream" uid="uid://clwyuqmeeulsl" path="res://assets/firepower/firepower.ogg" id="4_0qqen"]
 [ext_resource type="PackedScene" uid="uid://b1wbaspy50ihp" path="res://src/collectables/firepower_trail.tscn" id="9_4mhto"]
 
